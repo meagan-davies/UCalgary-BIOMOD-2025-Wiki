@@ -1,10 +1,4 @@
-# Team Calgary 2024 Wiki
-
-This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python, etc).
-
-Images, photos, icons and fonts **MUST** be stored on `static.igem.wiki` using [uploads.igem.org](https://uploads.igem.org), and Videos **must** be embedded from [iGEM Video Universe](https://video.igem.org).
-
-For up-to-date requirements, resources, help and guidance, visit [competition.igem.org/deliverables/team-wiki](https://competition.igem.org/deliverables/team-wiki).
+# UCalgary BIOMOD 2025 Wiki
 
 ## About this Template
 
@@ -12,6 +6,7 @@ For up-to-date requirements, resources, help and guidance, visit [competition.ig
 
 The static assets are in the `static` directory. The layout and templates are in the `wiki` directory, and the pages live in the `wiki > pages` directory. Unless you are an experienced and/or adventurous human, you probably shouldn't change other files.
 
+    |__ docs/               -> Static copy of wiki for deployment on GitHub Pages
     |__ static/             -> static assets (CSS and JavaScript files only)
     |__ wiki/               -> Main directory for the pages and layouts
         |__ footer.html     -> Footer that will appear in all the pages
@@ -21,17 +16,16 @@ The static assets are in the `static` directory. The layout and templates are in
             |__ *.html      -> Actual pages of your wiki
     |__ .gitignore          -> Tells GitLab which files/directories should not be uploaded to the repository
     |__ .gitlab-ci.yml      -> Automated flow for building, testing and deploying your website.
-    |__ LICENSE             -> License CC-by-4.0, all wikis are required to have this license - DO NOT MODIFY
-    |__ README.md           -> File containing the text you are reading right now
     |__ app.py              -> Python code managing your wiki
     |__ dependencies.txt    -> Software dependencies from the Python code
+    |__ README.md           -> File containing the text you are reading right now
 
 ### Technologies
 
   * [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/)
   * [Python](https://www.python.org): Programming language
   * [Flask](https://palletsprojects.com/p/flask/): Python framework
-  * [Fronzen-Flask](https://pythonhosted.org/Frozen-Flask): Library that builds the wiki to be deployed as a static website
+  * [Frozen-Flask](https://frozen-flask.readthedocs.io/en/latest/): Library that builds the wiki to be deployed as a static website
   * [Bootstrap](https://getbootstrap.com/docs/5.0/components): CSS and JS components used
 
 ### Building Locally
