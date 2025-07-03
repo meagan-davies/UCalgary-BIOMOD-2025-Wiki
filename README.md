@@ -69,4 +69,11 @@ git pull
     - Git Extension Pack
     - GitHub Codespaces
     - GitHub Pull Requests
+
+### Deploying to GitHub Pages
+
+This project is set up with Frozen Flask to freeze the dynamic flask pages to allow for deployment. To utlise this method to update the deployed pages the following can be run:
+```bash
+python app.py build
+```
  

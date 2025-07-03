@@ -7,6 +7,6 @@ pages:
   - FLASK_APP=app.py flask freeze
   artifacts:
     paths:
-    - public
+    - docs
   only:
   - main

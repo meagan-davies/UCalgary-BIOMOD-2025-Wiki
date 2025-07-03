@@ -21,7 +21,7 @@ freezer = Freezer(app)
 
 
 #app.config['FREEZER_BASE_URL'] = environ.get('CI_PAGES_URL')
-app.config['FREEZER_DESTINATION'] = 'public'
+app.config['FREEZER_DESTINATION'] = 'docs'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
 freezer = Freezer(app)
