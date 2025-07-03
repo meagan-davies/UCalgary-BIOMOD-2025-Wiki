@@ -22,7 +22,6 @@ The static assets are in the `static` directory. The layout and templates are in
 
 ### Technologies
 
-  * [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/)
   * [Python](https://www.python.org): Programming language
   * [Flask](https://palletsprojects.com/p/flask/): Python framework
   * [Frozen-Flask](https://frozen-flask.readthedocs.io/en/latest/): Library that builds the wiki to be deployed as a static website
