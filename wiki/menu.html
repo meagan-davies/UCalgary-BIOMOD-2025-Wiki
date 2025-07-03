@@ -23,16 +23,16 @@
               Project
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('pages', page='modelling') }}">Modelling</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('render_page', page='description') }}">Description</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('render_page', page='modelling') }}">Modelling</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('render_page', page='experiments') }}">Experiments</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('render_page', page='results') }}">Results</a></li>
             </ul>
           </li>
   
           <!---- NOTEBOOK ---->
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('pages', page='notebook') }}">Notebook</a>
+            <a class="nav-link" href="{{ url_for('render_page', page='notebook') }}">Notebook</a>
           </li>
   
           <!---- ELSI/HUMAN PRACTICES ---->
@@ -41,8 +41,8 @@
               ELSI
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for('pages', page='safety') }}">Safety</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('pages', page='ethics') }}">Ethics</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('render_page', page='safety') }}">Safety</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('render_page', page='ethics') }}">Ethics</a></li>
             </ul>
           </li>
   
@@ -52,8 +52,8 @@
               Team
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for('pages', page='members') }}">Members</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('pages', page='sponsors') }}">Sponsors</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('render_page', page='members') }}">Members</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('render_page', page='sponsors') }}">Sponsors</a></li>
             </ul>
           </li>
         </ul>
