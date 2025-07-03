@@ -8,15 +8,15 @@
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
     <!-- Bootstrap CSS -->
-    <link href="../static/bootstrap.min.css" rel="stylesheet">
+    <link href="static/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../static/style.css" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet">
 
     <!-- Footer Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    <title>Team | UCalgary BIOMOD 2025</title>
+    <title>Project Description | UCalgary BIOMOD 2025</title>
 
 </head>
 <body>
@@ -37,7 +37,7 @@
   
           <!---- HOME ---->
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
   
           <!---- PROJECT ---->
@@ -90,8 +90,8 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">Team</h1>
-	        <p class="lead mb-5 text-white-50">On this page you can introduce your team members, instructors, and advisors.</p>
+          <h1 class="display-4 text-white mt-5 mb-2">Project Description</h1>
+	        <p class="lead mb-5 text-white-50">Describe how and why you chose your iGEM project.</p>
         </div>
       </div>
     </div>
@@ -101,32 +101,52 @@
   <div class="container">
     
 
-<div class="row">
-  <div class="col-8">
+<div class="row mt-4">
+  <div class="col">
+    <div class="bd-callout bd-callout-info">
+      <h4>Bronze Medal Criterion #3</h4>
+      <p>Describe how and why you chose your iGEM project.<p>
+      <hr>
+      <p>Please see  <a href="https://competition.igem.org/judging/medals">2023 Medals Page</a> for more information.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-lg-8">
     <h2>What should this page contain?</h2>
     <hr>
-    <p>
-      Cool new members!
-    <p>
     <ul>
-      <li>Include pictures of your teammates, don't forget instructors and advisors!</li>
-      <li>You can add a small biography or a few words from each team member, to tell us what you like, and what motivated you to participate in iGEM.</li>
-      <li>Take team pictures! Show us your school, your lab and little bit of your city.</li>
-      <li>Remember that image galleries can help you showcase many pictures while saving space.</li>
+      <li>A clear and concise description of your project.</li>
+      <li>A detailed explanation of why your team chose to work on this particular project.</li>
+      <li>References and sources to document your research.</li>
+      <img src="static/Img/Slayer-drawing.png">
     </ul>
-    <div class="bd-callout bd-callout-info"><strong>Important:</strong> Your wiki pages will be archived at the end of the iGEM season and this content will remain online. Please keep this in mind as you post photos and personal information on this page.</div>
   </div>
-  <div class="col-4">
+  <div class="col-lg-4">
     <h2>Inspirations</h2>
     <hr>
     <ul>
-      <li><a href="https://2019.igem.org/Team:CU/Team">2019 CU</a></li>
-      <li><a href="https://2019.igem.org/Team:UANL/Team">2019 UANL</a></li>
-      <li><a href="https://2019.igem.org/Team:William_and_Mary/Team">2019 William and Mary</a></li>
-      <li><a href="https://2020.igem.org/Team:BOKU-Vienna/Team">2020 BOKU Vienna </a></li>
-      <li><a href="https://2020.igem.org/Team:CAU_China/Team_Member">2020 CAU China</a></li>
-      <li><a href="https://2020.igem.org/Team:Lethbridge/Members">2020 Lethbridge</a></li>
+      <li><a href="https://2022.igem.wiki/dtu-denmark/description">2022 DTU-Denmark</a></li>
+      <li><a href="https://2019.igem.org/Team:ITESO_Guadalajara/Description">2019 ITESO Guadalajara</a></li>
+      <li><a href="https://2020.igem.org/Team:Technion-Israel/Description">2020 Technion Israel</a></li>
+      <li><a href="https://2020.igem.org/Team:Botchan_Lab_Tokyo/Description">2020 Botchan Lab Tokyo</a></li>
+      <li><a href="https://2020.igem.org/Team:St_Andrews/Description">2020 St Andrews</a></li>
+      <li><a href="https://2020.igem.org/Team:MIT/Description">2020 MIT</a></li>
     </ul>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-lg-8">
+    <h2>Some advice</h2>
+    <hr>
+    <p>We encourage you to put up a lot of information and content on your wiki, but we also encourage you to include summaries as much as possible. If you think of the sections in your project description as the sections in a publication, you should try to be concise, accurate, and unambiguous in your achievements. Your Project Description should include more information than your project abstract.</p>
+  </div>
+  <div class="col-lg-4">
+    <h2>References</h2>
+    <hr>
+    <p>iGEM teams are encouraged to record references you use during the course of your research. They should be posted somewhere on your wiki so that judges and other visitors can see how you thought about your project and what works inspired you.</p>
   </div>
 </div>
 
@@ -207,6 +227,6 @@
 </footer>
 
   <!-- Bootstrap Bundle with Popper -->
-  <script src="../static/bootstrap.bundle.min.js"></script>
+  <script src="static/bootstrap.bundle.min.js"></script>
 </body>
 </html>

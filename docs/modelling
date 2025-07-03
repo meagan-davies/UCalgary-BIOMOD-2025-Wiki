@@ -8,15 +8,15 @@
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
     <!-- Bootstrap CSS -->
-    <link href="../static/bootstrap.min.css" rel="stylesheet">
+    <link href="static/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../static/style.css" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet">
 
     <!-- Footer Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    <title>Team | UCalgary BIOMOD 2025</title>
+    <title>Model | UCalgary BIOMOD 2025</title>
 
 </head>
 <body>
@@ -37,7 +37,7 @@
   
           <!---- HOME ---->
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
   
           <!---- PROJECT ---->
@@ -90,8 +90,8 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">Team</h1>
-	        <p class="lead mb-5 text-white-50">On this page you can introduce your team members, instructors, and advisors.</p>
+          <h1 class="display-4 text-white mt-5 mb-2">Model</h1>
+	        <p class="lead mb-5 text-white-50">Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.</p>
         </div>
       </div>
     </div>
@@ -101,31 +101,35 @@
   <div class="container">
     
 
-<div class="row">
-  <div class="col-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>
-      Cool new members!
-    <p>
-    <ul>
-      <li>Include pictures of your teammates, don't forget instructors and advisors!</li>
-      <li>You can add a small biography or a few words from each team member, to tell us what you like, and what motivated you to participate in iGEM.</li>
-      <li>Take team pictures! Show us your school, your lab and little bit of your city.</li>
-      <li>Remember that image galleries can help you showcase many pictures while saving space.</li>
-    </ul>
-    <div class="bd-callout bd-callout-info"><strong>Important:</strong> Your wiki pages will be archived at the end of the iGEM season and this content will remain online. Please keep this in mind as you post photos and personal information on this page.</div>
+<div class="row mt-4">
+  <div class="col">
+    <div class="bd-callout bd-callout-info">
+      <h4>Best Model</h4>
+      <p>Models and computer simulations provide a great way to describe the functioning and operation of BioBrick Parts and Devices. Synthetic biology is an engineering discipline and part of engineering is simulation and modeling to determine system behavior before building your design. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before or in conjunction with experiments in the wetlab.</p>
+      <p>To compete for the Best Model prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
+      <hr>
+      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
+    </div>
   </div>
-  <div class="col-4">
+</div>
+
+<div class="row mt-4">
+  <div class="col-lg-8">
+    <h2>Overview</h2>
+    <hr>
+    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
+  </div>
+  <div class="col-lg-4">
     <h2>Inspirations</h2>
     <hr>
     <ul>
-      <li><a href="https://2019.igem.org/Team:CU/Team">2019 CU</a></li>
-      <li><a href="https://2019.igem.org/Team:UANL/Team">2019 UANL</a></li>
-      <li><a href="https://2019.igem.org/Team:William_and_Mary/Team">2019 William and Mary</a></li>
-      <li><a href="https://2020.igem.org/Team:BOKU-Vienna/Team">2020 BOKU Vienna </a></li>
-      <li><a href="https://2020.igem.org/Team:CAU_China/Team_Member">2020 CAU China</a></li>
-      <li><a href="https://2020.igem.org/Team:Lethbridge/Members">2020 Lethbridge</a></li>
+      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
+      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
+      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
+      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
+      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
+      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
+      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
     </ul>
   </div>
 </div>
@@ -207,6 +211,6 @@
 </footer>
 
   <!-- Bootstrap Bundle with Popper -->
-  <script src="../static/bootstrap.bundle.min.js"></script>
+  <script src="static/bootstrap.bundle.min.js"></script>
 </body>
 </html>
