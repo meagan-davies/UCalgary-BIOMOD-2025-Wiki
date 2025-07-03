@@ -8,12 +8,15 @@
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
     <!-- Bootstrap CSS -->
-    <link href="static/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="static/style.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
 
-    <title>Team | Calgary - iGEM 2023</title>
+    <!-- Footer Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <title>Team | UCalgary BIOMOD 2025</title>
 
 </head>
 <body>
@@ -22,7 +25,7 @@
     <div class="container">
   
       <!---- TEAM NAME ---->
-      <a class="navbar-brand" href="#">Calgary</a>
+      <a class="navbar-brand" href="#">UCalgary BIOMOD 2025</a>
   
       <!---- SMALL SCREEN MENU ICON ---->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,18 +37,7 @@
   
           <!---- HOME ---->
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-  
-          <!---- TEAM ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="team" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Team
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="team">Team</a></li>
-              <li><a class="dropdown-item" href="attributions">Attributions</a></li>
-            </ul>
+            <a class="nav-link" href="../index.html">Home</a>
           </li>
   
           <!---- PROJECT ---->
@@ -54,43 +46,39 @@
               Project
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="contribution">Contribution</a></li>
               <li><a class="dropdown-item" href="description">Description</a></li>
-              <li><a class="dropdown-item" href="engineering">Engineering</a></li>
+              <li><a class="dropdown-item" href="modelling">Modelling</a></li>
               <li><a class="dropdown-item" href="experiments">Experiments</a></li>
-              <li><a class="dropdown-item" href="notebook">Notebook</a></li>
               <li><a class="dropdown-item" href="results">Results</a></li>
             </ul>
           </li>
   
-          <!---- SAFETY ---->
+          <!---- NOTEBOOK ---->
           <li class="nav-item">
-            <a class="nav-link" href="safety">Safety</a>
+            <a class="nav-link" href="notebook">Notebook</a>
           </li>
   
-          <!---- HUMAN PRACTICES ---->
-          <li class="nav-item">
-            <a class="nav-link" href="human-practices">Human Practices</a>
-          </li>
-  
-          <!---- AWARDS ---->
+          <!---- ELSI/HUMAN PRACTICES ---->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Awards
+              ELSI
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="education">Education</a></li>
-              <li><a class="dropdown-item" href="entrepreneurship">Entrepreneurship</a></li>
-              <li><a class="dropdown-item" href="hardware">Hardware</a></li>
-              <li><a class="dropdown-item" href="inclusivity">Inclusivity</a></li>
-              <li><a class="dropdown-item" href="measurement">Measurement</a></li>
-              <li><a class="dropdown-item" href="model">Model</a></li>
-              <li><a class="dropdown-item" href="plant">Plant</a></li>
-              <li><a class="dropdown-item" href="software">Software</a></li>
-              <li><a class="dropdown-item" href="sustainable">Sustainable</a></li>
+              <li><a class="dropdown-item" href="safety">Safety</a></li>
+              <li><a class="dropdown-item" href="ethics">Ethics</a></li>
             </ul>
           </li>
   
+          <!---- TEAM ---->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Team
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="members">Members</a></li>
+              <li><a class="dropdown-item" href="sponsors">Sponsors</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -146,43 +134,79 @@
   </div>
 
   <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
-  <footer class="pt-5 pb-5 footer py-5 mt-5 bg-dark text-white">
+  <footer class="pt-5 pb-4 bg-dark text-white">
   <div class="container">
-    <div class="row mb-4">
-      <div class="col-lg-6 col-xs-12">
-        <h4 class="mb-3">Heading</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis</p>
+    <div class="row">
+
+      <!-- Logo + Socials -->
+      <div class="col-lg-4 mb-4">
+        <a href="/">
+          <img src="/img/logo.png" alt="Logo" style="height: 50px;" class="mb-3">
+        </a>
+        <div class="d-flex gap-3">
+          <a href="https://bmerit.web.app/" target="_blank"><i class="fas fa-globe fa-lg text-white"></i></a>
+          <a href="https://www.instagram.com/biomod_ucalgary" target="_blank"><i class="fab fa-instagram fa-lg text-white"></i></a>
+          <a href="https://www.linkedin.com/company/biomedical-engineering-research-and-innovation-team-bmerit-ucalgary" target="_blank"><i class="fab fa-linkedin-in fa-lg text-white"></i></a>
+          <a href="https://www.youtube.com/@ucalgarybiomod" target="_blank"><i class="fab fa-youtube fa-lg text-white"></i></a>
+          <a href="mailto:bmerit@ucalgary.ca"><i class="far fa-envelope fa-lg text-white"></i></a>
+        </div>
       </div>
-      <div class="col-lg-3 col-xs-12">
-        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
-          <ul class="m-2 p-2">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">Nam mauris velit</a></li>
-            <li><a href="#">Etiam vitae mauris</a></li>
-            <li><a href="#">Fusce scelerisque</a></li>
-            <li><a href="#">Sed faucibus</a></li>
-            <li><a href="#">Mauris efficitur nulla</a></li>
-          </ul>
+
+      <!-- Home -->
+      <div class="col-lg-2 mb-4">
+        <h5 class="text-uppercase">Home</h5>
+        <ul class="list-unstyled">
+          <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+        </ul>
       </div>
-      <div class="col-lg-3 col-xs-12">
-        <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-        <p class="mb-0">(541) 754-3010</p>
-        <p>info@hsdf.com</p>
+
+      <!-- Project -->
+      <div class="col-lg-2 mb-4">
+        <h5 class="text-uppercase">Project</h5>
+        <ul class="list-unstyled">
+          <li><a href="/project/description" class="text-white text-decoration-none">Description</a></li>
+          <li><a href="/project/modelling" class="text-white text-decoration-none">Modelling</a></li>
+          <li><a href="/project/experiments" class="text-white text-decoration-none">Experiments</a></li>
+          <li><a href="/project/results" class="text-white text-decoration-none">Results</a></li>
+          <li><a href="/project/notebook" class="text-white text-decoration-none">Notebook</a></li>
+        </ul>
       </div>
+
+      <!-- ELSI -->
+      <div class="col-lg-2 mb-4">
+        <h5 class="text-uppercase">ELSI</h5>
+        <ul class="list-unstyled">
+          <li><a href="/elsi/ethics" class="text-white text-decoration-none">Ethics</a></li>
+          <li><a href="/elsi/safety" class="text-white text-decoration-none">Safety</a></li>
+        </ul>
+      </div>
+
+      <!-- Team -->
+      <div class="col-lg-2 mb-4">
+        <h5 class="text-uppercase">Team</h5>
+        <ul class="list-unstyled">
+          <li><a href="/team/members" class="text-white text-decoration-none">Members</a></li>
+        </ul>
+      </div>
+
     </div>
-    <hr>
-    <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
-    <div class="row mt-4">
-      <div class="col">
-        <p class="mb-0"><small>© 2024 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
-	      <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2024/calgary">gitlab.igem.org/2024/calgary</a>.</small></p>
-      </div>
+
+    <hr class="border-secondary">
+
+    <!-- Disclaimer -->
+    <div class="text-center small">
+      <p class="mb-0">
+        The repository used to create this website is available at
+        <a href="https://github.com/meagan-davies/UCalgary-BIOMOD-2025-Wiki" class="text-white text-decoration-underline" target="_blank">
+          github.com/meagan-davies/UCalgary-BIOMOD-2025-Wiki
+        </a>
+      </p>
     </div>
+
   </div>
 </footer>
 
   <!-- Bootstrap Bundle with Popper -->
-  <script src="static/bootstrap.bundle.min.js"></script>
+  <script src="../static/bootstrap.bundle.min.js"></script>
 </body>
 </html>
