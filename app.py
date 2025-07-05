@@ -19,7 +19,7 @@ freezer = Freezer(app)
 def home():
     return render_template('pages/home.html')
 
-@app.route('/<page>')
+@app.route('/<page>' + '.html')
 def render_page(page):
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
 
