@@ -1,63 +1,71 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-  
-      <!---- TEAM NAME ---->
-      <a class="navbar-brand" href="{{ url_for('home') }}">UCalgary BIOMOD 2025</a>
-  
-      <!---- SMALL SCREEN MENU ICON ---->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto left-aligned">
-  
-          <!---- HOME ---->
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
-          </li>
-  
-          <!---- PROJECT ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Project
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for('render_page', page='description') }}">Description</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('render_page', page='modelling') }}">Modelling</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('render_page', page='experiments') }}">Experiments</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('render_page', page='results') }}">Results</a></li>
-            </ul>
-          </li>
-  
-          <!---- NOTEBOOK ---->
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('render_page', page='notebook') }}">Notebook</a>
-          </li>
-  
-          <!---- ELSI/HUMAN PRACTICES ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ELSI
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for('render_page', page='safety') }}">Safety</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('render_page', page='ethics') }}">Ethics</a></li>
-            </ul>
-          </li>
-  
-          <!---- TEAM ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Team
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for('render_page', page='members') }}">Members</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('render_page', page='sponsors') }}">Sponsors</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+  <div class="container">
+
+    <!-- TEAM NAME -->
+    <a class="navbar-brand" href="{{ url_for('home') }}">UCalgary BIOMOD</a>
+
+    <!-- SMALL SCREEN MENU ICON -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSIBLE NAV -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto"> 
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+
+        <!-- PROJECT -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProject" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownProject">
+            <li><a class="dropdown-item" href="{{ url_for('render_page', page='description') }}">Description</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('render_page', page='modelling') }}">Modelling</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('render_page', page='experiments') }}">Experiments</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('render_page', page='results') }}">Results</a></li>
+          </ul>
+        </li>
+
+        <!-- NOTEBOOK -->
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('render_page', page='notebook') }}">Notebook</a>
+        </li>
+
+        <!-- ELSI -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownELSI" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            ELSI
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownELSI">
+            <li><a class="dropdown-item" href="{{ url_for('render_page', page='safety') }}">Safety</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('render_page', page='ethics') }}">Ethics</a></li>
+          </ul>
+        </li>
+
+        <!-- TEAM -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTeam" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownTeam">
+            <li><a class="dropdown-item" href="{{ url_for('render_page', page='members') }}">Members</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('render_page', page='sponsors') }}">Sponsors</a></li>
+          </ul>
+        </li>
+
+      </ul>
     </div>
-  </nav>
-  
+  </div>
+</nav>
