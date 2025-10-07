@@ -1,0 +1,119 @@
+/* ==== BIOMOD 2025 DARK NAVBAR ==== */
+
+.navbar {
+    background-color: #0b0e17 !important; /* match site bg */
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(79, 163, 255, 0.2);
+    height: auto; /* remove fixed height */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* stay above hero/content */
+}
+
+/* Adjust page offset so content isn't hidden under navbar */
+body {
+    padding-top: 90px; /* fits taller navbar */
+}
+
+/* Team name / logo */
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #4fa3ff !important;
+}
+
+/* Menu items */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    color: #e6e6e6 !important;
+    font-weight: 500;
+    padding: 0.6rem 1rem !important;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    background: linear-gradient(135deg, #4fa3ff33, #62ff8c33);
+    color: #4fa3ff !important;
+    box-shadow: 0 0 10px rgba(79,163,255,0.3);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background-color: #141a29 !important;
+    border: 1px solid rgba(79,163,255,0.15);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    margin-top: 0.3rem;
+    min-width: 180px;
+    padding: 0;
+}
+
+.dropdown-item {
+    color: #e6e6e6 !important;
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background: var(--accent-gradient);
+    color: #fff !important;
+}
+
+/* Dropdowns open on hover (desktop only) */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Toggler (mobile) */
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* Mobile dropdown menu */
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: #0e1220 !important;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .dropdown-menu {
+        background-color: #0e1220 !important;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dropdown-item:hover {
+        background-color: #4fa3ff !important;
+        color: #fff !important;
+    }
+}
