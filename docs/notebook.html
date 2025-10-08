@@ -1,83 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
-    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
-    <!-- Bootstrap CSS -->
-    <link href="static/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap & site CSS (existing includes) -->
+  <link href="static/bootstrap.min.css" rel="stylesheet"/>
+  <link href="static/style.css" rel="stylesheet"/>
+  <link href="static/navbar.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
-    <!-- Custom CSS -->
-    <link href="static/style.css" rel="stylesheet">
+  <title>Notebook | UCalgary BIOMOD 2025</title>
 
-    <!-- Navbar CSS -->
-    <link href="static/navbar.css" rel="stylesheet">
-
-    <!-- Footer Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-    <title>Notebook | UCalgary BIOMOD 2025</title>
-
+  <!-- Minimal page-local tweaks -->
+  <style>
+    .week-bar{position:sticky;top:56px;z-index:1020;background:#0d1b2a;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.1);overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}
+    .week-bar .btn{margin:0 .25rem .25rem 0}
+    .week-section .card-header h3{font-size:1.25rem;margin:0}
+    .week-section .card-header small{color:rgba(255,255,255,.6)}
+    .back-to-top{position:sticky;bottom:12px;float:right}
+    .week-section.ring .card{box-shadow:0 0 0 .25rem rgba(13,202,240,.35)}
+  </style>
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- ===== NAVBAR (unchanged) ===== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-  
-      <!---- TEAM NAME ---->
       <a class="navbar-brand" href="index.html">UCalgary BIOMOD 2025</a>
-  
-      <!---- SMALL SCREEN MENU ICON ---->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto left-aligned">
-  
-          <!---- HOME ---->
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-  
-          <!---- PROJECT ---->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Project
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Project</a>
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="description.html">Description</a></li>
               <li><a class="dropdown-item" href="modelling.html">Modelling</a></li>
               <li><a class="dropdown-item" href="experiments.html">Experiments</a></li>
               <li><a class="dropdown-item" href="results.html">Results</a></li>
             </ul>
           </li>
-  
-          <!---- NOTEBOOK ---->
-          <li class="nav-item">
-            <a class="nav-link" href="notebook.html">Notebook</a>
-          </li>
-  
-          <!---- ELSI/HUMAN PRACTICES ---->
+          <li class="nav-item"><a class="nav-link active" href="notebook.html">Notebook</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ELSI
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ELSI</a>
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="safety.html">Safety</a></li>
               <li><a class="dropdown-item" href="ethics.html">Ethics</a></li>
             </ul>
           </li>
-  
-          <!---- TEAM ---->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Team
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Team</a>
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="members.html">Members</a></li>
               <li><a class="dropdown-item" href="sponsors.html">Sponsors</a></li>
             </ul>
@@ -86,127 +61,753 @@
       </div>
     </div>
   </nav>
-  
 
-  <!-- Header -->
-  <header class="bg-hero py-5 mb-5">
+  <!-- ===== HEADER ===== -->
+  <header class="bg-hero py-5 mb-0">
     <div class="content-container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
           <h1 class="display-4 text-white mt-5 mb-2">Notebook</h1>
-	        <p class="lead mb-5 text-white-50">Document the dates you worked on your project. This should be a detailed account of the work done each day for your project.</p>
+          <p class="lead mb-4 text-white-50">Week-by-week highlights, daily logs, pictures, and who did what.</p>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Page Content -->
-  <div class="content-container">
-    
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Chronological notes of what your team is doing.</li>
-      <li>Brief descriptions of daily important events.</li>
-      <li>Pictures of your progress.</li>
-      <li>Mention who participated in what task.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul> 
-      <li><a href="http://2018.igem.org/Team:Munich/Notebook">2018 Munich</a></li>
-      <li><a href="https://2019.igem.org/Team:Georgia_State/Notebook">2019 Georgia State</a></li>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Notebook">2019 Newcastle</a></li>
-      <li><a href="https://2020.igem.org/Team:IISER-Pune-India/Notebook">2020 IISER Pune India</a></li>
-      <li><a href="https://2020.igem.org/Team:Lund/Notebook">2020 Lund</a></li>
-      <li><a href="https://2020.igem.org/Team:NOVA_LxPortugal/Notebook">2020 NOVA LxPortugal</a></li>
-      <li><a href="https://2020.igem.org/Team:RDFZ-China/NoteBook">2020 RDFZ China</a></li>
-    </ul>
-  </div>
-</div>
-
-
+  <!-- ===== WEEK SELECTOR BAR ===== -->
+  <div class="week-bar">
+    <div class="content-container">
+      <div id="weekButtons" class="d-inline-flex flex-row"></div>
+    </div>
   </div>
 
-  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
-  <footer class="pt-5 pb-4 bg-dark text-white">
-  <div class="container">
-    <div class="row">
+  <!-- ===== PAGE CONTENT ===== -->
+  <div class="content-container my-4">
 
-      <!-- Logo + Socials -->
-      <div class="col-lg-4 mb-4">
-        <a href="index.html">
-          <img src="/img/logo.png" alt="Logo" style="height: 50px;" class="mb-3">
-        </a>
-        <div class="d-flex gap-3">
-          <a href="https://bmerit.web.app/" target="_blank"><i class="fas fa-globe fa-lg text-white"></i></a>
-          <a href="https://www.instagram.com/biomod_ucalgary" target="_blank"><i class="fab fa-instagram fa-lg text-white"></i></a>
-          <a href="https://www.linkedin.com/company/biomedical-engineering-research-and-innovation-team-bmerit-ucalgary" target="_blank"><i class="fab fa-linkedin-in fa-lg text-white"></i></a>
-          <a href="https://www.youtube.com/@ucalgarybiomod" target="_blank"><i class="fab fa-youtube fa-lg text-white"></i></a>
-          <a href="mailto:bmerit@ucalgary.ca"><i class="far fa-envelope fa-lg text-white"></i></a>
+    <div class="alert alert-info small">
+      <strong>How to edit:</strong> Each week is one <code>&lt;section class="week-section"&gt;</code> card.
+      Change <code>data-week</code>, <code>data-dates</code>, and the text inside. Duplicate an entire
+      section to add new weeks. (Buttons above are auto-generated.)
+    </div>
+
+    <!-- =========================================================
+         ==============  WEEK 1 (May 5–9)  =======================
+         Edit inside this section only for Week 1
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-1" data-week="Week 1" data-dates="May 5–9">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 1</h3><small>May 5–9</small>
+        </div>
+        <div class="card-body">
+          <h5>Highlights</h5>
+          <ul>
+            <li>Preliminary notebook template, scheduling, and mentor/prof coordination.</li>
+            <li>TMSD modelling research; enzyme–aptamer modelling; budget + SSAF application.</li>
+            <li>Inventory setup; Faculty Talk prep/presentation; wet-lab templates and protocols started.</li>
+          </ul>
+
+          <h5 class="mt-4">Daily Log</h5>
+
+          <h6 class="mt-3">May 5</h6>
+          <ul>
+            <li><strong>Meagan</strong> (12–2 am): preliminary notebook template; TMSD modelling research; scheduling; meetings; availability tracker.</li>
+            <li><strong>Ella</strong>: reviewed project proposal; TMSD review for specific sequence (in progress); presentation slides (in progress).</li>
+            <li><strong>Jackson</strong>: compared enzyme sizes (β-gal vs HRP); worked on faculty talk slides; modelled β-gal &amp; HRP with ptau ± substrates; added PDBs.</li>
+            <li><strong>Durwyn</strong>: supported budget &amp; finalized SSAF application.</li>
+            <li><strong>Isabel</strong>: completed budget &amp; itinerary for SSAF.</li>
+            <li><strong>Ryland</strong>: LFA literature review (in progress); TMSD procedure revision (in progress).</li>
+            <li><strong>Ria</strong>: aptamer literature review; protocol revisions; compared biotin/streptavidin vs PEG spacers vs other linkers; worked on slides.</li>
+            <li><strong>Zehaan</strong>: generated ssDNA models for TMSD in Chimera; modelled duplex; saved PDBs.</li>
+          </ul>
+
+          <h6 class="mt-3">May 6</h6>
+          <ul>
+            <li><strong>Meagan</strong>: edited Faculty Talk slides; presented to Dr. Cairo; team meeting.</li>
+            <li><strong>Ella</strong>: Faculty Talk script; toehold exchange sequence research; found TMSD sequences; presented to Dr. Cairo.</li>
+            <li><strong>Jackson</strong>: created Faculty Talk script.</li>
+            <li><strong>Mayuri</strong>: Faculty Talk presentation.</li>
+            <li><strong>Durwyn</strong>: Faculty Talk visuals; LFA literature review.</li>
+            <li><strong>Isabel</strong>: added substrate–enzyme protocol slides to Faculty Talk.</li>
+            <li><strong>Ryland</strong>: LFA &amp; attachment methods literature; wet-lab protocol slides.</li>
+          </ul>
+
+          <h6 class="mt-3">May 7</h6>
+          <ul>
+            <li><strong>Meagan</strong>: met lab tech; edited &amp; presented Faculty Talk; emailed mentor; inventory template; sent protocols; wet-lab notebook template; team reminders; updated GANTT &amp; contacts; scheduled meetings; many todos.</li>
+            <li><strong>Ella</strong>: met lab tech; presented; finished slides; started organizing protocols.</li>
+            <li><strong>Jackson</strong>: materials list.</li>
+            <li><strong>Shade</strong>: enzyme/substrate binding lit review; Faculty Talk.</li>
+            <li><strong>Durwyn</strong>: attended Faculty Talk; minutes and feedback notes.</li>
+            <li><strong>Isabel</strong>: LFA lit review; slides on LFA–TMSD integration &amp; enzyme/substrate validation; presented.</li>
+            <li><strong>Ryland</strong>: edited protocols &amp; slides; attended Faculty Talk; α-complementation review.</li>
+            <li><strong>Ria</strong>: presented; edited wet-lab protocol slides; researched protocols; click-chemistry for enzyme–DNA attachment; planned diagrams.</li>
+          </ul>
+
+          <h6 class="mt-3">May 8</h6>
+          <ul>
+            <li><strong>Meagan</strong>: inventory; mentor meeting; brief TMSD modelling review.</li>
+            <li><strong>Ella</strong>: inventory; reviewed safety certificates; daily experimental plans.</li>
+            <li><strong>Durwyn</strong>: meeting; generated ssDNA/DNA models of updated TMSD in Chimera (exported PDB/PNG); to-dos on joining models; brief modelling review.</li>
+            <li><strong>Isabel</strong>: control line protocols research (ongoing); mentor meeting notes (LFA integration, controls, enzyme–substrate reactions, modelling).</li>
+            <li><strong>Ria</strong>: inventory; mentor meeting; lit review on EDC coupling to LFA membrane; click-chemistry protocol.</li>
+          </ul>
+
+          <h6 class="mt-3">May 9</h6>
+          <ul>
+            <li><strong>Meagan</strong>: inventory.</li>
+            <li><strong>Ella</strong>: finished inventory; protocol review; created Week 1 summary.</li>
+          </ul>
+
+          <a href="#" class="btn btn-outline-light btn-sm back-to-top mt-3" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
         </div>
       </div>
+    </section>
 
-      <!-- Home -->
-      <div class="col-lg-2 mb-4">
-        <h5 class="text-uppercase">Home</h5>
-        <ul class="list-unstyled">
-          <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+    <!-- =========================================================
+         ==============  WEEK 2 (May 12–16)  =====================
+         Edit inside this section only for Week 2
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-2" data-week="Week 2" data-dates="May 12–16">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 2</h3><small>May 12–16</small>
+        </div>
+        <div class="card-body">
+          <h5>Highlights</h5>
+          <ul>
+            <li>Wet-lab schedule; materials &amp; equipment lists; protocol edits; attachment chemistry research.</li>
+            <li>In-silico SELEX scripting started; LFA attachment protocols explored.</li>
+          </ul>
+
+          <h5 class="mt-4">Daily Log</h5>
+
+          <h6 class="mt-3">May 12</h6>
+          <ul>
+            <li><strong>Meagan</strong>: reviewed hours/protocols; emailed Ha.</li>
+            <li><strong>Ella</strong>: created wet-lab schedule; protocol comments.</li>
+            <li><strong>Jackson</strong>: finalized materials list; in-silico SELEX &amp; sequence program research.</li>
+            <li><strong>Shade</strong>: equipment list from protocols; LFA literature.</li>
+            <li><strong>Ryland</strong>: NC membrane protein-binding; epoxide–thiol; diaminoalkane–glutaraldehyde; β-gal–NC attachment protocol.</li>
+            <li><strong>Ria</strong>: protocol edits; functional-group attachment lit review.</li>
+            <li><strong>Zehaan</strong>: in-silico SELEX with Jackson; docking software research (AutoDock, MOE, DockingServer).</li>
+          </ul>
+
+          <h6 class="mt-3">May 13</h6>
+          <ul>
+            <li><strong>Jackson</strong>: SELEX sequence generator (in progress); aptamer length review; materials list work.</li>
+            <li><strong>Mayuri</strong>: materials list.</li>
+            <li><strong>Durwyn</strong>: joined TMSD + literature aptamer models in Chimera; uploaded updated structures; LFA review (nucleic-acid aptamer-based).</li>
+            <li><strong>Isabel</strong>: waste-disposal investigation.</li>
+            <li><strong>Ria</strong>: HRP-to-DNA attachment literature.</li>
+          </ul>
+
+          <h6 class="mt-3">May 14</h6>
+          <ul>
+            <li><strong>Ria</strong>: completed HRP-to-DNA and TMB-to-DNA literature review; added to <em>Attachment Methods → TMB/HRP</em>.</li>
+            <li><strong>Zehaan</strong>: Python script to generate SELEX banks; docking work continues.</li>
+          </ul>
+
+          <h6 class="mt-3">May 15</h6>
+          <ul>
+            <li><strong>Meagan</strong>: ordered materials; receipts to MindFuel; mentor meeting.</li>
+            <li><strong>Ella</strong>: met Dr. Pandey; helped order materials.</li>
+            <li><strong>Shade</strong>: LFA assembly procedure; mentor meeting.</li>
+            <li><strong>Durwyn</strong>: mentor meeting.</li>
+            <li><strong>Isabel</strong>: modelling software exploration; reviewed code from Zehaan &amp; Jackson.</li>
+            <li><strong>Ria</strong>: mentor meeting; pros/cons list for colorimetric pairs (started).</li>
+          </ul>
+
+          <h6 class="mt-3">May 16</h6>
+          <ul>
+            <li><strong>Meagan</strong>: MindFuel RSVP; Dr. Pandey meeting; lab orientation; emailed docs to Lindsay &amp; Ha.</li>
+            <li><strong>Ella</strong>: Dr. Pandey meeting.</li>
+            <li><strong>Mayuri</strong>, <strong>Shade</strong>, <strong>Durwyn</strong>, <strong>Ryland</strong>, <strong>Ria</strong>, <strong>Zehaan</strong>: lab orientation (as listed).</li>
+          </ul>
+
+          <a href="#" class="btn btn-outline-light btn-sm back-to-top mt-3" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 3 (May 19–23)  =====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-3" data-week="Week 3" data-dates="May 19–23">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 3</h3><small>May 19–23</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+
+          <h6 class="mt-3">May 19 (Victoria Day)</h6>
+          <ul>
+            <li><strong>Meagan</strong>: revised 2024 GANTT; DNA biosensor research.</li>
+            <li><strong>Shade</strong>: completed LFA literature review.</li>
+          </ul>
+
+          <h6 class="mt-3">May 20</h6>
+          <ul>
+            <li><strong>Ella</strong>: compiled prior notes; outlined MindFuel prototype; reviewed mentor minutes; updated wet-lab schedule (new start).</li>
+            <li><strong>Jackson</strong>: organized judges’ notes from MindFuel pitch.</li>
+            <li><strong>Durwyn</strong>: finished substrate &amp; aptamer LFA models; uploaded; finished nucleic-acid LFA review.</li>
+            <li><strong>Ryland</strong>: protocol work.</li>
+          </ul>
+
+          <h6 class="mt-3">May 21</h6>
+          <ul>
+            <li><strong>Ella</strong>, <strong>Jackson</strong>, <strong>Mayuri</strong>, <strong>Durwyn</strong>, <strong>Isabel</strong>: MindFuel slide work (visuals, models, outline for prototype video).</li>
+          </ul>
+
+          <h6 class="mt-3">May 22</h6>
+          <ul>
+            <li><strong>Ella</strong>: confirmed in-lab schedules; slides; poster planning.</li>
+            <li><strong>Durwyn</strong>: slides; presented at mentor meeting.</li>
+            <li><strong>Isabel</strong>: BioRender image; proposal update.</li>
+            <li><strong>Ria</strong>: slides; presented at mentor meeting.</li>
+          </ul>
+
+          <h6 class="mt-3">May 23</h6>
+          <ul>
+            <li><strong>Ella</strong>: edited MindFuel slides from feedback; weekly summary; poster &amp; wet-lab schedule.</li>
+            <li><strong>Jackson</strong>: salivary biomarkers document.</li>
+            <li><strong>Ria</strong>: edited MindFuel slides/scripts to be concise.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 4 (May 26–30)  =====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-4" data-week="Week 4" data-dates="May 26–30">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 4</h3><small>May 26–30</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+
+          <h6 class="mt-3">May 26</h6>
+          <ul>
+            <li><strong>Meagan</strong>: week planning; meetings (Ella, Faeez).</li>
+            <li><strong>Ella</strong>: week planning; poster/video script work.</li>
+            <li><strong>Jackson</strong>: IDT ordering research.</li>
+            <li><strong>Durwyn</strong>: MindFuel video script outline finalized.</li>
+            <li><strong>Ryland</strong>: reviewed v5 proposal comments.</li>
+            <li><strong>Ria</strong>: video script.</li>
+          </ul>
+
+          <h6 class="mt-3">May 27</h6>
+          <ul>
+            <li><strong>Ella</strong>: poster for MindFuel; recorded script.</li>
+            <li><strong>Durwyn</strong>: video editing; finished &amp; uploaded MindFuel prototype video.</li>
+            <li><strong>Isabel</strong>: BioRender images; poster creation.</li>
+            <li><strong>Ryland</strong>: protocols updated w/ substrate–enzyme pair.</li>
+          </ul>
+
+          <h6 class="mt-3">May 28</h6>
+          <ul>
+            <li><strong>Ella</strong>: transport materials list.</li>
+            <li><strong>Durwyn</strong>: finished modelling script for prototype presentation; uploaded video + description.</li>
+            <li><strong>Isabel</strong>: MindFuel presentation work.</li>
+            <li><strong>Ryland</strong>: HRP research.</li>
+            <li><strong>Ria</strong>: presented to mentor; follow-up research.</li>
+          </ul>
+
+          <h6 class="mt-3">May 29</h6>
+          <ul>
+            <li><strong>Durwyn</strong>: mentor meeting; finished project display.</li>
+            <li><strong>Isabel</strong>: mentor meeting; patent on new AD biomarkers.</li>
+            <li><strong>Ria</strong>: mentor meeting; HRP vs β-gal pros/cons.</li>
+          </ul>
+
+          <h6 class="mt-3">May 30</h6>
+          <ul>
+            <li><strong>Isabel</strong>: memorized MindFuel script; slide/script edits.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 5 (Jun 2–6)  =======================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-5" data-week="Week 5" data-dates="June 2–6">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 5</h3><small>June 2–6</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <h6 class="mt-3">June 2</h6>
+          <ul><li><strong>Ella</strong>: created prior-week summary.</li></ul>
+
+          <h6 class="mt-3">June 3</h6>
+          <ul>
+            <li><strong>Ella</strong>: edited experimental schedule; reviewed protocol comments.</li>
+            <li><strong>Jillian</strong>: addressed judges’ RBC filtration comments.</li>
+            <li><strong>Durwyn</strong>: protocol work; LoD research for blood/saliva biomarkers.</li>
+            <li><strong>Isabel</strong>: proposal edits.</li>
+            <li><strong>Ryland</strong>, <strong>Ria</strong>: protocol work.</li>
+          </ul>
+
+          <h6 class="mt-3">June 4</h6>
+          <ul>
+            <li><strong>Ella</strong>: worked on proposal v5.</li>
+            <li><strong>Ria</strong>: reviewed protocol comments.</li>
+          </ul>
+
+          <h6 class="mt-3">June 5</h6>
+          <ul>
+            <li><strong>Meagan</strong>, <strong>Ella</strong>, <strong>Jillian</strong>, <strong>Zehaan</strong>: transported materials.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 6 (Jun 9–13)  ======================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-6" data-week="Week 6" data-dates="June 9–13">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 6</h3><small>June 9–13</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <h6 class="mt-3">June 9</h6>
+          <ul>
+            <li><strong>Ella</strong>: weekly summary; team-bonding planning; protocol-confirming literature.</li>
+            <li><strong>Ria</strong>: protocol edits based on comments.</li>
+          </ul>
+
+          <h6 class="mt-3">June 11</h6>
+          <ul>
+            <li><strong>Ria</strong>: qPCR techniques; Cell-SELEX aptamer article shared; biomarker research.</li>
+          </ul>
+
+          <h6 class="mt-3">June 12</h6>
+          <ul>
+            <li><strong>Ryland</strong>: edited protocols to use HRP; HRP application research.</li>
+          </ul>
+
+          <h6 class="mt-3">June 13</h6>
+          <ul>
+            <li><strong>Ryland</strong>: continued HRP protocol edits &amp; research.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 7 (Jun 16–20)  =====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-7" data-week="Week 7" data-dates="June 16–20">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 7</h3><small>June 16–20</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <h6 class="mt-3">June 16</h6>
+          <ul>
+            <li><strong>Jackson</strong>: AutoDock docking research; PDBs for p-T181 &amp; p-T231; phosphorylating tau with Zehaan (ChimeraX/PyMOL).</li>
+            <li><strong>Ryland</strong>: primer design research.</li>
+            <li><strong>Ria</strong>: primer sequences + materials tab + Tm values.</li>
+          </ul>
+
+          <h6 class="mt-3">June 17</h6>
+          <ul>
+            <li><strong>Jackson</strong>: primer details (Tm/dimers/ΔG etc.); how-to doc for in-silico SELEX.</li>
+          </ul>
+
+          <h6 class="mt-3">June 18</h6>
+          <ul><li><strong>Jillian</strong>: aptamer docking controls.</li></ul>
+
+          <h6 class="mt-3">June 19</h6>
+          <ul>
+            <li><strong>Jackson</strong>: WinCoot setup; phosphorylation workflow.</li>
+            <li><strong>Jillian</strong>: aptamer docking controls.</li>
+            <li><strong>Durwyn</strong>: BIOMOD wiki design concept; photo scheduling; team questions &amp; form.</li>
+          </ul>
+
+          <h6 class="mt-3">June 20</h6>
+          <ul>
+            <li><strong>Jackson</strong>: materials list check; phosphorylation research.</li>
+            <li><strong>Ryland</strong>: protocol reviewing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 8 (Jun 23–27)  =====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-8" data-week="Week 8" data-dates="June 23–27">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 8</h3><small>June 23–27</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+
+          <h6 class="mt-3">June 23</h6>
+          <ul>
+            <li><strong>Jackson</strong>: phosphorylating tau in WinCoot; SU Conference funding application work.</li>
+          </ul>
+
+          <h6 class="mt-3">June 24</h6>
+          <ul>
+            <li><strong>Durwyn</strong>: “Meet the Team” form; wiki design; SU funding application.</li>
+          </ul>
+
+          <h6 class="mt-3">June 25</h6>
+          <ul>
+            <li><strong>Jackson</strong>: coordinated WinCoot phosphorylation with Zehaan; SU funding application.</li>
+          </ul>
+
+          <h6 class="mt-3">June 26</h6>
+          <ul>
+            <li><strong>Meagan</strong>: completed phosphorylated tau (181/231) in WinCoot; emails; commercialization/photo when2meets; wiki profile.</li>
+            <li><strong>Isabel</strong>: surveyed past iGEM/BIOMOD wikis (incl. best-website winners).</li>
+            <li><strong>Ria</strong>: developed aptamer-TMSD sequences; researched alternative columns &amp; unmodified oligo options.</li>
+          </ul>
+
+          <h6 class="mt-3">June 27</h6>
+          <ul>
+            <li><strong>Isabel</strong>: continued wiki survey.</li>
+            <li><strong>Ryland</strong>: protocol reviewing; team description form.</li>
+            <li><strong>Ria</strong>: worked on SU funding application (June 28).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 9 (Jun 30–Jul 4)  ==================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-9" data-week="Week 9" data-dates="June 30–July 4">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 9</h3><small>June 30–July 4</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+
+          <h6 class="mt-3">June 30</h6>
+          <ul>
+            <li><strong>Jackson</strong>: primer review + primer design doc; protocol &amp; materials review.</li>
+            <li><strong>Isabel</strong>, <strong>Ryland</strong>, <strong>Ria</strong>, <strong>Zehaan</strong>: SU funding application completed.</li>
+          </ul>
+
+          <h6 class="mt-3">July 1 (Canada Day)</h6>
+          <ul><li>—</li></ul>
+
+          <h6 class="mt-3">July 2</h6>
+          <ul>
+            <li><strong>Ella</strong>: weekly summary &amp; schedule updates; meeting minutes.</li>
+            <li><strong>Mayuri</strong>: materials list — justification &amp; protocol comparison.</li>
+            <li><strong>Ryland</strong>, <strong>Ria</strong>: asymmetric PCR reading; pricing &amp; sequence updates; outreach to 2024 BIOMOD for PCR help; team meeting.</li>
+          </ul>
+
+          <h6 class="mt-3">July 3</h6>
+          <ul>
+            <li><strong>Mayuri</strong>: Chimera interview questions; materials list; started Tris buffers.</li>
+            <li><strong>Jillian</strong>, <strong>Durwyn</strong>, <strong>Isabel</strong>, <strong>Ryland</strong>: Chimera interview questions work (various).</li>
+          </ul>
+
+          <h6 class="mt-3">July 4</h6>
+          <ul><li>—</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 10 (Jul 7–11)  =====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-10" data-week="Week 10" data-dates="July 7–11">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 10</h3><small>July 7–11</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+
+          <h6 class="mt-3">July 7</h6>
+          <ul>
+            <li><strong>Jillian</strong>: novelty review.</li>
+            <li><strong>Ryland</strong>: asymmetric PCR + purification methods reading; protocols for asymmetric PCR &amp; denaturing PAGE; ongoing λ-exonuclease ssDNA purification protocol.</li>
+          </ul>
+
+          <h6 class="mt-3">July 8</h6>
+          <ul>
+            <li><strong>Mayuri</strong> &amp; <strong>Durwyn</strong>: made 1 L Tris pH 7.5 (calibrated pH meter; diluted HCl; titration to pH 7.49); started 500 mL Tris pH 8.0.</li>
+          </ul>
+
+          <h6 class="mt-3">July 9</h6>
+          <ul>
+            <li><strong>Mayuri</strong>: finished 50 mM Tris-HCl pH 8.0 (500 mL); documented titration &amp; corrections.</li>
+            <li><strong>Jillian</strong>: novelty review.</li>
+          </ul>
+
+          <h6 class="mt-3">July 10</h6>
+          <ul>
+            <li><strong>Mayuri</strong>: updated notebook for lab work; materials list review.</li>
+          </ul>
+
+          <h6 class="mt-3">July 11</h6>
+          <ul>
+            <li><strong>Mayuri</strong>: Chimera interview questions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 11 (Jul 14–18)  ====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-11" data-week="Week 11" data-dates="July 14–18">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 11</h3><small>July 14–18</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <h6 class="mt-3">July 14</h6>
+          <ul><li><strong>Mayuri</strong>: lit review — TBE vs Tris-HCl buffer.</li></ul>
+
+          <h6 class="mt-3">July 17</h6>
+          <ul>
+            <li><strong>Meagan</strong>: PI meeting; sequence spreadsheet edits (internal amino-mod for TMB; folding behavior; concentration &amp; purification fixes).</li>
+            <li><strong>Jackson</strong>: prepared aptamer + ligand docking files for pTau181 &amp; pTau231.</li>
+          </ul>
+
+          <h6 class="mt-3">July 18</h6>
+          <ul><li><strong>Mayuri</strong>: TBE vs Tris-HCl lit review (continued).</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 12 (Jul 21–25)  ====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-12" data-week="Week 12" data-dates="July 21–25">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 12</h3><small>July 21–25</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+
+          <h6 class="mt-3">July 21</h6>
+          <ul><li><strong>Mayuri</strong>: prepared 1× TBE buffer (500 mL).</li></ul>
+
+          <h6 class="mt-3">July 22</h6>
+          <ul>
+            <li><strong>Jackson</strong>, <strong>Zehaan</strong>: molecular docking work.</li>
+          </ul>
+
+          <h6 class="mt-3">July 24</h6>
+          <ul>
+            <li><strong>Jackson</strong>: molecular docking.</li>
+          </ul>
+
+          <h6 class="mt-3">July 25</h6>
+          <ul>
+            <li><strong>Jackson</strong>: finished docking; downloaded &amp; organized files.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 13 (Jul 28–Aug 1)  =================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-13" data-week="Week 13" data-dates="July 28–Aug 1">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 13</h3><small>July 28–Aug 1</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <h6 class="mt-3">July 30</h6>
+          <ul>
+            <li><strong>Isabel</strong>: SDS for materials; BIOMOD meeting.</li>
+          </ul>
+          <h6 class="mt-3">July 31</h6>
+          <ul><li><strong>Isabel</strong>: SDS for materials (continued).</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 14 (Aug 4–8)  ======================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-14" data-week="Week 14" data-dates="Aug 4–8">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 14</h3><small>Aug 4–8</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <h6 class="mt-3">Aug 4 (Alberta Day)</h6>
+          <ul><li>—</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 15 (Aug 11–15)  ====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-15" data-week="Week 15" data-dates="Aug 11–15">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 15</h3><small>Aug 11–15</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <ul><li>—</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 16 (Aug 18–22)  ====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-16" data-week="Week 16" data-dates="Aug 18–22">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 16</h3><small>Aug 18–22</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <ul><li>—</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ==============  WEEK 17 (Aug 25–29)  ====================
+         ======================================================= -->
+    <section class="week-section mb-4" id="week-17" data-week="Week 17" data-dates="Aug 25–29 (Block Week)">
+      <div class="card bg-dark text-white">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Week 17</h3><small>Aug 25–29 (Block Week)</small>
+        </div>
+        <div class="card-body">
+          <h5>Daily Log</h5>
+          <ul><li>—</li></ul>
+
+          <h5 class="mt-4">September Notes</h5>
+          <ul>
+            <li><strong>Sept 2–3 — Ria</strong>: added colorimetric standard-curve prep protocol to protocols.</li>
+            <li><strong>Sept 11 — Ria</strong>: added aptazyme testing &amp; conformation testing to protocols.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== What + Inspirations (kept from your page) ===== -->
+    <div class="row mt-5">
+      <div class="col-lg-8">
+        <h2>What should this page contain?</h2>
+        <hr>
+        <ul>
+          <li>Chronological notes of what your team is doing.</li>
+          <li>Brief descriptions of daily important events.</li>
+          <li>Pictures of your progress.</li>
+          <li>Mention who participated in what task.</li>
         </ul>
       </div>
-
-      <!-- Project -->
-      <div class="col-lg-2 mb-4">
-        <h5 class="text-uppercase">Project</h5>
-        <ul class="list-unstyled">
-          <li><a href="description.html" class="text-white text-decoration-none">Description</a></li>
-          <li><a href="modelling.html" class="text-white text-decoration-none">Modelling</a></li>
-          <li><a href="experiments.html" class="text-white text-decoration-none">Experiments</a></li>
-          <li><a href="results.html" class="text-white text-decoration-none">Results</a></li>
-          <li><a href="notebook.html" class="text-white text-decoration-none">Notebook</a></li>
+      <div class="col-lg-4">
+        <h2>Inspirations</h2>
+        <hr>
+        <ul>
+          <li><a href="http://2018.igem.org/Team:Munich/Notebook" target="_blank">2018 Munich</a></li>
+          <li><a href="https://2019.igem.org/Team:Georgia_State/Notebook" target="_blank">2019 Georgia State</a></li>
+          <li><a href="https://2019.igem.org/Team:Newcastle/Notebook" target="_blank">2019 Newcastle</a></li>
+          <li><a href="https://2020.igem.org/Team:IISER-Pune-India/Notebook" target="_blank">2020 IISER Pune India</a></li>
+          <li><a href="https://2020.igem.org/Team:Lund/Notebook" target="_blank">2020 Lund</a></li>
+          <li><a href="https://2020.igem.org/Team:NOVA_LxPortugal/Notebook" target="_blank">2020 NOVA LxPortugal</a></li>
+          <li><a href="https://2020.igem.org/Team:RDFZ-China/NoteBook" target="_blank">2020 RDFZ China</a></li>
         </ul>
       </div>
-
-      <!-- ELSI -->
-      <div class="col-lg-2 mb-4">
-        <h5 class="text-uppercase">ELSI</h5>
-        <ul class="list-unstyled">
-          <li><a href="ethics.html" class="text-white text-decoration-none">Ethics</a></li>
-          <li><a href="safety.html" class="text-white text-decoration-none">Safety</a></li>
-        </ul>
-      </div>
-
-      <!-- Team -->
-      <div class="col-lg-2 mb-4">
-        <h5 class="text-uppercase">Team</h5>
-        <ul class="list-unstyled">
-          <li><a href="members.html" class="text-white text-decoration-none">Members</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <hr class="border-secondary">
-
-    <!-- Disclaimer -->
-    <div class="text-center small">
-      <p class="mb-0">
-        The repository used to create this website is available at
-        <a href="https://github.com/meagan-davies/UCalgary-BIOMOD-2025-Wiki" class="text-white text-decoration-underline" target="_blank">
-          github.com/meagan-davies/UCalgary-BIOMOD-2025-Wiki
-        </a>
-      </p>
     </div>
 
   </div>
-</footer>
 
-  <!-- Bootstrap Bundle with Popper -->
+  <!-- ===== FOOTER (unchanged) ===== -->
+  <footer class="pt-5 pb-4 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <a href="index.html"><img src="/img/logo.png" alt="Logo" style="height: 50px;" class="mb-3"/></a>
+          <div class="d-flex gap-3">
+            <a href="https://bmerit.web.app/" target="_blank"><i class="fas fa-globe fa-lg text-white"></i></a>
+            <a href="https://www.instagram.com/biomod_ucalgary" target="_blank"><i class="fab fa-instagram fa-lg text-white"></i></a>
+            <a href="https://www.linkedin.com/company/biomedical-engineering-research-and-innovation-team-bmerit-ucalgary" target="_blank"><i class="fab fa-linkedin-in fa-lg text-white"></i></a>
+            <a href="https://www.youtube.com/@ucalgarybiomod" target="_blank"><i class="fab fa-youtube fa-lg text-white"></i></a>
+            <a href="mailto:bmerit@ucalgary.ca"><i class="far fa-envelope fa-lg text-white"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h5 class="text-uppercase">Home</h5>
+          <ul class="list-unstyled"><li><a href="/" class="text-white text-decoration-none">Home</a></li></ul>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h5 class="text-uppercase">Project</h5>
+          <ul class="list-unstyled">
+            <li><a href="description.html" class="text-white text-decoration-none">Description</a></li>
+            <li><a href="modelling.html" class="text-white text-decoration-none">Modelling</a></li>
+            <li><a href="experiments.html" class="text-white text-decoration-none">Experiments</a></li>
+            <li><a href="results.html" class="text-white text-decoration-none">Results</a></li>
+            <li><a href="notebook.html" class="text-white text-decoration-none">Notebook</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h5 class="text-uppercase">ELSI</h5>
+          <ul class="list-unstyled">
+            <li><a href="ethics.html" class="text-white text-decoration-none">Ethics</a></li>
+            <li><a href="safety.html" class="text-white text-decoration-none">Safety</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h5 class="text-uppercase">Team</h5>
+          <ul class="list-unstyled"><li><a href="members.html" class="text-white text-decoration-none">Members</a></li></ul>
+        </div>
+      </div>
+      <hr class="border-secondary"/>
+      <div class="text-center small">
+        <p class="mb-0">The repository used to create this website is available at
+          <a href="https://github.com/meagan-davies/UCalgary-BIOMOD-2025-Wiki" class="text-white text-decoration-underline" target="_blank">github.com/meagan-davies/UCalgary-BIOMOD-2025-Wiki</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
   <script src="static/bootstrap.bundle.min.js"></script>
+  <script>
+    // Build week buttons from sections
+    (function () {
+      const container = document.getElementById('weekButtons');
+      const sections = document.querySelectorAll('.week-section');
+      sections.forEach((sec, i) => {
+        const label = sec.dataset.week || `Week ${i+1}`;
+        const dates = sec.dataset.dates ? ` (${sec.dataset.dates})` : '';
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn btn-outline-light btn-sm';
+        btn.innerHTML = `${label}<span class="text-secondary d-none d-sm-inline">${dates}</span>`;
+        btn.addEventListener('click', () => {
+          sec.scrollIntoView({behavior:'smooth', block:'start'});
+          sec.classList.add('ring'); setTimeout(()=>sec.classList.remove('ring'), 800);
+        });
+        container.appendChild(btn);
+      });
+    })();
+  </script>
 </body>
 </html>
