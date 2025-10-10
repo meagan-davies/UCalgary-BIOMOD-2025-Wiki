@@ -16,85 +16,81 @@
     <!-- Navbar CSS -->
     <link href="static/navbar.css" rel="stylesheet">
 
+     <!-- Sidenav CSS -->
+    <link href="static/sidenav.css" rel="stylesheet">
+
     <!-- Footer Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    <title>Project Description | UCalgary BIOMOD 2025</title>
+    <title>Description | UCalgary BIOMOD 2025</title>
 
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-  
-      <!---- TEAM NAME ---->
-      <a class="navbar-brand" href="index.html">UCalgary BIOMOD 2025</a>
-  
-      <!---- SMALL SCREEN MENU ICON ---->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto left-aligned">
-  
-          <!---- HOME ---->
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-  
-          <!---- PROJECT ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Project
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="description.html">Description</a></li>
-              <li><a class="dropdown-item" href="modelling.html">Modelling</a></li>
-              <li><a class="dropdown-item" href="experiments.html">Experiments</a></li>
-              <li><a class="dropdown-item" href="results.html">Results</a></li>
-            </ul>
-          </li>
-  
-          <!---- NOTEBOOK ---->
-          <li class="nav-item">
-            <a class="nav-link" href="notebook.html">Notebook</a>
-          </li>
-  
-          <!---- ELSI/HUMAN PRACTICES ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ELSI
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="safety.html">Safety</a></li>
-              <li><a class="dropdown-item" href="ethics.html">Ethics</a></li>
-            </ul>
-          </li>
-  
-          <!---- TEAM ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Team
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="members.html">Members</a></li>
-              <li><a class="dropdown-item" href="sponsors.html">Sponsors</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+  <div class="container">
+
+    <!-- TEAM NAME -->
+    <a class="navbar-brand" href="index.html">UCalgary BIOMOD</a>
+
+    <!-- SMALL SCREEN MENU ICON -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSIBLE NAV -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto"> 
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <!-- PROJECT -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProject" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownProject">
+            <li><a class="dropdown-item" href="description.html">Description</a></li>
+            <li><a class="dropdown-item" href="modelling.html">Modelling</a></li>
+            <li><a class="dropdown-item" href="experiments.html">Experiments</a></li>
+            <li><a class="dropdown-item" href="results.html">Results</a></li>
+          </ul>
+        </li>
+
+        <!-- NOTEBOOK -->
+        <li class="nav-item">
+          <a class="nav-link" href="notebook.html">Notebook</a>
+        </li>
+
+        <!-- ELSI -->
+        <li class="nav-item">
+          <a class="nav-link" href="elsi.html">ELSI</a>
+        </li>
+
+        <!-- TEAM -->
+        <li class="nav-item">
+          <a class="nav-link" href="team.html">Team</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-  
+  </div>
+</nav>
 
   <!-- Header -->
   <header class="bg-hero py-5 mb-5">
     <div class="content-container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">Project Description</h1>
-	        <p class="lead mb-5 text-white-50">Describe how and why you chose your iGEM project.</p>
+          <h1 class="display-4 text-white mt-5 mb-2">Description</h1>
+	        <p class="lead mb-5 text-white-50">Overview of the DNADetect Alzheimer’s Disease Biosensor</p>
         </div>
       </div>
     </div>
@@ -102,58 +98,104 @@
 
   <!-- Page Content -->
   <div class="content-container">
+    <div class="row">
+      
+        <div class="col-lg-2 d-none d-lg-block">
+          <nav id="sidenav" class="sidenav">
+  <ul>
     
+      <li><a href="#background" id="link-background">Background</a></li>
+    
+      <li><a href="#project" id="link-project">Project</a></li>
+    
+      <li><a href="#feasibility" id="link-feasibility">Feasibility</a></li>
+    
+      <li><a href="#merit" id="link-merit">Merit</a></li>
+    
+      <li><a href="#references" id="link-references">References</a></li>
+    
+  </ul>
+</nav>
+        </div>
+        <div class="col-lg-10 col-12">
+      
+          
+<section id="background" class="mb-3">
+  <h2 class="section-title">Background</h2>
+  <div class="divider"></div>
+  <p>
+    The early detection of Alzheimer’s disease is critically important, as it enables timely therapeutic intervention, informed lifestyle modifications, and proactive care planning prior to the onset of significant and irreversible cognitive decline. Early identification also facilitates patient enrollment in clinical trials and access to emerging therapeutic modalities, while equipping caregivers and healthcare professionals with the necessary information to optimize long-term disease management. Despite its clinical significance, existing diagnostic methodologies are often invasive, prohibitively costly, or insufficiently sensitive to detect subtle molecular alterations during the prodromal phase.
+  </p>
+  <p>
+    To address this gap, we are developing a prototype biosensor designed to detect Alzheimer’s disease through blood-based biomarkers. At the core of this system is an aptazyme, a hybrid nucleic acid construct that combines the high-affinity binding capacity of an aptamer with the catalytic properties of a ribozyme. Upon binding its target biomarker, the aptazyme undergoes a conformational change that activates its enzymatic function, producing a distinct colorimetric signal. This approach enables rapid, sensitive, and minimally invasive detection, offering a cost-effective alternative to conventional diagnostic technologies.
+  </p>
+  <p>
+    The overarching aim of this research is to establish a practical and reliable platform for the early diagnosis of Alzheimer’s disease, thereby improving clinical outcomes and reducing the broader societal and economic burden associated with the condition. Future directions include extending the biosensor’s functionality to saliva-based detection, further enhancing accessibility and non-invasiveness. Such advancements would support point-of-care diagnostics and at-home screening, significantly broadening applicability and transforming current approaches to Alzheimer’s disease detection and management across both clinical and community health settings.
+  </p>
+</section>
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #3</h4>
-      <p>Describe how and why you chose your iGEM project.<p>
-      <hr>
-      <p>Please see  <a href="https://competition.igem.org/judging/medals">2023 Medals Page</a> for more information.</p>
+<section id="project" class="mb-3">
+  <h2 class="section-title">Project</h2>
+  <div class="divider"></div>
+  <h3>Relevance</h3>
+  <p>
+    The proposed solution of an aptamer-based biosensor with a colorimetric reaction as its main mechanism directly targets the critical challenge of rapid, non-invasive diagnosis of Alzheimer’s disease.
+  </p>
+</section>
+
+<section id="feasibility" class="mb-3">
+  <h2>Feasibility</h2>
+  <p>
+    Our design is a DNA-based biosensor integrated into a lateral flow assay for early Alzheimer's disease detection, using well-established biosensing and biochemical design concepts to create a practical system. The main mechanism of the sensor relies on a DNA aptazyme that undergoes conformational changes upon contact with the target blood-based biomarker. When this binding occurs, the DNA aptazyme brings together a horseradish peroxidase (HRP) and tetramethylbenzidine (TMB) pair to produce a visible colorimetric reaction in the form of a blue signal, confirming detection.
+  </p>
+  <p>
+    The design procedure and system have been evaluated to consider flexibility and reusability, incorporating a toehold-mediated strand exchange to allow for the replacement of a used aptazyme component and resetting the detection system. This is not only useful in changing the system to bind with different biomarkers, but allows for multiple uses of the same mechanism, without taking apart the entire structure. Feasibility is strengthened by the use of in-silico SELEX for choosing ideal aptazyme sequences, and backup sequences from literature to help account for sequencing delays or setbacks. Additionally, extensive computational modeling for structure and docking validation has been completed. Many principle elements of the biosensor, including the colorimetric reaction, aptazymes for biosensing, and the use of blood-based biomarkers for detection are extensively researched and reviewed in prior studies.
+  </p>
+</section>
+
+<section id="merit" class="mb-3">
+  <h2>Merit</h2>
+  <p>
+    This project directly addresses the critical gap in rapid, non-invasive diagnostic tools for Alzheimer’s disease, offering an innovative solution where existing methods remain inadequate. Current clinical approaches, such as positron emission tomography (PET) scans and lumbar punctures, are costly, invasive, and impractical for routine screening. As a result, diagnosis is often delayed until significant disease progression has already occurred.
+  </p>
+  <p>
+    The global demand for improved diagnostics is substantial. More than 50 million individuals worldwide are affected by Alzheimer’s disease and related dementias, with annual care costs exceeding $1 trillion USD. Within Canada, over 750,000 individuals currently live with Alzheimer’s disease, and this figure continues to rise each year. These statistics underscore the urgent need for diagnostic technologies that are scalable, affordable, and accessible.
+  </p>
+  <p>
+    A central innovation lies in the construction of aptazymes. Aptamers, carefully selected for their high specificity to Alzheimer’s biomarkers, are engineered to integrate with enzymatic components. Upon target recognition, the conformational change in the aptamer initiates an enzyme–substrate reaction that generates a visible signal. Unlike fluorescence-based methods, which necessitate advanced and costly equipment, this design employs a colorimetric detection system utilizing horseradish peroxidase (HRP) and 3,3′,5,5′-tetramethylbenzidine (TMB). HRP catalyzes the oxidation of TMB, producing a distinct blue color change that may be detected visually or quantified using simple optical devices. This approach renders the biosensor highly practical for point-of-care diagnostics, including applications in resource-limited settings.
+  </p>
+</section>
+
+<section id="references" class="mb-3">
+  <h2 class="section-title">References</h2>
+  <div class="divider"></div>
+
+  <!-- Collapsible References Card -->
+  <div class="references-card p-3 rounded mb-4">
+    <button class="btn references-toggle w-100 d-flex justify-content-between align-items-center" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#references-list" 
+            aria-expanded="false" 
+            aria-controls="references-list">
+      Show References
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+    
+    <div class="collapse mt-2" id="references-list">
+      <ul class="list-unstyled mb-0">
+        <li>Author et al., Year. Title of Paper. Journal Name.</li>
+        <li>Author et al., Year. Title of Paper. Journal Name.</li>
+        <li>Author et al., Year. Title of Paper. Journal Name.</li>
+        <!-- Add more references as needed -->
+      </ul>
     </div>
   </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>A clear and concise description of your project.</li>
-      <li>A detailed explanation of why your team chose to work on this particular project.</li>
-      <li>References and sources to document your research.</li>
-      <img src="static/Img/Slayer-drawing.png">
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2022.igem.wiki/dtu-denmark/description">2022 DTU-Denmark</a></li>
-      <li><a href="https://2019.igem.org/Team:ITESO_Guadalajara/Description">2019 ITESO Guadalajara</a></li>
-      <li><a href="https://2020.igem.org/Team:Technion-Israel/Description">2020 Technion Israel</a></li>
-      <li><a href="https://2020.igem.org/Team:Botchan_Lab_Tokyo/Description">2020 Botchan Lab Tokyo</a></li>
-      <li><a href="https://2020.igem.org/Team:St_Andrews/Description">2020 St Andrews</a></li>
-      <li><a href="https://2020.igem.org/Team:MIT/Description">2020 MIT</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Some advice</h2>
-    <hr>
-    <p>We encourage you to put up a lot of information and content on your wiki, but we also encourage you to include summaries as much as possible. If you think of the sections in your project description as the sections in a publication, you should try to be concise, accurate, and unambiguous in your achievements. Your Project Description should include more information than your project abstract.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>References</h2>
-    <hr>
-    <p>iGEM teams are encouraged to record references you use during the course of your research. They should be posted somewhere on your wiki so that judges and other visitors can see how you thought about your project and what works inspired you.</p>
-  </div>
-</div>
+</section>
 
 
+        </div>
+    </div>
   </div>
 
   <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
@@ -179,7 +221,7 @@
       <div class="col-lg-2 mb-4">
         <h5 class="text-uppercase">Home</h5>
         <ul class="list-unstyled">
-          <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="/" class="text-white">Home</a></li>
         </ul>
       </div>
 
@@ -187,11 +229,11 @@
       <div class="col-lg-2 mb-4">
         <h5 class="text-uppercase">Project</h5>
         <ul class="list-unstyled">
-          <li><a href="description.html" class="text-white text-decoration-none">Description</a></li>
-          <li><a href="modelling.html" class="text-white text-decoration-none">Modelling</a></li>
-          <li><a href="experiments.html" class="text-white text-decoration-none">Experiments</a></li>
-          <li><a href="results.html" class="text-white text-decoration-none">Results</a></li>
-          <li><a href="notebook.html" class="text-white text-decoration-none">Notebook</a></li>
+          <li><a href="description.html" class="text-white">Description</a></li>
+          <li><a href="modelling.html" class="text-white">Modelling</a></li>
+          <li><a href="experiments.html" class="text-white">Experiments</a></li>
+          <li><a href="results.html" class="text-white">Results</a></li>
+          <li><a href="notebook.html" class="text-white">Notebook</a></li>
         </ul>
       </div>
 
@@ -199,8 +241,7 @@
       <div class="col-lg-2 mb-4">
         <h5 class="text-uppercase">ELSI</h5>
         <ul class="list-unstyled">
-          <li><a href="ethics.html" class="text-white text-decoration-none">Ethics</a></li>
-          <li><a href="safety.html" class="text-white text-decoration-none">Safety</a></li>
+          <li><a href="elsi.html" class="text-white">ELSI</a></li>
         </ul>
       </div>
 
@@ -208,7 +249,7 @@
       <div class="col-lg-2 mb-4">
         <h5 class="text-uppercase">Team</h5>
         <ul class="list-unstyled">
-          <li><a href="members.html" class="text-white text-decoration-none">Members</a></li>
+          <li><a href="team.html" class="text-white">Team</a></li>
         </ul>
       </div>
 
@@ -231,5 +272,6 @@
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="static/bootstrap.bundle.min.js"></script>
+  <script src="static/sidenav.js"></script>
 </body>
 </html>

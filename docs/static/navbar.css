@@ -73,24 +73,10 @@ body {
     color: #fff !important;
 }
 
-/* Dropdowns open on hover (desktop only) */
-@media (min-width: 992px) {
-    .navbar .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-}
 
 /* Toggler (mobile) */
 .navbar-toggler {
-    border: none !important;
-    outline: none !important;
-    color: #fff;
-}
-
-.navbar-toggler-icon {
-    background-image: none !important;
-    font-size: 1.8rem;
-    line-height: 1;
+    color: white !important;
 }
 
 .navbar-toggler:focus {
@@ -113,7 +99,12 @@ body {
     }
 
     .dropdown-item:hover {
-        background-color: #4fa3ff !important;
+        background: var(--accent-gradient);
         color: #fff !important;
     }
+
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
 }
