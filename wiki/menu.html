@@ -42,29 +42,14 @@
         </li>
 
         <!-- ELSI -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownELSI" role="button"
-             data-bs-toggle="dropdown" aria-expanded="false">
-            ELSI
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownELSI">
-            <li><a class="dropdown-item" href="{{ url_for('render_page', page='safety') }}">Safety</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('render_page', page='ethics') }}">Ethics</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('render_page', page='elsi') }}">ELSI</a>
         </li>
 
         <!-- TEAM -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTeam" role="button"
-             data-bs-toggle="dropdown" aria-expanded="false">
-            Team
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownTeam">
-            <li><a class="dropdown-item" href="{{ url_for('render_page', page='members') }}">Members</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('render_page', page='sponsors') }}">Sponsors</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('render_page', page='members') }}">Team</a>
         </li>
-
       </ul>
     </div>
   </div>
