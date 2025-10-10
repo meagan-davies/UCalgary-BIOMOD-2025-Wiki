@@ -227,6 +227,145 @@ section:not(:first-of-type)::before {
 }
 
 
+/* ==== TEAM CARDS ==== */
+.team-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    position: relative;
+    text-align: center;
+    padding: 25px 15px 40px;
+}
+
+.team-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ==== IMAGE CIRCLE WITH LINK ==== */
+.team-image-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #4fa3ff, #62ff8c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* changed from visible to hidden */
+}
+
+.team-image-wrapper a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.team-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* INFO */
+.team-info {
+    margin-top: 10px;
+}
+
+.team-name {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.15rem;
+}
+
+.team-role {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+/* BIO + FUN FACTS */
+.team-bio {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.4s ease, opacity 0.4s ease;
+    padding: 0 1rem;
+    text-align: justify;
+}
+
+.team-card.expanded .team-bio {
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.fun-facts {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.fun-facts li {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Gradient text for fun fact labels */
+.team-bio .fun-facts li strong {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* EXPAND ARROW */
+.expand-arrow {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent-green);
+    transition: transform 0.4s ease;
+}
+
+.team-card.expanded .expand-arrow {
+    transform: translateX(-50%) rotate(180deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .team-card {
+        padding: 20px 10px 30px;
+    }
+    .team-image-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-image-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
 
 /* ==== FOOTER ==== */
 footer {

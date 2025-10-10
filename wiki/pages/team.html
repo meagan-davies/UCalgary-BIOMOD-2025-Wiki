@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% block title %}Team{% endblock %}
+{% block lead %}Meet Our Team{% endblock %}
+
+{% block page_content %}
+<section id="team" class="mb-5">
+  <h2 class="section-title">Our Team</h2>
+  <div class="divider"></div>
+  <div class="row g-4 mt-4">
+    {% for member in team_members %}
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card {% if member.fun_facts %}has-fun-facts{% endif %}">
+        <div class="team-image-wrapper">
+          {% if member.linkedin %}
+          <a href="{{ member.linkedin }}" target="_blank">
+            <img src="{{ url_for('static', filename='Img/' ~ member.image) }}" alt="{{ member.name }}" class="team-image">
+          </a>
+          {% else %}
+            <img src="{{ url_for('static', filename='Img/' ~ member.image) }}" alt="{{ member.name }}" class="team-image">
+          {% endif %}
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">{{ member.name }}</h4>
+          <p class="team-role">{{ member.role }}</p>
+        </div>
+        <div class="team-bio">
+          <p>{{ member.bio }}</p>
+          <ul class="fun-facts">
+            {% if member.fun_facts.current_song %}
+            <li><strong>Current song:</strong> {{ member.fun_facts.current_song }}</li>
+            {% endif %}
+            {% if member.fun_facts.fun_fact %}
+            <li><strong>Fun fact:</strong> {{ member.fun_facts.fun_fact }}</li>
+            {% endif %}
+            {% if member.fun_facts.unpopular_opinion %}
+            <li><strong>Unpopular opinion:</strong> {{ member.fun_facts.unpopular_opinion }}</li>
+            {% endif %}
+          </ul>
+        </div>
+        <div class="expand-arrow">&#9660;</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.team-card');
+
+    cards.forEach(card => {
+        const bio = card.querySelector('.team-bio');
+
+        card.addEventListener('click', (e) => {
+            // Prevent toggle if clicking a link or image
+            if(e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'img') return;
+
+            const isExpanded = card.classList.contains('expanded');
+
+            // Close all other cards
+            cards.forEach(c => {
+                c.classList.remove('expanded');
+                c.querySelector('.team-bio').style.height = '0';
+            });
+
+            // Open this card if it wasn't already
+            if(!isExpanded){
+                card.classList.add('expanded');
+                bio.style.height = bio.scrollHeight + 'px';
+            }
+        });
+
+        // Adjust height on resize
+        window.addEventListener('resize', () => {
+            if(card.classList.contains('expanded')){
+                bio.style.height = bio.scrollHeight + 'px';
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
