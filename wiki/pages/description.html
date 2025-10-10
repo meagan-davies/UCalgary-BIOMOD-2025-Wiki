@@ -3,7 +3,8 @@
   {"id": "background", "title": "Background"},
   {"id": "project", "title": "Project"},
   {"id": "feasibility", "title": "Feasibility"},
-  {"id": "merit", "title": "Merit"}
+  {"id": "merit", "title": "Merit"},
+  {"id": "references", "title": "References"}
 ] %}
 
 {% block title %}Description{% endblock %}
@@ -25,7 +26,7 @@
 </section>
 
 <section id="project" class="mb-3">
-  <h2 class="section-title">Background</h2>
+  <h2 class="section-title">Project</h2>
   <div class="divider"></div>
   <h3>Relevance</h3>
   <p>
@@ -55,4 +56,32 @@
     A central innovation lies in the construction of aptazymes. Aptamers, carefully selected for their high specificity to Alzheimer’s biomarkers, are engineered to integrate with enzymatic components. Upon target recognition, the conformational change in the aptamer initiates an enzyme–substrate reaction that generates a visible signal. Unlike fluorescence-based methods, which necessitate advanced and costly equipment, this design employs a colorimetric detection system utilizing horseradish peroxidase (HRP) and 3,3′,5,5′-tetramethylbenzidine (TMB). HRP catalyzes the oxidation of TMB, producing a distinct blue color change that may be detected visually or quantified using simple optical devices. This approach renders the biosensor highly practical for point-of-care diagnostics, including applications in resource-limited settings.
   </p>
 </section>
+
+<section id="references" class="mb-3">
+  <h2 class="section-title">References</h2>
+  <div class="divider"></div>
+
+  <!-- Collapsible References Card -->
+  <div class="references-card p-3 rounded mb-4">
+    <button class="btn references-toggle w-100 d-flex justify-content-between align-items-center" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#references-list" 
+            aria-expanded="false" 
+            aria-controls="references-list">
+      Show References
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+    
+    <div class="collapse mt-2" id="references-list">
+      <ul class="list-unstyled mb-0">
+        <li>Author et al., Year. Title of Paper. Journal Name.</li>
+        <li>Author et al., Year. Title of Paper. Journal Name.</li>
+        <li>Author et al., Year. Title of Paper. Journal Name.</li>
+        <!-- Add more references as needed -->
+      </ul>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

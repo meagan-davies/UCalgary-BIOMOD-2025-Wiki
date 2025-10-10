@@ -184,6 +184,50 @@ section:not(:first-of-type)::before {
     color: white;
 }
 
+/* ==== REFERENCES ==== */
+/* References Card */
+.references-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--divider-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.references-toggle {
+    background: var(--accent-gradient);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: left;
+    padding: 0.6rem 1rem;
+    transition: background 0.3s ease;
+}
+
+.references-toggle:hover {
+    filter: brightness(1.1);
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when collapse is shown */
+.collapse.show + .references-toggle .arrow-icon,
+.references-toggle[aria-expanded="true"] .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* List inside card */
+.references-card ul li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--divider-color);
+}
+.references-card ul li:last-child {
+    border-bottom: none;
+}
+
+
+
 /* ==== FOOTER ==== */
 footer {
     position: relative;
