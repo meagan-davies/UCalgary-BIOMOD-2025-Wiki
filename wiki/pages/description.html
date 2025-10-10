@@ -1,93 +1,58 @@
 {% extends "layout.html" %}
-
 {% set toc_items = [
-  {"id": "overview", "title": "Overview"},
-  {"id": "project-criteria", "title": "Bronze Medal Criterion"},
-  {"id": "project-content", "title": "Page Content"},
-  {"id": "inspirations", "title": "Inspirations"},
-  {"id": "advice", "title": "Advice"},
-  {"id": "references", "title": "References"}
+  {"id": "background", "title": "Background"},
+  {"id": "project", "title": "Project"},
+  {"id": "feasibility", "title": "Feasibility"},
+  {"id": "merit", "title": "Merit"}
 ] %}
 
-{% block title %}Project Description{% endblock %}
-{% block lead %}Describe how and why you chose your iGEM project.{% endblock %}
+{% block title %}Description{% endblock %}
+{% block lead %}Overview of the DNADetect Alzheimer’s Disease Biosensor{% endblock %}
 
 {% block page_content %}
-
-<section id="overview">
-  <div class="row mt-4">
-    <div class="col">
-      <div class="bd-callout bd-callout-info">
-        <h4>Overview</h4>
-        <p>This page introduces our BIOMOD 2025 project, explaining our design rationale and inspiration.</p>
-      </div>
-    </div>
-  </div>
+<section id="background" class="mb-3">
+  <h2 class="section-title">Background</h2>
+  <div class="divider"></div>
+  <p>
+    The early detection of Alzheimer’s disease is critically important, as it enables timely therapeutic intervention, informed lifestyle modifications, and proactive care planning prior to the onset of significant and irreversible cognitive decline. Early identification also facilitates patient enrollment in clinical trials and access to emerging therapeutic modalities, while equipping caregivers and healthcare professionals with the necessary information to optimize long-term disease management. Despite its clinical significance, existing diagnostic methodologies are often invasive, prohibitively costly, or insufficiently sensitive to detect subtle molecular alterations during the prodromal phase.
+  </p>
+  <p>
+    To address this gap, we are developing a prototype biosensor designed to detect Alzheimer’s disease through blood-based biomarkers. At the core of this system is an aptazyme, a hybrid nucleic acid construct that combines the high-affinity binding capacity of an aptamer with the catalytic properties of a ribozyme. Upon binding its target biomarker, the aptazyme undergoes a conformational change that activates its enzymatic function, producing a distinct colorimetric signal. This approach enables rapid, sensitive, and minimally invasive detection, offering a cost-effective alternative to conventional diagnostic technologies.
+  </p>
+  <p>
+    The overarching aim of this research is to establish a practical and reliable platform for the early diagnosis of Alzheimer’s disease, thereby improving clinical outcomes and reducing the broader societal and economic burden associated with the condition. Future directions include extending the biosensor’s functionality to saliva-based detection, further enhancing accessibility and non-invasiveness. Such advancements would support point-of-care diagnostics and at-home screening, significantly broadening applicability and transforming current approaches to Alzheimer’s disease detection and management across both clinical and community health settings.
+  </p>
 </section>
 
-<section id="project-criteria">
-  <div class="row mt-4">
-    <div class="col">
-      <div class="bd-callout bd-callout-info">
-        <h4>Bronze Medal Criterion #3</h4>
-        <p>Describe how and why you chose your iGEM project.</p>
-        <hr>
-        <p>See <a href="https://competition.igem.org/judging/medals">2023 Medals Page</a> for more information.</p>
-      </div>
-    </div>
-  </div>
+<section id="project" class="mb-3">
+  <h2 class="section-title">Background</h2>
+  <div class="divider"></div>
+  <h3>Relevance</h3>
+  <p>
+    The proposed solution of an aptamer-based biosensor with a colorimetric reaction as its main mechanism directly targets the critical challenge of rapid, non-invasive diagnosis of Alzheimer’s disease.
+  </p>
 </section>
 
-<section id="project-content">
-  <div class="row mt-4">
-    <div class="col-lg-8">
-      <h2>What should this page contain?</h2>
-      <hr>
-      <ul>
-        <li>A clear and concise description of your project.</li>
-        <li>A detailed explanation of why your team chose to work on this particular project.</li>
-        <li>References and sources to document your research.</li>
-      </ul>
-      <img src="{{ url_for('static', filename='Img/Slayer-drawing.png') }}" class="img-fluid rounded shadow-sm mt-3">
-    </div>
-  </div>
+<section id="feasibility" class="mb-3">
+  <h2>Feasibility</h2>
+  <p>
+    Our design is a DNA-based biosensor integrated into a lateral flow assay for early Alzheimer's disease detection, using well-established biosensing and biochemical design concepts to create a practical system. The main mechanism of the sensor relies on a DNA aptazyme that undergoes conformational changes upon contact with the target blood-based biomarker. When this binding occurs, the DNA aptazyme brings together a horseradish peroxidase (HRP) and tetramethylbenzidine (TMB) pair to produce a visible colorimetric reaction in the form of a blue signal, confirming detection.
+  </p>
+  <p>
+    The design procedure and system have been evaluated to consider flexibility and reusability, incorporating a toehold-mediated strand exchange to allow for the replacement of a used aptazyme component and resetting the detection system. This is not only useful in changing the system to bind with different biomarkers, but allows for multiple uses of the same mechanism, without taking apart the entire structure. Feasibility is strengthened by the use of in-silico SELEX for choosing ideal aptazyme sequences, and backup sequences from literature to help account for sequencing delays or setbacks. Additionally, extensive computational modeling for structure and docking validation has been completed. Many principle elements of the biosensor, including the colorimetric reaction, aptazymes for biosensing, and the use of blood-based biomarkers for detection are extensively researched and reviewed in prior studies.
+  </p>
 </section>
 
-<section id="inspirations">
-  <div class="row mt-4">
-    <div class="col-lg-8">
-      <h2>Inspirations</h2>
-      <hr>
-      <ul>
-        <li><a href="https://2022.igem.wiki/dtu-denmark/description">2022 DTU-Denmark</a></li>
-        <li><a href="https://2019.igem.org/Team:ITESO_Guadalajara/Description">2019 ITESO Guadalajara</a></li>
-        <li><a href="https://2020.igem.org/Team:Technion-Israel/Description">2020 Technion Israel</a></li>
-        <li><a href="https://2020.igem.org/Team:Botchan_Lab_Tokyo/Description">2020 Botchan Lab Tokyo</a></li>
-        <li><a href="https://2020.igem.org/Team:St_Andrews/Description">2020 St Andrews</a></li>
-        <li><a href="https://2020.igem.org/Team:MIT/Description">2020 MIT</a></li>
-      </ul>
-    </div>
-  </div>
+<section id="merit" class="mb-3">
+  <h2>Merit</h2>
+  <p>
+    This project directly addresses the critical gap in rapid, non-invasive diagnostic tools for Alzheimer’s disease, offering an innovative solution where existing methods remain inadequate. Current clinical approaches, such as positron emission tomography (PET) scans and lumbar punctures, are costly, invasive, and impractical for routine screening. As a result, diagnosis is often delayed until significant disease progression has already occurred.
+  </p>
+  <p>
+    The global demand for improved diagnostics is substantial. More than 50 million individuals worldwide are affected by Alzheimer’s disease and related dementias, with annual care costs exceeding $1 trillion USD. Within Canada, over 750,000 individuals currently live with Alzheimer’s disease, and this figure continues to rise each year. These statistics underscore the urgent need for diagnostic technologies that are scalable, affordable, and accessible.
+  </p>
+  <p>
+    A central innovation lies in the construction of aptazymes. Aptamers, carefully selected for their high specificity to Alzheimer’s biomarkers, are engineered to integrate with enzymatic components. Upon target recognition, the conformational change in the aptamer initiates an enzyme–substrate reaction that generates a visible signal. Unlike fluorescence-based methods, which necessitate advanced and costly equipment, this design employs a colorimetric detection system utilizing horseradish peroxidase (HRP) and 3,3′,5,5′-tetramethylbenzidine (TMB). HRP catalyzes the oxidation of TMB, producing a distinct blue color change that may be detected visually or quantified using simple optical devices. This approach renders the biosensor highly practical for point-of-care diagnostics, including applications in resource-limited settings.
+  </p>
 </section>
-
-<section id="advice">
-  <div class="row mt-4">
-    <div class="col-lg-8">
-      <h2>Some Advice</h2>
-      <hr>
-      <p>Include summaries wherever possible. Be concise and accurate, as in a scientific publication, while making your project description clear and engaging.</p>
-    </div>
-  </div>
-</section>
-
-<section id="references">
-  <div class="row mt-4">
-    <div class="col-lg-8">
-      <h2>References</h2>
-      <hr>
-      <p>iGEM teams are encouraged to record references you use during your research. They help demonstrate your scientific grounding and thought process.</p>
-    </div>
-  </div>
-</section>
-
 {% endblock %}
