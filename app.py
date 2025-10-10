@@ -158,7 +158,8 @@ def home():
 
 @app.route('/team.html')
 def team():
-    return render_template('pages/team.html', team_members=team_members)
+    sorted_members = sorted(team_members, key=lambda m: m["name"].split()[-1].lower())
+    return render_template('pages/team.html', team_members=sorted_members)
 
 @app.route('/<page>' + '.html')
 def render_page(page):
