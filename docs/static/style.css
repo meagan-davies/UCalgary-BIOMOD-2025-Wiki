@@ -45,6 +45,14 @@ section a {
     color: #62ff8c !important;
 }
 
+.figure-image {
+  max-width: 600px;   /* maximum width */
+  width: 100%;        /* scale down for smaller screens */
+  height: auto;       /* maintain aspect ratio */
+  display: block;
+  margin: 0 auto;     /* center the image */
+}
+
 /* ==== HOME SECTION (Hero Video) ==== */
 .hero-section {
     position: relative;
