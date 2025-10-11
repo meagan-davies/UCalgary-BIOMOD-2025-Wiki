@@ -2,86 +2,270 @@
 {% set toc_items = [
   {"id": "background", "title": "Background"},
   {"id": "project", "title": "Project"},
+  {"id": "relevance", "title": "Relevance"},
+  {"id": "specification", "title": "Specification"},
   {"id": "feasibility", "title": "Feasibility"},
   {"id": "merit", "title": "Merit"},
+  {"id": "goals", "title": "Goals"},
   {"id": "references", "title": "References"}
 ] %}
 
 {% block title %}Description{% endblock %}
-{% block lead %}Overview of the DNADetect Alzheimer’s Disease Biosensor{% endblock %}
+{% block lead %}Overview of the APTAMOD Alzheimer’s Disease Biosensor{% endblock %}
 
 {% block page_content %}
-<section id="background" class="mb-3">
+
+<section id="background" class="mb-4">
   <h2 class="section-title">Background</h2>
   <div class="divider"></div>
-  <p>
-    The early detection of Alzheimer’s disease is critically important, as it enables timely therapeutic intervention, informed lifestyle modifications, and proactive care planning prior to the onset of significant and irreversible cognitive decline. Early identification also facilitates patient enrollment in clinical trials and access to emerging therapeutic modalities, while equipping caregivers and healthcare professionals with the necessary information to optimize long-term disease management. Despite its clinical significance, existing diagnostic methodologies are often invasive, prohibitively costly, or insufficiently sensitive to detect subtle molecular alterations during the prodromal phase.
-  </p>
-  <p>
-    To address this gap, we are developing a prototype biosensor designed to detect Alzheimer’s disease through blood-based biomarkers. At the core of this system is an aptazyme, a hybrid nucleic acid construct that combines the high-affinity binding capacity of an aptamer with the catalytic properties of a ribozyme. Upon binding its target biomarker, the aptazyme undergoes a conformational change that activates its enzymatic function, producing a distinct colorimetric signal. This approach enables rapid, sensitive, and minimally invasive detection, offering a cost-effective alternative to conventional diagnostic technologies.
-  </p>
-  <p>
-    The overarching aim of this research is to establish a practical and reliable platform for the early diagnosis of Alzheimer’s disease, thereby improving clinical outcomes and reducing the broader societal and economic burden associated with the condition. Future directions include extending the biosensor’s functionality to saliva-based detection, further enhancing accessibility and non-invasiveness. Such advancements would support point-of-care diagnostics and at-home screening, significantly broadening applicability and transforming current approaches to Alzheimer’s disease detection and management across both clinical and community health settings.
-  </p>
+
+  <p>Alzheimer’s disease (AD) is the primary form of dementia, which is an umbrella term for neurodegenerative diseases that lead to loss of memory, language, and many other important cognitive functions [1]. Aging is one of the most significant risk factors for this condition, with Alzheimer’s mainly affecting those aged 65 or over [2]. More specifically, 1 in 13 individuals between the ages of 65 and 84, and 1 in 3 individuals aged 85 or above currently live with Alzheimer’s [2] . Alzheimer’s disease can also lead to other conditions such as hypertension, obesity, and cardiovascular diseases [3]. There currently exists no cure for Alzheimer’s disease, and current treatments only focus on management of symptoms and potentially slowing the progression of the condition [4].
+
+  <p>The progression of Alzheimer’s disease is typically through three stages, including preclinical, MCI (mild cognitive impairment), and the dementia stages [5]. Before onset of symptoms even occurs, preclinical AD is characterized by certain changes to the brain, such as accumulation of amyloid-beta (Aβ) or tau [6]. Although patients in the preclinical stage do not present any symptoms, build-up of these proteins present the opportunity to detect abnormal concentrations of these biomarkers for early intervention [7]. Mild cognitive impairment (MCI) is a condition that includes individuals with issues surrounding memory or thinking more so compared to other people in the same age group [8]. It should be mentioned that symptoms of MCI are not as severe as those with Alzheimer’s disease or other dementia-related diseases. However, it is common for those diagnosed with MCI to eventually progress into the dementia-stages of AD, in which more severe memory loss and issues with cognitive function begin to develop [8]. The dementia stage of AD is also categorized into various stages including early (mild), middle (moderate), and late (severe) [5]. Early, or mild AD is characterized by a variety of symptoms such as memory loss, poor judgement, and difficulty completing normal, everyday tasks [9]. Moderate AD patients can also start to display behavioural changes, whereas patients with severe AD typically have a loss of communication skills and everyday functions, such as walking or eating. Fatal complications are common with dementia stage AD [9].</p> 
+
+  <p>The early detection of Alzheimer’s disease is therefore critically important, as it enables timely therapeutic intervention, informed lifestyle modifications, and proactive care planning prior to the onset of significant and irreversible cognitive decline. Early identification also facilitates patient enrollment in clinical trials and access to emerging therapeutic modalities, while equipping caregivers and healthcare professionals with the necessary information to optimize long-term disease management. Despite its clinical significance, existing diagnostic methodologies are often invasive, prohibitively costly, or insufficiently sensitive to detect subtle molecular alterations during the prodromal phase. Current diagnostic methods include imaging techniques such as positron emission tomography (PET) scans and magnetic-resonance imaging (MRI) scans [10]. However, these do not offer many benefits in the scope of early detection, as they are often applied too late into the progression of AD. Despite the frequency of disease, routine biomarker-based tests are not used in clinical practice due to limited standardization of results and testing technologies [10]. Therefore, it would offer many clinical benefits to implement a diagnostic tool that can measure biomarkers during regular and routinely check-ups to effectively combat the issue of late diagnosis.</p>
+
+  <p>The solution, APTAMOD aims to do just that, bridging a technological and diagnostic gap in AD. At the core of this system is an aptazyme, a hybrid nucleic acid construct that combines the high-affinity binding capacity of an aptamer with enzymatic based colorimetric output. Upon binding its target biomarker, the aptazyme undergoes a conformational change that activates its enzymatic function, producing a distinct colorimetric signal. This approach enables rapid, sensitive, and minimally invasive detection, offering a cost-effective alternative to conventional diagnostic technologies. The overarching aim of this research is to establish a practical and reliable platform for the early diagnosis of Alzheimer’s disease, thereby improving clinical outcomes and reducing the broader societal and economic burden associated with the condition. Future directions include extending the biosensor’s functionality to saliva-based detection, further enhancing accessibility and non-invasiveness. Such advancements would support point-of-care diagnostics and at-home screening, significantly broadening applicability and transforming current approaches to Alzheimer’s disease detection and management across both clinical and community health settings.</p>
 </section>
 
-<section id="project" class="mb-3">
+<section id="project" class="mb-4">
   <h2 class="section-title">Project</h2>
   <div class="divider"></div>
-  <h3>Relevance</h3>
-  <p>
-    The proposed solution of an aptamer-based biosensor with a colorimetric reaction as its main mechanism directly targets the critical challenge of rapid, non-invasive diagnosis of Alzheimer’s disease.
-  </p>
+
+  <p>The project involves the use of a DNA aptazyme or aptamer and toehold exchange (a type of toehold mediated strand displacement) to create a biosensor in a lateral flow assay for early Alzheimer’s disease detection, using a colorimetric substrate-enzyme pair to identify the desired biomarker. The colorimetric pair used was horseradish peroxidase HRP and 3,3’ ,5,5’ -Tetramethylbenzidine (TMB). The colorimetric approach allows for a visual response to be integrated to the biosensor, specifically a blue colour formation [11]. This indicates the presence of the AD biomarker and allows for an earlier detection and diagnosis than current procedures. The project is split into three main components: the detection mechanism, the toehold exchange and sensor reset, and the lateral flow assay.</p>
+
+  <!-- Figure 1 -->
+  <div class="text-center my-4">
+    <img src="{{ url_for('static', filename='Img/description1.png') }}" alt="Figure 1: legend of diagram components." class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 1.</strong> Legend of diagram components.</p>
+  </div>  
+
+  <h4>Detection Mechanism</h4>
+  <p>The project's detection mechanism (Figure 2.) involves a DNA aptamer loop with a substrate and enzyme attachment. A sample of blood in a buffer solution would be required for the detection mechanism. The process begins with the enzyme HRP attached to one side of the DNA aptamer loop and the substrate TMB to the opposite side of the same loop. Once the desired biomarker target binds, the conformational structure of the sensor changes. In other words, the loop of the DNA aptamer closes. This brings together the two regions of the colorimetric indicator, i.e. the substrate and enzyme, and induces a visual response. This blue color formation makes our mechanism a target induced activation [12] of an aptamer, and reveals visually when a target biomarker is present in a blood sample.</p>
+
+  <!-- Figure 2 -->
+  <div class="text-center my-4">
+    <img src="{{ url_for('static', filename='Img/description2.png') }}" alt="Figure 2: Aptazyme detection mechanism" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 2.</strong> Aptazyme-based colorimetric detection mechanism with HRP–TMB activation upon biomarker binding.</p>
+  </div>
+
+  <h4>Toehold Exchange / Sensor Reset</h4>
+  <p>A promising part of our mechanism involves the use of the toehold exchange seen in Figure 3. This process allows for the potential to replace the aptamer component being used without destroying or discarding the rest of the system. This allows for the modular assembly of the sensor where it can be reapplied by replacing one input nucleic acid strand with a specific output strand [13]. The invader strand “exchanges” the previously bounded or used aptamer system, allowing for the reintroduction of a new aptamer and colorimetric pair loop. The sensor is then reset and ready for reuse.</p>
+
+  <!-- Figure 3 -->
+  <div class="text-center my-4">
+    <img src="{{ url_for('static', filename='Img/description3.png') }}" alt="Figure 3: Toehold exchange mechanism" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 3.</strong> Toehold-mediated strand displacement process allowing aptazyme modularity and reuse.</p>
+  </div>
+
+  <h4>Lateral Flow Assay</h4>
+  <p>A future direction for this project is to integrate the use of a lateral flow assay into the mechanism. Lateral flow assays (LFAs), as seen in Figure 4., involve paper-based platforms that allow for the detection and quantification of complex mixtures, generally used with biological fluids for clinical and diagnostic tests [14]. The sample is meant to flow through a conjugate pad, where bioreceptors, usually antibodies or aptamers, are held [15]. This mixture then flows through both a test line, and control line where interactions between the antigen and antibodies occur. The test line determines whether the sample contains a sufficient amount of the target analyte, which may include biomarkers [15], producing a line if the analyte is present. A control line is designed to display the validity of the test, as if it does not produce a line, the test is likely invalid and would be required to be performed again [15].</p>
+
+  <!-- Figure placeholder -->
+  <div class="text-center my-4">
+    <img src="{{ url_for('static', filename='Img/description4.png') }}" alt="Figure 4: Conceptual lateral flow assay" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 4.</strong> Conceptual diagram of the integrated lateral flow assay (LFA) format for biosensor deployment.</p>
+  </div>
 </section>
 
-<section id="feasibility" class="mb-3">
-  <h2>Feasibility</h2>
-  <p>
-    Our design is a DNA-based biosensor integrated into a lateral flow assay for early Alzheimer's disease detection, using well-established biosensing and biochemical design concepts to create a practical system. The main mechanism of the sensor relies on a DNA aptazyme that undergoes conformational changes upon contact with the target blood-based biomarker. When this binding occurs, the DNA aptazyme brings together a horseradish peroxidase (HRP) and tetramethylbenzidine (TMB) pair to produce a visible colorimetric reaction in the form of a blue signal, confirming detection.
-  </p>
-  <p>
-    The design procedure and system have been evaluated to consider flexibility and reusability, incorporating a toehold-mediated strand exchange to allow for the replacement of a used aptazyme component and resetting the detection system. This is not only useful in changing the system to bind with different biomarkers, but allows for multiple uses of the same mechanism, without taking apart the entire structure. Feasibility is strengthened by the use of in-silico SELEX for choosing ideal aptazyme sequences, and backup sequences from literature to help account for sequencing delays or setbacks. Additionally, extensive computational modeling for structure and docking validation has been completed. Many principle elements of the biosensor, including the colorimetric reaction, aptazymes for biosensing, and the use of blood-based biomarkers for detection are extensively researched and reviewed in prior studies.
-  </p>
-</section>
-
-<section id="merit" class="mb-3">
-  <h2>Merit</h2>
-  <p>
-    This project directly addresses the critical gap in rapid, non-invasive diagnostic tools for Alzheimer’s disease, offering an innovative solution where existing methods remain inadequate. Current clinical approaches, such as positron emission tomography (PET) scans and lumbar punctures, are costly, invasive, and impractical for routine screening. As a result, diagnosis is often delayed until significant disease progression has already occurred.
-  </p>
-  <p>
-    The global demand for improved diagnostics is substantial. More than 50 million individuals worldwide are affected by Alzheimer’s disease and related dementias, with annual care costs exceeding $1 trillion USD. Within Canada, over 750,000 individuals currently live with Alzheimer’s disease, and this figure continues to rise each year. These statistics underscore the urgent need for diagnostic technologies that are scalable, affordable, and accessible.
-  </p>
-  <p>
-    A central innovation lies in the construction of aptazymes. Aptamers, carefully selected for their high specificity to Alzheimer’s biomarkers, are engineered to integrate with enzymatic components. Upon target recognition, the conformational change in the aptamer initiates an enzyme–substrate reaction that generates a visible signal. Unlike fluorescence-based methods, which necessitate advanced and costly equipment, this design employs a colorimetric detection system utilizing horseradish peroxidase (HRP) and 3,3′,5,5′-tetramethylbenzidine (TMB). HRP catalyzes the oxidation of TMB, producing a distinct blue color change that may be detected visually or quantified using simple optical devices. This approach renders the biosensor highly practical for point-of-care diagnostics, including applications in resource-limited settings.
-  </p>
-</section>
-
-<section id="references" class="mb-3">
-  <h2 class="section-title">References</h2>
+<section id="relevance" class="mb-4">
+  <h2 class="section-title">Relevance</h2>
   <div class="divider"></div>
 
-  <!-- Collapsible References Card -->
-  <div class="references-card p-3 rounded mb-4">
-    <button class="btn references-toggle w-100 d-flex justify-content-between align-items-center" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#references-list" 
-            aria-expanded="false" 
-            aria-controls="references-list">
-      Show References
-      <i class="fas fa-chevron-down arrow-icon"></i>
-    </button>
-    
-    <div class="collapse mt-2" id="references-list">
-      <ul class="list-unstyled mb-0">
-        <li>Author et al., Year. Title of Paper. Journal Name.</li>
-        <li>Author et al., Year. Title of Paper. Journal Name.</li>
-        <li>Author et al., Year. Title of Paper. Journal Name.</li>
-        <!-- Add more references as needed -->
+  <p>This project has significant relevance both in a scientific and technological context, as it is meant to address many gaps that exist in the diagnostic scope of Alzheimer’s disease (AD). As discussed, this condition is notoriously difficult to diagnose early, mainly due to the vague and broad symptoms, as well as limitations with current diagnostic techniques which are generally invasive, expensive, or rely heavily on subjective evaluations performed by a healthcare provider [16]. Therefore, this project, which is a biosensor involving the use of DNA aptazymes and a lateral flow assay (LFA), aims to provide an innovative, non-invasive solution to these issues. Furthermore, this project offers many technological advantages through mechanisms such as the use of a Toehold Exchange which contributes to the modularity and potential reusability of this design. These components offer a low-cost and modular design that can accurately detect elevated levels of biomarkers found in blood plasma samples of patients.</p>
+</section>
+
+<section id="specification" class="mb-4">
+  <h2 class="section-title">Specification</h2>
+  <div class="divider"></div>
+
+  <p>The project has clearly defined goals, outlined as follows:</p>
+
+  <ul class="list-checklist">
+    <li class="checked">Design a modular biosensor capable of detecting clinically relevant biomarkers (e.g., amyloid-beta, p-tau181) via aptazyme activation with a visible colorimetric readout.</li>
+    <li class="checked">Develop standardized protocols for: TMSD validation, colorimetric standard curve, aptazyme synthesis, and biomarker testing under physiologically relevant conditions.</li>
+    <li class="checked">Construct a TMSD mechanism to enable test reusability, increasing cost-effectiveness and sustainability.</li>
+    <li class="unchecked">Demonstrate specificity and sensitivity of the biosensor to its target biomarker in vitro, validating through enzymatic cleavage and colorimetric signal.</li>
+    <li class="unchecked">Validate the designed biosensor through wet and dry lab experimentation before integration into a lateral flow assay.</li>
+    <li class="unchecked">Integrate the system into a lateral flow assay for accessible, point-of-care testing.</li>
+    <li class="checked">Deliver a theoretical or working proof-of-concept, supported by both computational modeling and wet lab experiments.</li>
+  </ul>
+
+  <p>Despite not completing all original target goals, success has been measured by the validity of accomplishments combined with dry and wet lab experimentation. Through standardized protocols, computational modelling, in silico SELEX procedures, and wet lab experiments, this project represents a successful start and theoretical proof-of-concept for our biosensor.</p>
+</section>
+
+<section id="feasibility" class="mb-4">
+  <h2 class="section-title">Feasibility</h2>
+  <div class="divider"></div>
+
+  <p>Our design is a DNA-based biosensor integrated into a lateral flow assay for early Alzheimer's disease detection, using well-established biosensing and biochemical design concepts to create a practical system. The main mechanism of the sensor relies on a DNA aptazyme that undergoes conformational changes upon contact with the target blood-based biomarker. When this binding occurs, the DNA aptazyme brings together a horseradish peroxidase (HRP) and tetramethylbenzidine (TMB) pair to produce a visible colorimetric reaction in the form of a blue signal, confirming detection.</p>
+  <p>The design procedure and system have been evaluated to consider flexibility and reusability, incorporating a toehold-medated strand exchange to allow for the replacement of a used aptazyme component and resetting the detection system. This is not only useful in changing the system to bind with different biomarkers, but allows for multiple uses of the same mechanism, without taking apart the entire structure. Feasibility is strengthened by the use of in-silico SELEX for choosing ideal aptazyme sequences, and backup sequences from literature to help account for sequencing delays or setbacks. Additionally, extensive computational modeling for structure and docking validation has been completed. Many principle elements of the biosensor, including the colorimetric reaction, aptazymes for biosensing, and the use of blood-based biomarkers for detection are extensively researched and reviewed in prior studies. Integrating the system into a lateral flow assay has been deemed a secondary goal at this stage of design, however, previous studies and research allow for confidence in the proof-of-concept development necessary to execute the proposed biosensor design foundations.</p>
+</section>
+
+<section id="merit" class="mb-4">
+  <h2 class="section-title">Merit</h2>
+  <div class="divider"></div>
+
+  <p>This project directly addresses the critical gap in rapid, non-invasive diagnostic tools for Alzheimer’s disease, offering an innovative solution where existing methods remain inadequate. Current clinical approaches, such as positron emission tomography (PET) scans and lumbar punctures, are costly, invasive, and impractical for routine screening [2]. As a result, diagnosis is often delayed until significant disease progression has already occurred.</p>
+  <p>The global demand for improved diagnostics is substantial. More than 40 million individuals worldwide are affected by Alzheimer’s disease and related dementias, with annual care costs exceeding $1 trillion USD [1]. Within Canada, over 750,000 individuals currently live with Alzheimer’s disease, and this figure continues to rise each year [17]. These statistics underscore the urgent need for diagnostic technologies that are scalable, affordable, and accessible.</p>
+  <p>In comparison to existing approaches, the proposed biosensor provides a diagnostic method that is faster, more cost-effective, and significantly less invasive, rendering it suitable for both early detection and routine clinical screening. This advancement has the potential to markedly improve patient outcomes by enabling timely intervention at earlier stages of disease progression.</p>
+  <p>A central innovation lies in the construction of aptazymes. Aptamers, carefully selected for their high specificity to Alzheimer’s biomarkers, are engineered to integrate with enzymatic components. Upon target recognition, the conformational change in the aptamer initiates an enzyme–substrate reaction that generates a visible signal. Unlike fluorescence-based methods, which necessitate advanced and costly equipment, this design employs a colorimetric detection system utilizing horseradish peroxidase (HRP) and 3,3′,5,5′-tetramethylbenzidine (TMB) [11]. HRP catalyzes the oxidation of TMB, producing a distinct blue color change that may be detected visually or quantified using simple optical devices [11]. This approach renders the biosensor highly practical for point-of-care diagnostics, including applications in resource-limited settings.</p>
+</section>
+
+<section id="goals" class="mb-2">
+  <h2 class="section-title">Goals</h2>
+  <div class="divider mb-4"></div>
+
+  <div class="row">
+    <!-- Wet Lab Goals -->
+    <div class="col-lg-6 col-12 mb-4">
+      <h4>Wet Lab Goals</h4>
+      <ul class="list-checklist">
+        <li>Aptamer Testing
+          <ul class="list-checklist ps-3">
+            <li class="unchecked">Literature Aptamer Preparation</li>
+            <li class="unchecked">Sensitivity and Stability Testing</li>
+          </ul>
+        </li>
+
+        <li>Colorimetric Substrate and Enzyme Standard Curve
+          <ul class="list-checklist ps-3">
+            <li class="checked">Buffer + Material Prep</li>
+            <li class="checked">Plate Reader Experiment</li>
+          </ul>
+        </li>
+
+        <li>TMSD Characterization
+          <ul class="list-checklist ps-3">
+            <li class="checked">Gel Electrophoresis</li>
+            <li class="unchecked">Gel Imaging</li>
+          </ul>
+        </li>
+
+        <li>TMSD Testing and Binding
+          <ul class="list-checklist ps-3">
+            <li class="unchecked">TMSD Preparation</li>
+            <li class="unchecked">Binding Specificity Testing</li>
+            <li class="unchecked">Buffer + Material Prep</li>
+            <li class="unchecked">Surface Anchoring</li>
+          </ul>
+        </li>
+
+        <li>Aptamer Stability and Specificity Testing
+          <ul class="list-checklist ps-3">
+            <li class="unchecked">Gel Electrophoresis</li>
+          </ul>
+        </li>
+
+        <li>Aptamer Modifications with TMB and HRP
+          <ul class="list-checklist ps-3">
+            <li class="unchecked">Attach TMB to Aptamer</li>
+            <li class="unchecked">Attach HRP to Aptamer</li>
+            <li class="unchecked">Sensor Testing</li>
+          </ul>
+        </li>
+
+        <li>Literature System Testing
+          <ul class="list-checklist ps-3">
+            <li class="unchecked">Aptamer + TMSD Binding</li>
+            <li class="unchecked">Aptamer + Substrate/Enzyme Binding</li>
+            <li class="unchecked">Aptamer + TMSD + Substrate/Enzyme Binding</li>
+            <li class="unchecked">Concentration Curve Analysis</li>
+          </ul>
+        </li>
+
+        <li>LFA Testing and Integration
+          <ul class="list-checklist ps-3">
+            <li class="unchecked">Membrane Characterization</li>
+            <li class="unchecked">Aptamer + TMSD Pad Loading</li>
+            <li class="unchecked">Control Line Preparation + Testing</li>
+            <li class="unchecked">Strip Assembly and Buffer Testing</li>
+            <li class="unchecked">Concentration Limit/Curve Testing</li>
+            <li class="unchecked">Sample Testing</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Dry Lab Goals -->
+    <div class="col-lg-6 col-12 mb-4">
+      <h4>Dry Lab Goals</h4>
+      <ul class="list-checklist">
+        <li>Aptamer Modelling
+          <ul class="list-checklist ps-3">
+            <li class="checked">Structural Model of Literature Aptamer</li>
+            <li class="checked">Docking Simulations for Literature Aptamer</li>
+          </ul>
+        </li>
+
+        <li>In-Silico SELEX
+          <ul class="list-checklist ps-3">
+            <li class="checked">Aptamer Sequence Generation</li>
+            <li class="checked">Secondary Structure Generation</li>
+            <li class="checked">PDB File Generation</li>
+            <li class="unchecked">Docking Simulation Integration</li>
+            <li class="unchecked">Sequence Optimization Mutation</li>
+          </ul>
+        </li>
+
+        <li>TMSD Modelling
+          <ul class="list-checklist ps-3">
+            <li class="checked">Structural Model of Literature TMSD</li>
+          </ul>
+        </li>
+
+        <li>System Modelling
+          <ul class="list-checklist ps-3">
+            <li class="checked">Structural Model of Literature Aptamer + TMSD</li>
+            <li class="unchecked">Aptamer + TMSD Substrate/Enzyme Model</li>
+            <li class="unchecked">Structural Model of TMSD & Aptamer + HRP + TMB</li>
+            <li class="unchecked">Docking Simulation of Full Model</li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
 </section>
+
+
+<section id="references" class="mb-4">
+  <h2 class="section-title">References</h2>
+  <div class="divider"></div>
+
+  <div class="references-card p-3 rounded mb-4">
+    <button class="btn references-toggle w-100 d-flex justify-content-between align-items-center"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#references-list"
+      aria-expanded="false"
+      aria-controls="references-list">
+      Show References
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div class="collapse mt-3" id="references-list">
+      <ul class="list-unstyled small">
+        <li>[1] Alzheimer’s Association. “What is Dementia? Symptoms, Causes & Treatment | alz.org.” https://www.alz.org/alzheimers-dementia/what-is-dementia</li>
+        <li>[2] National Institute on Aging. “What causes Alzheimer’s disease?” Jul. 02, 2024. https://www.nia.nih.gov/health/alzheimers-causes-and-risk-factors/what-causes-alzheimers-disease</li>
+        <li>[3] Zhang, J., Zhang, Y., Wang, J., Xia, Y., Zhang, J., & Chen, L. “Recent advances in Alzheimer’s disease: mechanisms, clinical trials and new drug development strategies,” *Sig Transduct Target Ther*, vol. 9, no. 1, pp. 1–35, Aug. 2024, doi: 10.1038/s41392-024-01911-3.</li>
+        <li>[4] NHS. “Treatment,” Apr. 17, 2025. https://www.nhs.uk/conditions/alzheimers-disease/treatment/#:~:text=There's%20currently%20no%20cure%20for,can%20temporarily%20reduce%20the%20symptoms.</li>
+        <li>[5] UCI MIND. “Mild Cognitive Impairment - UCI MIND,” Apr. 14, 2017. https://mind.uci.edu/dementia/mild-cognitive-impairment/</li>
+        <li>[6] Dubois, B. et al. “Preclinical Alzheimer’s disease: Definition, natural history, and diagnostic criteria,” *Alzheimer S & Dementia*, vol. 12, no. 3, pp. 292–323, Mar. 2016, doi: 10.1016/j.jalz.2016.02.002.</li>
+        <li>[7] Alzheimers.gov. “What is mild cognitive impairment?” https://www.alzheimers.gov/alzheimers-dementias/mild-cognitive-impairment</li>
+        <li>[8] Bălașa, A. F., Chircov, C., & Grumezescu, A. M. “Body Fluid Biomarkers for Alzheimer’s Disease—An Up-To-Date Overview,” *Biomedicines*, vol. 8, no. 10, p. 421, Oct. 2020, doi: 10.3390/biomedicines8100421.</li>
+        <li>[9] Leuzy, A. et al. “Blood‐based biomarkers for Alzheimer’s disease,” *EMBO Molecular Medicine*, vol. 14, no. 1, Dec. 2021, doi: 10.15252/emmm.202114408.</li>
+        <li>[10] Madnani, R. S. “Alzheimer’s disease: a mini-review for the clinician,” *Front. Neurol.*, vol. 14, Jun. 2023, doi: 10.3389/fneur.2023.1178588.</li>
+        <li>[11] Gilchrist, A., & Nobbs, J. “Colorimetry, theory,” in *Elsevier eBooks*, 2016, pp. 328–333. doi: 10.1016/b978-0-12-803224-4.00124-2.</li>
+        <li>[12] Wu, D., Gao, T., Lei, L., Yang, D., Mao, X., & Li, G. “Colorimetric detection of proteins based on target-induced activation of aptazyme,” *Analytica Chimica Acta*, vol. 942, pp. 68–73, Sep. 2016, doi: 10.1016/j.aca.2016.09.010.</li>
+        <li>[13] Yoo, H., Jo, H., & Oh, S. S. “Detection and beyond: challenges and advances in aptamer-based biosensors,” *Materials Advances*, vol. 1, no. 8, pp. 2663–2687, Jan. 2020, doi: 10.1039/d0ma00639d.</li>
+        <li>[14] Hollenstein, M. “DNA catalysis: the chemical repertoire of DNAzymes,” *Molecules*, vol. 20, no. 11, pp. 20777–20804, Nov. 2015, doi: 10.3390/molecules201119730.</li>
+        <li>[15] IVEK. “Manufacturing lateral flow assays for lateral flow reagent dispensing.” https://www.ivek.com/lateral-flow-assay.html</li>
+        <li>[16] Bomasang-Layno, E., & Bronsther, R. “Diagnosis and treatment of Alzheimer’s disease,” *Delaware Journal of Public Health*, vol. 7, no. 4, pp. 74–85, Sep. 2021, doi: 10.32481/djph.2021.09.009.</li>
+        <li>[17] Statistics Canada. “Alzheimer’s Awareness Month,” StatsCAN Plus, Jan. 12, 2024. https://www.statcan.gc.ca/o1/en/plus/5374-alzheimers-awareness-month</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
 {% endblock %}

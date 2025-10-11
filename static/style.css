@@ -305,7 +305,7 @@ section:not(:first-of-type)::before {
     opacity: 0;
     transition: height 0.4s ease, opacity 0.4s ease;
     padding: 0 1rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .team-card.expanded .team-bio {
@@ -360,8 +360,8 @@ section:not(:first-of-type)::before {
 
 @media (max-width: 576px) {
     .team-image-wrapper {
-        width: 90px;
-        height: 90px;
+        width: 110px;
+        height: 110px;
     }
 }
 
@@ -426,6 +426,36 @@ section:not(:first-of-type)::before {
   background: linear-gradient(135deg, #4fa3ff, #62ff8c);
 }
 
+/* Checklist Feature */
+
+.list-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-checklist li {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Checked items */
+.list-checklist li.checked::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #12fbff; /* green checkmark */
+  font-weight: bold;
+}
+
+/* Unchecked items */
+.list-checklist li.unchecked::before {
+  content: "○"; /* empty circle */
+  position: absolute;
+  left: 0;
+  color: #6c757d; /* gray */
+  font-weight: bold;
+}
 
 
 /* ==== FOOTER ==== */
