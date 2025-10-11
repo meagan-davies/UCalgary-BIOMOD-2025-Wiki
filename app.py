@@ -21,7 +21,7 @@ team_members = [
         "name": "Jackson Qi",
         "role": "Dry Lab Member",
         "image": "Jackson.jpg",
-        "bio": "I am going into my third year, majoring in Biological Sciences with a concentration in Biotechnology. My role focuses on dry lab modelling and molecular analysis, and I also contribute to experimental planning.",
+        "bio": "Hi! My name is Jackson and I am going into my third year of study, majoring in biological sciences with a concentration in biotechnology. I love volunteering, listening to music and pursuing hobbies in my spare time, such as chess, for example. My role here at BIOMOD is primarily focused upon dry lab modelling and the in-depth analysis of molecular structures. However, I have contributed to the experimental planning and design aspect as well.",
         "linkedin": "",
         "fun_facts": {
             "current_song": "Wasted by Carda (feat. Emily Falvey)",
@@ -33,7 +33,7 @@ team_members = [
         "name": "Ryland Gujilde",
         "role": "Wet Lab Member",
         "image": "Ryland.jpg",
-        "bio": "I am involved in experimental planning, protocol development, and hands-on experimentation. Fascinated by the potential of biotechnology to drive innovation in diagnostics and therapeutics.",
+        "bio": "As a Wet Lab Member on the BIOMOD team, I am involved in experimental planning, protocol development, and hands-on experimentation. I’m especially fascinated by the potential of biotechnology to drive innovation in diagnostics and therapeutics. This project has deepened my interest in studying and engineering biomolecules to develop smarter, more responsive systems that can transform research and patient care. Being part of a team that combines creativity with molecular precision has been both challenging and inspiring!",
         "linkedin": "",
         "fun_facts": {
             "current_song": "Whenever - Gareth Donkin",
@@ -45,7 +45,7 @@ team_members = [
         "name": "Ella Webster",
         "role": "Wet Lab Lead",
         "image": "Ella.jpg",
-        "bio": "I organize and oversee all lab experiments to ensure plans and deadlines are clear. Passionate about early detection of neurological biomarkers and biomedical research.",
+        "bio": "I am the Wet Lab Lead for the 2025 BIOMOD Team. In this role I organize and oversee all of the experiments we will be conducting in the lab to ensure there is a clear plan and everything is completed for the team set deadlines. I have a passion for finding the why for neurological diseases and learning about how we can detect them as early as possible. Studying these biomarkers and what causes them to be present is something I want to continue learning about in the lab.",
         "linkedin": "",
         "fun_facts": {
             "current_song": "What Are You Listening To? - Chris Stapleton",
@@ -57,7 +57,7 @@ team_members = [
         "name": "Mayuri Sharma",
         "role": "Wet Lab Member",
         "image": "Mayuri.jpg",
-        "bio": "Ambitious about biological and medical science, especially interdisciplinary research. Passionate about problem-solving and innovative experiments.",
+        "bio": "I’m very ambitious about biological and medical science, particularly the interdisciplinary research that drives progress in these fields. My passion for research is driven by problem-solving, refining methodologies, and exploring innovative experiments. It’s this combination of intellectual challenge and hands-on discovery that motivated me to join the BIOMOD 2025 team as a wet lab member.",
         "linkedin": "",
         "fun_facts": {
             "current_song": "",
@@ -72,16 +72,16 @@ team_members = [
         "bio": "Passionate about interdisciplinary teamwork and research in biology, medicine, engineering, physics, and astronomy. Outside academics, I love coffee, tea, drawing, reading, and writing.",
         "linkedin": "https://www.linkedin.com/in/meagan-davies-407245214",
         "fun_facts": {
-            "current_song": "Will I finish my todo list or will my todo list finish me",
-            "fun_fact": "",
-            "unpopular_opinion": ""
+            "current_song": "Je te laisserai des mots - Patrick Watson",
+            "fun_fact": "I helped build a satellite.",
+            "unpopular_opinion": "Preffered work hours are 11pm to 2am."
         }
     },
     {
         "name": "Ria Sinha",
         "role": "Wet Lab Member",
         "image": "Ria.jpg",
-        "bio": "Excited to contribute to BIOMOD 2025. (Blurb pending)",
+        "bio": "As a member of the Wet Lab team, I am very interested in exploring how biomolecules can be manipulated to create tools that can improve healthcare outcomes. I am also excited to explore the field of biotechnology through this project. My roles include designing the protocols, and helping perform in-lab experiments. In my free time, I enjoy hiking, playing piano, and listening to podcasts.",
         "linkedin": "",
         "fun_facts": {
             "current_song": "Calling After Me by The Wallows",
@@ -93,7 +93,7 @@ team_members = [
         "name": "Zehaan Walji",
         "role": "Dry/Wet Lab Member",
         "image": "Zehaan.jpg",
-        "bio": "Second-year student studying Computer Science and Biological Sciences. First year in BIOMOD assisting wet and dry lab tasks, docking, research, and SELEX.",
+        "bio": "My name is Zehaan Walji, and I am entering my second year at the University of Calgary, where I am studying Computer Science and Biological Sciences. I chose this degree because I have always been fascinated by the intersection between technology and biology. Outside of academics, I love solving Rubik’s cubes and playing chess. This is my first year participating in BIOMOD, where I am being mentored in both the wet lab and dry lab teams, assisting with docking, research, and the in silico SELEX process.",
         "linkedin": "",
         "fun_facts": {
             "current_song": "Clutch (demo) - Melanie Faye",
@@ -105,7 +105,7 @@ team_members = [
         "name": "Jillian Cannon",
         "role": "Wet/Dry Lab Member",
         "image": "Jillian.jpg",
-        "bio": "Passionate about molecular design and DNA nanotechnology. Helps simulate structures and plan experiments. Enjoys hiking, skiing, and playing with dogs.",
+        "bio": "I have a passion for molecular design, DNA nanotechnology, and using science to improve lives. In BIOMOD, I’m part of both the wet and dry lab teams, where I help simulate our structures and plan experiments. Outside the lab, I love hiking, skiing, and playing with my dogs!",
         "linkedin": "",
         "fun_facts": {
             "current_song": "Anything by the Lumineers",
@@ -117,7 +117,7 @@ team_members = [
         "name": "Shade Odagwe",
         "role": "Wet Lab Member",
         "image": "Shade.jpg",
-        "bio": "Wet Lab Member. Interested in biomedical engineering and human biology, curious and passionate about research.",
+        "bio": "My name is Shade Odagwe. I am a Wet Lab Member of the BIOMOD Team. My interest in research developed from a place of curiosity. Bioloy has alway been a point of interest for me, and I was curious about how our understanding of the human body could deepen the knowledge and means of how we take care of ourselves. This curiosity fueled mmy passion for reaserch and for studying Biomedical Engineering.",
         "linkedin": "",
         "fun_facts": {
             "current_song": "Manchild - Sabrina Carpenter",
@@ -129,7 +129,7 @@ team_members = [
         "name": "Isabel Gonzalez",
         "role": "Wet/Dry Lab Member",
         "image": "Isabel.jpg",
-        "bio": "Member of both wet and dry lab. Passionate about solving real-world medical problems through engineering and biochemical research.",
+        "bio": "Hi! My name is Isabel and I am both a member of the wet and dry lab for UCalgary’s BIOMOD team! I am passionate about solving real world medical problems through applying engineering principles and design. BIOMOD has let me collaborate on a project at the intersection of engineering and biochemistry, while performing innovative and exciting research.",
         "linkedin": "",
         "fun_facts": {
             "current_song": "Otro Atardecer - Bad Bunny, The Marias",
