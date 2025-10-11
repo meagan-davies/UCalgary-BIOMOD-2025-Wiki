@@ -22,7 +22,7 @@
     <!-- Footer Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    <title>Model | UCalgary BIOMOD 2025</title>
+    <title>Modelling Process | UCalgary BIOMOD 2025</title>
 
 </head>
 <body>
@@ -89,8 +89,8 @@
     <div class="content-container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">Model</h1>
-	        <p class="lead mb-5 text-white-50">Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.</p>
+          <h1 class="display-4 text-white mt-5 mb-2">Modelling Process</h1>
+	        <p class="lead mb-5 text-white-50">Overview of the DNADetect Sensor Modelling</p>
         </div>
       </div>
     </div>
@@ -100,42 +100,249 @@
   <div class="content-container">
     <div class="row">
       
-        <div class="col-12">
+        <div class="col-lg-2 d-none d-lg-block">
+          <nav id="sidenav" class="sidenav">
+  <ul>
+    
+      <li><a href="#inspiration" id="link-inspiration">Inspiration</a></li>
+    
+      <li><a href="#mechanism" id="link-mechanism">Mechanism</a></li>
+    
+      <li><a href="#modelling-intro" id="link-modelling-intro">Modelling Introduction</a></li>
+    
+      <li><a href="#modelling-process" id="link-modelling-process">Modelling Process</a></li>
+    
+      <li><a href="#docking-results" id="link-docking-results">Docking Results</a></li>
+    
+      <li><a href="#references" id="link-references">References</a></li>
+    
+  </ul>
+</nav>
+        </div>
+        <div class="col-lg-10 col-12">
       
           
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Model</h4>
-      <p>Models and computer simulations provide a great way to describe the functioning and operation of BioBrick Parts and Devices. Synthetic biology is an engineering discipline and part of engineering is simulation and modeling to determine system behavior before building your design. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before or in conjunction with experiments in the wetlab.</p>
-      <p>To compete for the Best Model prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
+<!-- Inspiration Section -->
+<section id="inspiration" class="mb-4">
+  <h2 class="section-title">Inspiration</h2>
+  <div class="divider"></div>
+  <p>The final design took some inspiration from our 2024 project, which utilized both a DNA aptazyme and a toe-mediated strand displacement (TMSD) system. We wanted to keep these aspects due to familiarity, though some modifications to the actual signalling output were made. Instead of using dye as the visual indicator, which was released into the buffer solution following the binding of the aptazyme with its target molecule, we wanted to explore the use of a newer and more novel method. Based on the literature we reviewed, we eventually settled on using a colorimetric enzyme system, which produces a visual colour change as a result of substrate cleavage [1].</p>
+  <p>The mechanism and components for the colorimetric enzyme system would be similar to the usual activity assay that is used to measure enzyme activity based on the observed absorbance. We began by looking at the classic beta-galactosidase/ONPG assay, where the enzyme, beta-galactosidase, would hydrolyze the substrate ONPG, converting it into galactose and o-nitrophenol; o-nitrophenol would be the product of interest as it gives off a yellowish hue in solution [2]. We planned to utilize this concept for our project with the same components.</p>
+  <p>However, there were several problems with this approach; the primary concern was the size of beta galactosidase (Figure 1), which would theoretically prevent it from binding to the aptazyme and undergoing the proposed mechanism (more on this later). Therefore, we did some research and stumbled upon another enzyme, horseradish peroxidase, or HRP, and its respective substrate, 3,3’,5,5’ -Tetramethylbenzidine, or TMB [3]. The major advantage of HRP when compared to beta-galactosidase is that it is significantly smaller, reducing the potential effects of steric hindrance. However, a limitation of the HRP-TMB system is that it requires a hydrogen peroxide-based medium to function, which leads to other complications due to the presence of free hydroxyl radicals, therefore we revised our procedure to address these issues.</p>
+
+  <!-- Figure 1 -->
+  <div class="text-center my-4">
+    <img src="static/Img/modelling1.png" alt="Figure 1: Beta-galactosidase vs HRP size" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 1.</strong> Size comparison between E.coli beta-galactosidase (blue) and horseradish peroxidase (green highlight). Done in Chimera.</p>
+  </div>
+</section>
+
+<!-- Mechanism Section -->
+<section id="mechanism" class="mb-4">
+  <h2 class="section-title">Detection Mechanism</h2>
+  <div class="divider"></div>
+  <p>Our proposed mechanism is detailed below in Figure 2. The mechanism involves the target molecule being detected by a DNA aptamer, which leads to a conformational change, forcing the enzyme and substrate together and allowing the enzyme to cleave it. When enough substrate is cleaved, it will display a visual indicator in the form of a blueish hue in the solution. There will be a complementary TMSD system that will allow the insertion of a new aptamer for resetting the sensor.</p>
+  
+  <!-- Figure 2 -->
+  <div class="text-center my-4">
+    <img src="static/Img/modelling2.png" alt="Figure 2: Detection Mechanism" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 2.</strong> Overview of the detection mechanism and integration within the sensor design.</p>
+  </div>
+</section>
+
+<!-- Modelling Introduction Section -->
+<section id="modelling-intro" class="mb-4">
+  <h2 class="section-title">Modelling Introduction</h2>
+  <div class="divider"></div>
+  <p>Now that we had the pieces in play, we needed to verify whether or not a mechanism like this would actually work under molecular conditions. We started with modelling each component in Chimera and ChimeraX, such as the aptamers and the target proteins. We began by looking at both beta galactosidase and horseradish peroxidase and identified key structures (i.e, ion binding sites, important secondary structures, how it folds, etc.). We also compared them side by side as well as with other similarly sized molecules (Figure 3). By this time, we identified our respective target proteins, being p-tau181, p-tau231, and Aβ42 peptides. However, we ultimately chose to use Aβ42 over p-tau181 and p-tau231 due to it being a simpler peptide when compared to tau. Tau, as a peptide, is relatively large and disordered, making it difficult to 3D model and dock against its ligands. A complete model of tau does not exist on the Protein Data Bank and only certain portions of the protein can be shown at a time.</p>
+  
+  <!-- Figure 3 -->
+  <div class="text-center my-4">
+    <img src="static/Img/modelling3.png" alt="Figure 3: HRP vs Aptamer vs X-gal" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 3.</strong> Horseradish peroxidase in comparison with the p-tau231 aptamer and substrate 5-bromo-4-chloro-3-indolyl-β-d-galactopyranoside, X-gal. Done in Chimera.</p>
+  </div>
+
+  <p>We also investigated attachment methods of the enzyme to the DNA aptamer via click chemistry, such as using a copper (I) catalyzed azide-alkyne cycloaddition reaction involving modified alkynyl nucleotides. However, this method was abandoned due to limited equipment and the complexity of successfully executing the reaction [4]. Therefore, we decided on using 5'-aminohexyl modified oligodeoxynucleotides to attach HRP to the aptamer.</p>
+  <p>Below is the molecular docking process for our three target molecules with their respective DNA aptamers. It will go over how we prepared the 3D structures (both the target and the receptor) for docking and the specific website that we used to execute the task.</p>
+
+</section>
+
+<!-- Modelling Process Section -->
+<section id="modelling-process" class="mb-5">
+  <h2 class="section-title">Modelling Process for Aβ42, p-tau181, and p-tau231</h2>
+  <div class="divider"></div>
+
+  <ol class="section-text mt-3">
+    <li>
+      <strong>Preparation of 3D Protein Structures:</strong>
+      <p>Target molecules were either downloaded or created manually:</p>
+      <ul>
+        <li>The 3D structure for the <strong>Aβ42 peptide</strong> was obtained from the <a href="https://www.rcsb.org/structure/1IYT" target="_blank" rel="noopener noreferrer">Protein Data Bank (PDB)</a>.</li>
+        <li>The 3D structures for <strong>p-tau181</strong> and <strong>p-tau231</strong> were created by manually phosphorylating the tau protein at threonine 181 and threonine 231, respectively, using <strong>WinCoot Ver 0.9.8.7</strong>.</li>
+      </ul>
+    </li>
+
+    <li class="mt-3">
+      <strong>Preparation of Aptamer Structures:</strong>
+      <p>Aptamer sequences were generated using <a href="https://www.cgl.ucsf.edu/chimera/download.html" target="_blank" rel="noopener noreferrer">Chimera</a>. The steps were:</p>
+      <ul>
+        <li>Navigate to the <strong>'Build'</strong> option in the top menu and select <strong>'Build Structure'</strong>.</li>
+        <li>Ensure <strong>'helical DNA/RNA'</strong> is selected.</li>
+        <li>Enter the aptamer sequence exactly as reported in the literature.</li>
+      </ul>
+    </li>
+
+    <li class="mt-3">
+      <strong>Docking Process:</strong>
+      <p>Docking was performed using <a href="http://hdock.phys.hust.edu.cn/" target="_blank" rel="noopener noreferrer">HDOCK</a>. Key details:</p>
+      <ul>
+        <li>The aptamers were defined as the <strong>ligand</strong> while the target molecules (p-tau181, p-tau231, and the Aβ42 peptide) were defined as the <strong>receptor</strong>.</li>
+        <li>Three docking requests were submitted, one for each target molecule.</li>
+        <li>The top 10 docking models for each target were obtained and saved for further analysis.</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<!-- Results Section -->
+<section id="docking-results" class="mb-4">
+  <h2 class="section-title">Docking Results</h2>
+  <div class="divider"></div>
+
+  <p>We have included a section below detailing the qualitative and quantitative results after the docking process. Three figures are provided, which show the most ideal docking conformation for each target molecule and its respective DNA aptamer. There are also three tables given, which display quantities including docking scores, confidence scores, electrostatic interactions, ligand RMSD’s, etc.</p>
+  
+  <!-- Figure 4 -->
+  <div class="text-center my-4">
+    <img src="static/Img/modelling4.jpg" alt="Figure 4: Aβ42 Docking" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 4.</strong> Top docking result of Aβ42 with its aptamer. Done in HDOCK.</p>
+  </div>
+
+  <p class="figure-caption mt-2"><strong>Table 1.</strong> Binding energies resulting from the docking of Aβ42 with its respective aptamer.</p>
+  <div class="table-hazard-responsive mb-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Conf #</th>
+          <th>Electrostatics</th>
+          <th>Desolvation</th>
+          <th>VdW</th>
+          <th>Overall</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>6621</td><td>-41.769</td><td>11.176</td><td>14.782</td><td>-40.291</td></tr>
+        <tr><td>2</td><td>6644</td><td>-40.846</td><td>13.774</td><td>17.150</td><td>-39.131</td></tr>
+        <tr><td>3</td><td>705</td><td>-41.094</td><td>13.271</td><td>28.358</td><td>-38.258</td></tr>
+        <tr><td>4</td><td>3059</td><td>-41.857</td><td>12.798</td><td>37.450</td><td>-38.112</td></tr>
+        <tr><td>5</td><td>9355</td><td>-42.769</td><td>11.092</td><td>54.617</td><td>-37.307</td></tr>
+        <tr><td>6</td><td>723</td><td>-39.926</td><td>13.202</td><td>31.638</td><td>-36.762</td></tr>
+        <tr><td>7</td><td>296</td><td>-45.826</td><td>12.295</td><td>96.585</td><td>-36.168</td></tr>
+        <tr><td>8</td><td>6018</td><td>-39.741</td><td>13.244</td><td>37.269</td><td>-36.014</td></tr>
+        <tr><td>9</td><td>116</td><td>-43.876</td><td>13.501</td><td>81.298</td><td>-35.746</td></tr>
+        <tr><td>10</td><td>1047</td><td>-41.141</td><td>13.519</td><td>61.826</td><td>-34.958</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The binding energies reported from the docking software (Table 1) do not represent the binding affinity of the molecules. Rather, they are the scoring of each binding conformation, which is determined by the electrostatic interaction energy, desolvation, and Van der Waals interactions. The overall score indicates the strength of the binding, with more negative values indicating stronger binding. Electrostatic interactions result from charged molecules interacting with one another. Desolvation estimates the change in solvation free energy when the molecules come together and bury previously exposed polar or non-polar surfaces. Van der Waals (VdW) energy is the energy of interactions between molecules.</p>
+
+  <!-- Figure 5 -->
+  <div class="text-center my-4">
+    <img src="static/Img/modelling5.png" alt="Figure 5: p-tau181 Docking" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 5.</strong> Top molecular docking result of p-tau181 with its respective aptamer. Done in HDOCK.</p>
+  </div>
+
+  <p class="figure-caption mt-2"><strong>Table 2.</strong> Docking score, confidence score and ligand RMSD for the first ten models of docking between ptau-181 and its respective aptamer.</p>
+  <div class="table-hazard-responsive mb-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Rank</th><th>Docking Score</th><th>Confidence Score</th><th>Ligand RMSD (Å)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>-256.13</td><td>0.8931</td><td>95.17</td></tr>
+        <tr><td>2</td><td>-241.27</td><td>0.8612</td><td>88.57</td></tr>
+        <tr><td>3</td><td>-240.77</td><td>0.8600</td><td>92.74</td></tr>
+        <tr><td>4</td><td>-235.13</td><td>0.8459</td><td>102.36</td></tr>
+        <tr><td>5</td><td>-234.52</td><td>0.8443</td><td>91.72</td></tr>
+        <tr><td>6</td><td>-231.82</td><td>0.8370</td><td>98.11</td></tr>
+        <tr><td>7</td><td>231.13</td><td>0.8352</td><td>93.72</td></tr>
+        <tr><td>8</td><td>-229.55</td><td>0.8308</td><td>98.93</td></tr>
+        <tr><td>9</td><td>-228.87</td><td>0.8288</td><td>97.75</td></tr>
+        <tr><td>10</td><td>-227.03</td><td>0.8236</td><td>97.65</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The docking score is a quantitative measure that represents both the stability and strength of molecular interactions between the receptor and the ligand. Stronger binding interactions and higher potential effectiveness are represented by a lower score that is usually negative [5]. The confidence score is a representation of certainty; it ranges from 0 to 1, with values closer to 1 being of a higher certainty, while values closer to 0 are of a lower certainty. The Ligand RMSD (root mean square deviation) measured in Å is used to evaluate predicted structures against experimentally solved ones; models that have a score within 2Å indicate successful docking, while scores above 3Å are considered unsuccessful [6].</p>
+  <p>For these ten models of p-tau181 with its respective aptamer, although the docking score is low with a relatively high confidence interval, the ligand RMSD is greater than 3Å, suggesting that these docking simulations were not successful.</p>
+
+  <!-- Figure 6 -->
+  <div class="text-center my-4">
+    <img src="static/Img/modelling6.png" alt="Figure 6: p-tau231 Docking" class="img-fluid rounded shadow">
+    <p class="figure-caption mt-2"><strong>Figure 6.</strong> Top molecular docking result of p-tau231 with its respective aptamer. Done in HDOCK.</p>
+  </div>
+
+  <p class="figure-caption mt-2"><strong>Table 3.</strong> Docking score, confidence score and ligand RMSD for the first ten models of docking between ptau-231 and its respective aptamer.</p>
+  <div class="table-hazard-responsive mb-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Rank</th><th>Docking Score</th><th>Confidence Score</th><th>Ligand RMSD (Å)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>-278.99</td><td>0.9296</td><td>37.59</td></tr>
+        <tr><td>2</td><td>-270.36</td><td>0.9174</td><td>52.72</td></tr>
+        <tr><td>3</td><td>-263.76</td><td>0.9068</td><td>42.34</td></tr>
+        <tr><td>4</td><td>-254.76</td><td>0.8904</td><td>38.18</td></tr>
+        <tr><td>5</td><td>-254.08</td><td>0.8891</td><td>43.33</td></tr>
+        <tr><td>6</td><td>-254.08</td><td>0.8891</td><td>55.25</td></tr>
+        <tr><td>7</td><td>-247.22</td><td>0.8748</td><td>52.94</td></tr>
+        <tr><td>8</td><td>-246.73</td><td>0.8738</td><td>43.65</td></tr>
+        <tr><td>9</td><td>-242.22</td><td>0.8635</td><td>52.19</td></tr>
+        <tr><td>10</td><td>-238.81</td><td>0.8552</td><td>47.04</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>A similar trend for p-tau231 is seen, although the docking score for each model is lower with higher confidence scores. However, the ligand RMSD is still greater than 3Å, indicating that docking simulations were not successful.</p>
+  <p>Note that the ligand RMSD for model 1 of p-tau231 is considerably lower than model 1 for p-tau181 (37.59 Å compared to 95.17 Å), suggesting that p-tau231 had a higher docking success rate. </p>
+
+</section>
+
+<!-- References Section -->
+<section id="references" class="mb-4">
+  <h2 class="section-title">References</h2>
+  <div class="divider"></div>
+
+  <div class="references-card p-3 rounded mb-4">
+    <button class="btn references-toggle w-100 d-flex justify-content-between align-items-center"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#references-list"
+      aria-expanded="false"
+      aria-controls="references-list">
+      Show References
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div class="collapse mt-3" id="references-list">
+      <ul class="list-unstyled small">
+        <li>[1] D. Wu, T. Gao, L. Lei, D. Yang, X. Mao, and G. Li, “Colorimetric detection of proteins based on target-induced activation of aptazyme,” <em>Analytica Chimica Acta</em>, vol. 942, pp. 68–73, Sep. 2016, doi: 10.1016/j.aca.2016.09.010.</li>
+        <li>[2] A. Gilchrist and J. Nobbs, “Colorimetry, theory,” in <em>Elsevier eBooks</em>, 2016, pp. 328–333. doi: 10.1016/b978-0-12-803224-4.00124-2.</li>
+        <li>[3] L. S. A. Busa et al., “3,3′,5,5′-Tetramethylbenzidine oxidation on paper devices for horseradish peroxidase-based assays,” <em>Analytical Sciences</em>, vol. 32, no. 8, pp. 815–818, Aug. 2016, doi: 10.2116/analsci.32.815.</li>
+        <li>[4] R. A. Decréau, J. P. Collman, and A. Hosseini, “Electrochemical applications. How click chemistry brought biomimetic models to the next level: electrocatalysis under controlled rate of electron transfer,” <em>Chemical Society Reviews</em>, vol. 39, no. 4, pp. 1291–1291, Jan. 2010, doi: https://doi.org/10.1039/b901972n.</li>
+        <li>[5] A. Shirali, V. Stebliankin, U. Karki, J. Shi, P. Chapagain, and G. Narasimhan, “A comprehensive survey of scoring functions for protein docking models,” <em>BMC Bioinformatics</em>, vol. 26, no. 1, Jan. 2025, doi: https://doi.org/10.1186/s12859-024-05991-4.</li>
+        <li>[6] Y. Ding, Y. Fang, J. Moreno, J. Ramanujam, M. Jarrell, and M. Brylinski, “Assessing the similarity of ligand binding conformations with the Contact Mode Score,” <em>Computational Biology and Chemistry</em>, vol. 64, pp. 403–413, Oct. 2016, doi: https://doi.org/10.1016/j.compbiolchem.2016.08.007.</li>
+      </ul>
     </div>
   </div>
-</div>
+</section>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
-      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
-      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
-    </ul>
-  </div>
-</div>
 
 
         </div>
