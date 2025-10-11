@@ -31,7 +31,7 @@
       {% endfor %}
     </div>
   </div>
-  <div class="row g-4 mt-4">
+  <div class="row g-4 mt-4 justify-content-center">
     {% for member in team_members %}
     <div class="col-sm-6 col-md-4 col-lg-3">
       <div class="team-card {% if member.fun_facts %}has-fun-facts{% endif %}">
@@ -69,41 +69,114 @@
   </div>
 </section>
 
+<section id="support" class="mb-5">
+  <h2 class="section-title">Support</h2>
+  <div class="divider"></div>
+
+  <div class="row g-4 mt-4 justify-content-center">
+    {% set support_members = [
+      {
+        "name": "Dr. Richa Pandey",
+        "role": "Faculty Advisor | Assistant Professor | Department of Biomedical Engineering",
+        "image": "richa_pandey.jpg"
+      },
+      {
+        "name": "Dr. Mark Ungrin",
+        "role": "Associate Professor | Faculty of Veterinary Medicine, University of Calgary",
+        "image": "mark_ungrin.jpg"
+      },
+      {
+        "name": "Dhruvi Kakadiya",
+        "role": "Teaching Assistant | PhD Candidate in Biomedical Engineering",
+        "image": "dhruvi_kakadiya.jpg"
+      },
+      {
+        "name": "Ngoc Ha Dang",
+        "role": "Biomedical Engineering Technician",
+        "image": ""
+      },
+      {
+        "name": "Lindsay Leahul",
+        "role": "Laboratory Operations Technician",
+        "image": "" 
+      },
+      {
+        "name": "Faeez Ansari",
+        "role": "BMERIT Club President",
+        "image": "faeez_ansari.jpg" 
+      },
+      {
+        "name": "Amber Quo",
+        "role": "BMERIT Club Vice President",
+        "image": "amber_quo.jpg" 
+      }
+    ] %}
+
+    {% for member in support_members %}
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card support-card">
+        <div class="team-image-wrapper">
+          {% if member.image %}
+            <img src="{{ url_for('static', filename='Img/' ~ member.image) }}" alt="{{ member.name }}" class="team-image">
+          {% else %}
+            <div class="placeholder-image">
+              <span class="placeholder-text">{{ member.name.split(' ')[0][0] }}{{ member.name.split(' ')[1][0] if member.name.split(' ')|length > 1 else '' }}</span>
+            </div>
+          {% endif %}
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">{{ member.name }}</h4>
+          <p class="team-role">{{ member.role }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.team-card');
+  const cards = document.querySelectorAll('.team-card');
 
-    cards.forEach(card => {
-        const bio = card.querySelector('.team-bio');
+  cards.forEach(card => {
+    const bio = card.querySelector('.team-bio');
 
-        card.addEventListener('click', (e) => {
-            // Prevent toggle if clicking a link or image
-            if(e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'img') return;
+    // Skip cards without bios (e.g. support cards)
+    if (!bio) return;
 
-            const isExpanded = card.classList.contains('expanded');
+    card.addEventListener('click', (e) => {
+      // Prevent toggle if clicking a link or image
+      if (e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'img') return;
 
-            // Close all other cards
-            cards.forEach(c => {
-                c.classList.remove('expanded');
-                c.querySelector('.team-bio').style.height = '0';
-            });
+      const isExpanded = card.classList.contains('expanded');
 
-            // Open this card if it wasn't already
-            if(!isExpanded){
-                card.classList.add('expanded');
-                bio.style.height = bio.scrollHeight + 'px';
-            }
-        });
+      // Close all other cards that have bios
+      cards.forEach(c => {
+        const cBio = c.querySelector('.team-bio');
+        if (cBio) {
+          c.classList.remove('expanded');
+          cBio.style.height = '0';
+        }
+      });
 
-        // Adjust height on resize
-        window.addEventListener('resize', () => {
-            if(card.classList.contains('expanded')){
-                bio.style.height = bio.scrollHeight + 'px';
-            }
-        });
+      // Open this card if it wasn't already
+      if (!isExpanded) {
+        card.classList.add('expanded');
+        bio.style.height = bio.scrollHeight + 'px';
+      }
     });
+
+    // Adjust height on resize
+    window.addEventListener('resize', () => {
+      if (card.classList.contains('expanded')) {
+        bio.style.height = bio.scrollHeight + 'px';
+      }
+    });
+  });
 });
 </script>
+
 <script>
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");

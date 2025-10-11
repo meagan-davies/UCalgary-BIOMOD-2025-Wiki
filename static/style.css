@@ -431,6 +431,40 @@ section:not(:first-of-type)::before {
   background: linear-gradient(135deg, #4fa3ff, #62ff8c);
 }
 
+.support-card {
+  text-align: center;
+  background-color: var(--card-bg);
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.placeholder-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, var(--card-bg), var(--divider-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.team-image {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
 /* Checklist Feature */
 
 .list-checklist {
@@ -592,7 +626,6 @@ section:not(:first-of-type)::before {
         padding: 1rem;
     }
 }
-
 
 /* ==== FOOTER ==== */
 footer {
