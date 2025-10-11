@@ -1,9 +1,108 @@
-{% extends "layout.html" %}
-  
-{% block title %}Notebook{% endblock %}
-{% block lead %}Week-by-week highlights, daily logs, pictures, and who did what. Document the dates you worked on your project with detailed accounts of the work done each day.{% endblock %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
-{% block page_content %}
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/style.css" rel="stylesheet">
+
+    <!-- Navbar CSS -->
+    <link href="static/navbar.css" rel="stylesheet">
+
+     <!-- Sidenav CSS -->
+    <link href="static/sidenav.css" rel="stylesheet">
+
+    <!-- Footer Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <title>Notebook | UCalgary BIOMOD 2025</title>
+
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+
+    <!-- TEAM NAME -->
+    <a class="navbar-brand" href="index.html">UCalgary BIOMOD</a>
+
+    <!-- SMALL SCREEN MENU ICON -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSIBLE NAV -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto"> 
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <!-- PROJECT -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProject" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownProject">
+            <li><a class="dropdown-item" href="description.html">Description</a></li>
+            <li><a class="dropdown-item" href="modelling.html">Modelling</a></li>
+            <li><a class="dropdown-item" href="experiments.html">Experiments</a></li>
+            <li><a class="dropdown-item" href="results.html">Results</a></li>
+          </ul>
+        </li>
+
+        <!-- NOTEBOOK -->
+        <li class="nav-item">
+          <a class="nav-link" href="notebook.html">Notebook</a>
+        </li>
+
+        <!-- ELSI -->
+        <li class="nav-item">
+          <a class="nav-link" href="elsi.html">ELSI</a>
+        </li>
+
+        <!-- TEAM -->
+        <li class="nav-item">
+          <a class="nav-link" href="team.html">Team</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Header -->
+  <header class="bg-hero py-5 mb-5">
+    <div class="content-container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">Notebook</h1>
+	        <p class="lead mb-5 text-white-50">Week-by-week highlights, daily logs, pictures, and who did what. Document the dates you worked on your project with detailed accounts of the work done each day.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="content-container">
+    <div class="row">
+      
+        <div class="col-12">
+      
+          
 
 <!-- Collapsible Week Selector -->
 <div class="week-selector-container">
@@ -1683,5 +1782,85 @@
 </script>
 
 
-{% endblock %}
 
+        </div>
+    </div>
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  <footer class="pt-5 pb-4 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo + Socials -->
+      <div class="socials col-lg-4 mb-4">
+        <a href="home.html">
+          <img src="static/Img/logo.png" alt="Logo" style="max-width: 250px;">
+        </a>
+        <div class="p-3">
+          <a href="https://bmerit.web.app/" target="_blank"><i class="fas fa-globe fa-lg text-white"></i></a>
+          <a href="https://www.instagram.com/biomod_ucalgary" target="_blank"><i class="fab fa-instagram fa-lg text-white"></i></a>
+          <a href="https://www.linkedin.com/company/biomedical-engineering-research-and-innovation-team-bmerit-ucalgary" target="_blank"><i class="fab fa-linkedin-in fa-lg text-white"></i></a>
+          <a href="https://www.youtube.com/@ucalgarybiomod" target="_blank"><i class="fab fa-youtube fa-lg text-white"></i></a>
+          <a href="mailto:bmerit@ucalgary.ca"><i class="far fa-envelope fa-lg text-white"></i></a>
+        </div>
+      </div>
+
+      <!-- Home -->
+      <div class="col-lg-2 mb-4">
+        <h5 class="text-uppercase">Home</h5>
+        <ul class="list-unstyled">
+          <li><a href="/" class="text-white">Home</a></li>
+        </ul>
+      </div>
+
+      <!-- Project -->
+      <div class="col-lg-2 mb-4">
+        <h5 class="text-uppercase">Project</h5>
+        <ul class="list-unstyled">
+          <li><a href="description.html" class="text-white">Description</a></li>
+          <li><a href="modelling.html" class="text-white">Modelling</a></li>
+          <li><a href="experiments.html" class="text-white">Experiments</a></li>
+          <li><a href="results.html" class="text-white">Results</a></li>
+          <li><a href="notebook.html" class="text-white">Notebook</a></li>
+        </ul>
+      </div>
+
+      <!-- ELSI -->
+      <div class="col-lg-2 mb-4">
+        <h5 class="text-uppercase">ELSI</h5>
+        <ul class="list-unstyled">
+          <li><a href="elsi.html" class="text-white">ELSI</a></li>
+        </ul>
+      </div>
+
+      <!-- Team -->
+      <div class="col-lg-2 mb-4">
+        <h5 class="text-uppercase">Team</h5>
+        <ul class="list-unstyled">
+          <li><a href="team.html" class="text-white">Team</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <!-- Disclaimer -->
+    <div class="text-center small">
+      <p class="mb-0">
+        The repository used to create this website is available at
+        <a href="https://github.com/meagan-davies/UCalgary-BIOMOD-2025-Wiki" class="text-white text-decoration-underline" target="_blank">
+          github.com/meagan-davies/UCalgary-BIOMOD-2025-Wiki
+        </a>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="static/bootstrap.bundle.min.js"></script>
+  <script src="static/sidenav.js"></script>
+</body>
+</html>
