@@ -150,7 +150,7 @@
       
     </div>
   </div>
-  <div class="row g-4 mt-4">
+  <div class="row g-4 mt-4 justify-content-center">
     
     <div class="col-sm-6 col-md-4 col-lg-3">
       <div class="team-card has-fun-facts">
@@ -468,41 +468,162 @@
   </div>
 </section>
 
+<section id="support" class="mb-5">
+  <h2 class="section-title">Support</h2>
+  <div class="divider"></div>
+
+  <div class="row g-4 mt-4 justify-content-center">
+    
+
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card support-card">
+        <div class="team-image-wrapper">
+          
+            <img src="static/Img/richa_pandey.jpg" alt="Dr. Richa Pandey" class="team-image">
+          
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">Dr. Richa Pandey</h4>
+          <p class="team-role">Faculty Advisor | Assistant Professor | Department of Biomedical Engineering</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card support-card">
+        <div class="team-image-wrapper">
+          
+            <img src="static/Img/mark_ungrin.jpg" alt="Dr. Mark Ungrin" class="team-image">
+          
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">Dr. Mark Ungrin</h4>
+          <p class="team-role">Associate Professor | Faculty of Veterinary Medicine, University of Calgary</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card support-card">
+        <div class="team-image-wrapper">
+          
+            <img src="static/Img/dhruvi_kakadiya.jpg" alt="Dhruvi Kakadiya" class="team-image">
+          
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">Dhruvi Kakadiya</h4>
+          <p class="team-role">Teaching Assistant | PhD Candidate in Biomedical Engineering</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card support-card">
+        <div class="team-image-wrapper">
+          
+            <div class="placeholder-image">
+              <span class="placeholder-text">NH</span>
+            </div>
+          
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">Ngoc Ha Dang</h4>
+          <p class="team-role">Biomedical Engineering Technician</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card support-card">
+        <div class="team-image-wrapper">
+          
+            <div class="placeholder-image">
+              <span class="placeholder-text">LL</span>
+            </div>
+          
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">Lindsay Leahul</h4>
+          <p class="team-role">Laboratory Operations Technician</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card support-card">
+        <div class="team-image-wrapper">
+          
+            <img src="static/Img/faeez_ansari.jpg" alt="Faeez Ansari" class="team-image">
+          
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">Faeez Ansari</h4>
+          <p class="team-role">BMERIT Club President</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="team-card support-card">
+        <div class="team-image-wrapper">
+          
+            <img src="static/Img/amber_quo.jpg" alt="Amber Quo" class="team-image">
+          
+        </div>
+        <div class="team-info">
+          <h4 class="team-name">Amber Quo</h4>
+          <p class="team-role">BMERIT Club Vice President</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.team-card');
+  const cards = document.querySelectorAll('.team-card');
 
-    cards.forEach(card => {
-        const bio = card.querySelector('.team-bio');
+  cards.forEach(card => {
+    const bio = card.querySelector('.team-bio');
 
-        card.addEventListener('click', (e) => {
-            // Prevent toggle if clicking a link or image
-            if(e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'img') return;
+    // Skip cards without bios (e.g. support cards)
+    if (!bio) return;
 
-            const isExpanded = card.classList.contains('expanded');
+    card.addEventListener('click', (e) => {
+      // Prevent toggle if clicking a link or image
+      if (e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'img') return;
 
-            // Close all other cards
-            cards.forEach(c => {
-                c.classList.remove('expanded');
-                c.querySelector('.team-bio').style.height = '0';
-            });
+      const isExpanded = card.classList.contains('expanded');
 
-            // Open this card if it wasn't already
-            if(!isExpanded){
-                card.classList.add('expanded');
-                bio.style.height = bio.scrollHeight + 'px';
-            }
-        });
+      // Close all other cards that have bios
+      cards.forEach(c => {
+        const cBio = c.querySelector('.team-bio');
+        if (cBio) {
+          c.classList.remove('expanded');
+          cBio.style.height = '0';
+        }
+      });
 
-        // Adjust height on resize
-        window.addEventListener('resize', () => {
-            if(card.classList.contains('expanded')){
-                bio.style.height = bio.scrollHeight + 'px';
-            }
-        });
+      // Open this card if it wasn't already
+      if (!isExpanded) {
+        card.classList.add('expanded');
+        bio.style.height = bio.scrollHeight + 'px';
+      }
     });
+
+    // Adjust height on resize
+    window.addEventListener('resize', () => {
+      if (card.classList.contains('expanded')) {
+        bio.style.height = bio.scrollHeight + 'px';
+      }
+    });
+  });
 });
 </script>
+
 <script>
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
