@@ -3,7 +3,7 @@ body {
 }
 .left-aligned { margin-left: auto; }
 .bg-dark { background-color: #030e1a !important; }
-.bg-hero { background-color: rgb(0, 208, 255); }
+.bg-hero { background-color: #141a29; }
 
 /* CALLOUT */
 .bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
