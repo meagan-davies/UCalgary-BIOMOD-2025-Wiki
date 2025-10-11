@@ -508,6 +508,86 @@ section:not(:first-of-type)::before {
     }
 }
 
+/* ==== EXPERIMENTS ==== */
+/* ==== EXPERIMENTS SECTION ==== */
+.nav-tabs {
+    border-bottom: none;
+    justify-content: center;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 1rem 1rem 0 0;
+    margin: 0 0.25rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-tabs .nav-link.active {
+    background: var(--accent-gradient);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.tab-content .card {
+    background-color: var(--card-bg);
+    border-radius: 1.2rem;
+    border: 1px solid var(--divider-color);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab-content .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.tab-content .card h5.card-title {
+    color: var(--accent-green);
+    margin-bottom: 0.75rem;
+}
+
+.tab-content .card ul {
+    padding-left: 1rem;
+    margin-bottom: 0;
+}
+
+.tab-content .card ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.tab-content .card ul li ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.tab-content .card ul li ul li {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .nav-tabs .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-content .card {
+        padding: 1rem;
+    }
+}
+
 
 /* ==== FOOTER ==== */
 footer {
