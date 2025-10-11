@@ -2,7 +2,9 @@
   <div class="container">
 
     <!-- TEAM NAME -->
-    <a class="navbar-brand" href="{{ url_for('home') }}">UCalgary BIOMOD</a>
+    <a class="navbar-brand" href="{{ url_for('render_page', page='home') }}">
+      <img src="{{ url_for('static', filename='Img/logo.png') }}" alt="Logo" style="max-width: 180px;">
+    </a>
 
     <!-- SMALL SCREEN MENU ICON -->
     <button class="navbar-toggler" type="button"
