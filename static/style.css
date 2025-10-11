@@ -41,6 +41,10 @@ body {
     overflow-x: hidden;
 }
 
+section a {
+    color: #62ff8c !important;
+}
+
 /* ==== HOME SECTION (Hero Video) ==== */
 .hero-section {
     position: relative;
