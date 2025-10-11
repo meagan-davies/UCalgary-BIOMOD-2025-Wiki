@@ -16,6 +16,9 @@
     <!-- Navbar CSS -->
     <link href="static/navbar.css" rel="stylesheet">
 
+     <!-- Sidenav CSS -->
+    <link href="static/sidenav.css" rel="stylesheet">
+
     <!-- Footer Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
@@ -25,68 +28,61 @@
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-  
-      <!---- TEAM NAME ---->
-      <a class="navbar-brand" href="index.html">UCalgary BIOMOD 2025</a>
-  
-      <!---- SMALL SCREEN MENU ICON ---->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto left-aligned">
-  
-          <!---- HOME ---->
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-  
-          <!---- PROJECT ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Project
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="description.html">Description</a></li>
-              <li><a class="dropdown-item" href="modelling.html">Modelling</a></li>
-              <li><a class="dropdown-item" href="experiments.html">Experiments</a></li>
-              <li><a class="dropdown-item" href="results.html">Results</a></li>
-            </ul>
-          </li>
-  
-          <!---- NOTEBOOK ---->
-          <li class="nav-item">
-            <a class="nav-link" href="notebook.html">Notebook</a>
-          </li>
-  
-          <!---- ELSI/HUMAN PRACTICES ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ELSI
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="safety.html">Safety</a></li>
-              <li><a class="dropdown-item" href="ethics.html">Ethics</a></li>
-            </ul>
-          </li>
-  
-          <!---- TEAM ---->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Team
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="members.html">Members</a></li>
-              <li><a class="dropdown-item" href="sponsors.html">Sponsors</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+  <div class="container">
+
+    <!-- TEAM NAME -->
+    <a class="navbar-brand" href="index.html">UCalgary BIOMOD</a>
+
+    <!-- SMALL SCREEN MENU ICON -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSIBLE NAV -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto"> 
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <!-- PROJECT -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProject" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownProject">
+            <li><a class="dropdown-item" href="description.html">Description</a></li>
+            <li><a class="dropdown-item" href="modelling.html">Modelling</a></li>
+            <li><a class="dropdown-item" href="experiments.html">Experiments</a></li>
+            <li><a class="dropdown-item" href="results.html">Results</a></li>
+          </ul>
+        </li>
+
+        <!-- NOTEBOOK -->
+        <li class="nav-item">
+          <a class="nav-link" href="notebook.html">Notebook</a>
+        </li>
+
+        <!-- ELSI -->
+        <li class="nav-item">
+          <a class="nav-link" href="elsi.html">ELSI</a>
+        </li>
+
+        <!-- TEAM -->
+        <li class="nav-item">
+          <a class="nav-link" href="team.html">Team</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-  
+  </div>
+</nav>
 
   <!-- Header -->
   <header class="bg-hero py-5 mb-5">
@@ -94,7 +90,7 @@
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
           <h1 class="display-4 text-white mt-5 mb-2">Experiments</h1>
-	        <p class="lead mb-5 text-white-50">Describe the research, experiments, and protocols you used in your iGEM project.</p>
+	        <p class="lead mb-5 text-white-50">Describe the research, experiments, and protocols.</p>
         </div>
       </div>
     </div>
@@ -102,30 +98,636 @@
 
   <!-- Page Content -->
   <div class="content-container">
+    <div class="row">
+      
+        <div class="col-lg-2 d-none d-lg-block">
+          <nav id="sidenav" class="sidenav">
+  <ul>
     
+      <li><a href="#aptamer-synthesis" id="link-aptamer-synthesis">Aptamer Synthesis</a></li>
+    
+      <li><a href="#aptazyme-system" id="link-aptazyme-system">Aptazyme System Synthesis</a></li>
+    
+      <li><a href="#aptazyme-system-validation" id="link-aptazyme-system-validation">Aptazyme System Validation</a></li>
+    
+      <li><a href="#tmsd-integration-validation" id="link-tmsd-integration-validation">TMSD Confirmation</a></li>
+    
+      <li><a href="#lfa-integrated-system" id="link-lfa-integrated-system">LFA Integrated System Preparation</a></li>
+    
+      <li><a href="#sensor-testing" id="link-sensor-testing">Sensor Testing</a></li>
+    
+  </ul>
+</nav>
+        </div>
+        <div class="col-lg-10 col-12">
+      
+          
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>Describe the research, experiments, and protocols you used in your iGEM project. These should be detailed enough for another team to repeat your experiments.</p>
-    <p>If you made Parts this year, please remember to put all information, characterization, and measurement data on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a>.</p>
+<section id="aptamer-synthesis" class="mb-5">
+  <h2 class="section-title">Aptamer Synthesis</h2>
+  <div class="divider"></div>
+
+  <p class="section-text mt-3">
+    Our modelled aptamer sequence must adopt the correct conformation and bind to its target biomarker in the lab.
+  </p>
+
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs mt-4 custom-tabs" id="aptamerTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="aptamer-validation-tab" data-bs-toggle="tab" data-bs-target="#aptamer-validation" type="button" role="tab" aria-controls="aptamer-validation" aria-selected="true">
+        Experiment 1: Aptamer Validation
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tabs Content -->
+  <div class="tab-content" id="aptamerTabsContent">
+    <div class="tab-pane fade show active" id="aptamer-validation" role="tabpanel" aria-labelledby="aptamer-validation-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Purpose</h5>
+          <p>To ensure that the aptamer binds to its target biomarker.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+          <ul>
+            <li>Reconstitute the lyophilized aptamer in nuclease-free water to reach a concentration of 100 μM.</li>
+            <li>Create the folding buffer using:
+              <ul>
+                <li>1 L DEPC-treated water</li>
+                <li>8.01 g (137 mmol) NaCl</li>
+                <li>0.201 g (2.7 mmol) KCl</li>
+                <li>1.14 g anhydrous disodium phosphate (8 mmol)</li>
+                <li>0.239 g (1.76 mmol) potassium phosphate</li>
+                <li>0.1 g (1 mmol) MgCl₂ anhydrous</li>
+              </ul>
+            </li>
+            <li>Place aptamer in folding buffer, heat to 85–95°C for 5 minutes, then cool to room temperature.</li>
+            <li>Mix 1 L of aptamer solution into 100 mL of buffer.</li>
+            <li>Aliquot ¼ of the solution into a tube labeled “control”.</li>
+            <li>To the remaining solution, add 0.451 g of β-amyloid 42 (1 × 10⁻⁴ moles).</li>
+            <li>Incubate and take aliquots as follows:
+              <ul>
+                <li>5 min → tube labeled “5”</li>
+                <li>10 min → tube labeled “10”</li>
+                <li>15 min → tube labeled “15”</li>
+              </ul>
+            </li>
+            <li>Transfer all tubes (control, 5, 10, 15) to wells of a gel electrophoresis apparatus and analyze results:
+              <ul>
+                <li>Aptamer not bound to the target travels farther.</li>
+                <li>Aptamer bound to the target travels less far in the gel.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Nantes/Experiments">2019 Nantes</a></li>
-      <li><a href="https://2019.igem.org/Team:TU_Eindhoven/Experiments">2019 TU Eindhoven</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Demonstrate">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Amsterdam/Experiments">2020 Amsterdam</a></li>
-      <li><a href="https://2020.igem.org/Team:NCTU_Formosa/Experiments">2020 NCTU Formosa</a></li>
-      <li><a href="https://2020.igem.org/Team:USAFA/Experiments">2020 USAFA</a></li>
-    </ul>
+</section>
+
+<section id="aptazyme-system" class="mb-5">
+  <h2 class="section-title">Aptazyme System Synthesis</h2>
+  <div class="divider"></div>
+
+  <p class="section-text mt-3">
+    The mechanism of our biosensor requires that we attach both our colorimetric substrate 
+    <strong>3,3',5,5'-Tetramethylbenzidine (TMB)</strong> and our enzyme <strong>horseradish peroxidase (HRP)</strong> 
+    to our DNA aptamer sequences.
+  </p>
+
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs mt-4 custom-tabs" id="experimentTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="exp1-tab" data-bs-toggle="tab" data-bs-target="#exp1" type="button" role="tab" aria-controls="exp1" aria-selected="true">
+        Experiment 1: TMB Attachment
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="exp2-tab" data-bs-toggle="tab" data-bs-target="#exp2" type="button" role="tab" aria-controls="exp2" aria-selected="false">
+        Experiment 2: HRP Attachment
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tabs Content -->
+  <div class="tab-content" id="experimentTabsContent">
+
+    <!-- Experiment 1 -->
+    <div class="tab-pane fade show active" id="exp1" role="tabpanel" aria-labelledby="exp1-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Attach TMB to the aptamer sequence.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+          <ul>
+            <li><strong>Preparation of Aptamer Sequence:</strong>
+              <ul>
+                <li>Attach a PEG4-amine to one of the hairpin loops in the DNA sequence.</li>
+                <li>Confirm the presence of PEG4-amine using Poly-Acylamide Gel Electrophoresis (PAGE).</li>
+                <li>Cut the band expected to contain the modified DNA from the gel.</li>
+              </ul>
+            </li>
+            <li><strong>Preparation of TMB:</strong>
+              <ul>
+                <li>Synthesize TMB-succinyl.</li>
+                <li>Dissolve 1 mmol TMB in 7.5 mL dry pyridine.</li>
+                <li>Add 1.5 mmol succinic anhydride stock and incubate 4–6 hours at 25°C.</li>
+                <li>Quench by adding 10 mL cold water, adjust pH to 4.5–5 using HCl in 0.5 mL increments.</li>
+                <li>React TMB-succinyl with NHS: Add 1.5 mmol EDC-HCl to MES or DMF buffer, add TMB-succinyl, incubate 3 hours at 25°C.</li>
+              </ul>
+            </li>
+            <li><strong>Conjugation:</strong>
+              <ul>
+                <li>Mix activated TMB with 100 μL of 100 μM 3’-amine-modified aptamer in PBS (pH 8.5).</li>
+                <li>Incubate 2 hours at 25°C for linker-aptamer interaction.</li>
+                <li>Quench with Tris-HCl (pH 8.0) for 15 minutes.</li>
+                <li>Remove unreacted TMB via centrifugation at 2500 rpm for 10 minutes using a filtering device.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experiment 2 -->
+    <div class="tab-pane fade" id="exp2" role="tabpanel" aria-labelledby="exp2-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Attach HRP enzyme to the DNA aptamer at the 5’ end.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+          <ul>
+            <li><strong>Activating Oligonucleotides:</strong>
+              <ul>
+                <li>Dissolve 5 mg 5’ aminohexyl modified oligodeoxynucleotides in 1 mL distilled water.</li>
+                <li>Mix 15 μL 0.25 M sodium phosphate buffer (pH 8.0) and 10 μL 5 mg/mL SMCC in DMSO with 0.25 mg/50 μL oligonucleotide.</li>
+                <li>Incubate 1 hour at 30°C, remove unreacted SMCC using gel filtration.</li>
+                <li>Reverse-phase chromatography to elute 5’-MEI oligonucleotide, dissolve in 0.1 mL 1xMEI buffer.</li>
+              </ul>
+            </li>
+            <li><strong>Preparing HRP-SATA:</strong>
+              <ul>
+                <li>Mix 10 mg HRP in 1 mL 1xNHS buffer with 10 μL 50 mg/mL SATA in DMSO, incubate 1 hour at 30°C.</li>
+                <li>Remove unreacted SATA using gel filtration (Sephadex G50), collect brown fraction 7–9.5 mL, store at 4°C.</li>
+                <li>Confirm thiol:HRP ratio via spectroscopy (absorbance at 403 nm).</li>
+              </ul>
+            </li>
+            <li><strong>Conjugation:</strong>
+              <ul>
+                <li>Deprotect HRP-SATA with 50 μL 0.5 M hydroxylamine·HCl in 1xSATA buffer, pH 7.5, 1 hour at 30°C.</li>
+                <li>Add 0.5 mL 5’-MEI oligonucleotide, mix, incubate 3 hours at 30°C, store crude product at 4°C.</li>
+              </ul>
+            </li>
+            <li><strong>Purification by HPLC:</strong>
+              <ul>
+                <li>Inject 500 μL labelling mixture (0.125 mg oligo, 1 mg HRP) onto Superdex 75 column at 300 μL/min, eluting with PBS + 2 mM EDTA.</li>
+                <li>Expected retention volumes: 8.6–8.9 mL (5’-HRP oligo), 9.9–10.1 mL (free HRP), 10.3 mL (unlabelled oligo).</li>
+                <li>Pool 8.25–9.25 mL fractions, inject onto MonoQ column at 155 Buffer B (1xTE + 1 M NaCl), flow 100 μL/min.</li>
+                <li>HRP elutes 1 min post-injection, lower flow to 20 μL/min and apply 100% Buffer B to elute 5’-HRP oligos, store at 4°C.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
+</section>
+
+<section id="aptazyme-system-validation" class="mb-5">
+  <h2 class="section-title">Aptazyme System Confirmation and Validation</h2>
+  <div class="divider"></div>
+
+  <p class="section-text mt-3">
+    To confirm that the aptazyme system works, both the TMB and HRP must be attached to the aptamer. 
+    The system should be functional, meaning that when the biomarker binds, a colorimetric response is observed.
+  </p>
+
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs mt-4 custom-tabs" id="aptazymeValidationTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="in-gel-activity-tab" data-bs-toggle="tab" data-bs-target="#in-gel-activity" type="button" role="tab" aria-controls="in-gel-activity" aria-selected="true">
+        Experiment 1: Sodium Monohydrogen In-Gel Activity Assay & Native PAGE
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tabs Content -->
+  <div class="tab-content" id="aptazymeValidationTabsContent">
+    <div class="tab-pane fade show active" id="in-gel-activity" role="tabpanel" aria-labelledby="in-gel-activity-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Confirm successful function of aptamer-enzyme-substrate complex and its activation when the target is present.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+
+          <h6>Gel Cassette Assembly</h6>
+          <ul>
+            <li>Clean glass plates with detergent, distilled water, then ethanol.</li>
+            <li>Assemble the cassette on a flat surface with the shorter plate facing outwards on top of the spacer plate.</li>
+            <li>Slide plates into the casting frame, lock in place with clip doors facing outwards.</li>
+            <li>Place cassette on gray casting stand gasket, engage spring-loaded lever, and insert pipette tip to ensure tight seal.</li>
+            <li>Check for leaks with water and wipe plates dry.</li>
+          </ul>
+
+          <h6>Native PAGE Gel Preparation</h6>
+          <ul>
+            <li>In a 50 mL Falcon tube, mix 2.7 mL 30% acrylamide / 1% bisacrylamide, 1.25 mL 3 M Tris-HCl, bring volume to 10 mL with dH₂O.</li>
+            <li>Add 10 μL TEMED and 100 μL 10% ammonium persulfate, mix carefully.</li>
+            <li>Pour solution between glass plates using an eyedropper, insert comb at 45° angle.</li>
+            <li>Let gel polymerize 20–30 min, remove from casting frame, place in electrode assembly with buffer dam if needed.</li>
+          </ul>
+
+          <h6>Electrophoresis and In-Gel Activity Procedure</h6>
+          <ul>
+            <li>Fill chamber with 1× native running buffer.</li>
+            <li>Remove comb carefully.</li>
+            <li>Mix 35 μL protein standards or aptamer-enzyme-substrate with 35 μL 2× native loading buffer, incubate 37°C for 15 min.</li>
+            <li>Load wells as follows:
+              <ul>
+                <li>Lane 1: 20 μL HRP</li>
+                <li>Lane 2: 20 μL aptamer-HRP-substrate</li>
+                <li>Lane 3: 20 μL aptamer only</li>
+                <li>Lanes 4–6: EMPTY</li>
+                <li>Optional: protein ladder to approximate aptamer size</li>
+                <li>Lane 7–9: Repeat as above</li>
+              </ul>
+            </li>
+            <li>Run gel at 100 V for 60–70 min until tracking dye reaches the bottom.</li>
+            <li>Cut gel in half for staining:
+              <ul>
+                <li>Lanes 1–5: Coomassie blue staining, rinse, destain overnight, visualize.</li>
+                <li>Lanes 6–10: Incubate with 0.01–0.03% H₂O₂ in PBS for 10–30 min in the dark; blue color indicates HRP activity.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tmsd-integration-validation" class="mb-5">
+  <h2 class="section-title">TMSD Integration and Confirmation</h2>
+  <div class="divider"></div>
+
+  <p class="section-text mt-3">
+    Toehold-Mediated Strand Displacement (TMSD) provides modularity and sensor re-use in our design. DNA sequences attached to TMSD can be switched out. Using TMSD, we can replace used aptamer sequences with new ones on the same LFA surface. We must confirm TMSD binding to the aptamer and the modularity of the system.
+  </p>
+
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs mt-4 custom-tabs" id="tmsdValidationTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="native-page-tmsd-tab" data-bs-toggle="tab" data-bs-target="#native-page-tmsd" type="button" role="tab" aria-controls="native-page-tmsd" aria-selected="true">
+        Experiment 1: Non-SDS Native PAGE
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tabs Content -->
+  <div class="tab-content" id="tmsdValidationTabsContent">
+    <div class="tab-pane fade show active" id="native-page-tmsd" role="tabpanel" aria-labelledby="native-page-tmsd-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Confirm functionality of TMSD strands.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+
+          <h6>Gel Cassette Assembly</h6>
+          <ul>
+            <li>Assemble plates in the casting stand.</li>
+            <li>Check for leaks by adding water between plates. If none, dump water and wipe dry.</li>
+          </ul>
+
+          <h6>Create Separating Gel (10 mL)</h6>
+          <ul>
+            <li>Prepare the appropriate percentage of acrylamide/bis-acrylamide in a small beaker.</li>
+            <li>Add specific volumes of AP and TEMED according to the table below:</li>
+          </ul>
+
+          <table class="table-hazard-responsive mb-3">
+            <thead>
+              <tr>
+                <th>Acylamide %</th>
+                <th>Acrylamide/Bis-acrylamide (30%/0.8% w/v)</th>
+                <th>0.375 mM Tris-HCl (mL)</th>
+                <th>10% AP (μL)</th>
+                <th>TEMED (μL)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>6%</td><td>2</td><td>7.89</td><td>100</td><td>10</td></tr>
+              <tr><td>8%</td><td>2.6</td><td>7.28</td><td>100</td><td>10</td></tr>
+              <tr><td>10%</td><td>3.4</td><td>6.49</td><td>100</td><td>10</td></tr>
+              <tr><td>12%</td><td>4</td><td>5.89</td><td>100</td><td>10</td></tr>
+              <tr><td>15%</td><td>5</td><td>4.89</td><td>100</td><td>10</td></tr>
+            </tbody>
+          </table>
+
+          <h6>Prepare Stacking Gel Solution (5 mL)</h6>
+          <ul>
+            <li>Combine 4.275 mL 0.375M Tris-HCl and 0.57 mL acrylamide/bis-acrylamide in a new beaker.</li>
+            <li>Add 0.05 mL 10% AP and 5 μL 1% TEMED, mix gently.</li>
+            <li>Pour out water from previous step, fill gaps with stacking gel, insert comb, and let set 20–30 min.</li>
+          </ul>
+
+          <h6>Sample Loading</h6>
+          <ul>
+            <li>Mix sample buffer and prepare sample mixtures for lanes:</li>
+          </ul>
+
+          <table class="table-hazard-responsive mb-3">
+            <thead>
+              <tr>
+                <th>Lane</th>
+                <th>Sample</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>DNA ladder</td><td>See weights</td></tr>
+              <tr><td>2</td><td>Aptamer</td><td>Confirm aptamer weight</td></tr>
+              <tr><td>3</td><td>ONPG</td><td>Confirm ONPG weight</td></tr>
+              <tr><td>4</td><td>Aptamer-ONPG</td><td>Ensure proper attachment</td></tr>
+              <tr><td>5</td><td>Aptamer-ONPG + invader (T=15)</td><td>Control</td></tr>
+              <tr><td>6</td><td>Aptamer-ONPG + invader (T=10)</td><td>Test modularity</td></tr>
+              <tr><td>7</td><td>Aptamer-ONPG + invader (T=5)</td><td>Test modularity</td></tr>
+              <tr><td>8</td><td>Aptamer-ONPG + invader (T=0)</td><td>Test modularity</td></tr>
+            </tbody>
+          </table>
+
+          <ul>
+            <li>Set voltage and run electrophoresis.</li>
+            <li>Stain gel to visualize bands.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lfa-integrated-system" class="mb-5">
+  <h2 class="section-title">Lateral Flow Assay (Integrated System) Preparation</h2>
+  <div class="divider"></div>
+
+  <p class="section-text mt-3">
+    Our system is designed to operate as a lateral flow assay (LFA). The aptamer-enzyme-substrate-TMSD complex will be attached to a nitrocellulose membrane using a biotin-streptavidin system.
+  </p>
+
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs mt-4 custom-tabs" id="lfaTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="surface-binding-tab" data-bs-toggle="tab" data-bs-target="#surface-binding" type="button" role="tab" aria-controls="surface-binding" aria-selected="true">
+        Experiment 1: Surface Binding
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="control-lane-tab" data-bs-toggle="tab" data-bs-target="#control-lane" type="button" role="tab" aria-controls="control-lane" aria-selected="false">
+        Experiment 2: Control Lane
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="lfa-assembly-tab" data-bs-toggle="tab" data-bs-target="#lfa-assembly" type="button" role="tab" aria-controls="lfa-assembly" aria-selected="false">
+        Experiment 3: LFA Assembly
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tabs Content -->
+  <div class="tab-content" id="lfaTabsContent">
+    
+    <!-- Surface Binding Tab -->
+    <div class="tab-pane fade show active" id="surface-binding" role="tabpanel" aria-labelledby="surface-binding-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Anchoring of the TMSD strand with the nitrocellulose membrane surface to act as the test lane for the LFA.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+          <ul>
+            <li>Incorporate a 5’-biotin onto the 5’ end of the incumbent strand (alpha domain). This will biotinylate the TMSD strand, serving as the receptor region for Streptavidin.</li>
+            <li>Prepare 2–5% GMA solution in ethanol/water and incubate the nitrocellulose membrane for 1–2 hours at room temperature.</li>
+            <li>Rinse membrane with PBS to remove excess GMA.</li>
+            <li>Prepare 1–2 mg/mL streptavidin solution in PBS and add Traut’s reagent (2-iminothiolane) to introduce thiol groups.</li>
+            <li>Incubate 1 hour, then purify thiolated streptavidin using a desalting column.</li>
+            <li>Streak thiolated streptavidin on the membrane, let dry ~1 hour.</li>
+            <li>Dilute biotinylated TMSD-aptamer in PBS, streak over the test line, dry 30–60 minutes to allow conjugation.</li>
+            <li>Block membrane by soaking in 1% BSA/PBS for 30–60 minutes, rinse with PBS, and dry at room temperature.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Control Lane Tab -->
+    <div class="tab-pane fade" id="control-lane" role="tabpanel" aria-labelledby="control-lane-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Create a control line to ensure correct flow through of the LFA.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+          <ul>
+            <li>Pre-wet membranes in distilled water or PBS for 10 seconds.</li>
+            <li>Dilute HRP in PBS or Tris buffer to a final concentration of 1–100 µg/mL.</li>
+            <li>Streak a line (control line) on the membrane, swirl occasionally, repeat every 5 minutes for at least 1 hour.</li>
+            <li>Wash membrane with PBS + 0.005% Tween 20 at least 3 times.</li>
+            <li>Apply blocking solution (5% skimmed milk or 1% BSA), incubate ≥2 hours.</li>
+            <li>Test protein binding using TMB + 0.01–0.03% H2O2 in PBS; blue color indicates successful HRP binding.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- LFA Assembly Tab -->
+    <div class="tab-pane fade" id="lfa-assembly" role="tabpanel" aria-labelledby="lfa-assembly-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Create the final assembled lateral flow assay for the biosensor.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+          <ul>
+            <li>Prepare HRP solution.</li>
+            <li>Place two dots 1 cm apart on the NC membrane and conjugate pad; label T (Test) and C (Control).</li>
+            <li>Prepare wick pad and sample pad with buffer.</li>
+            <li>Peel liners and align pads onto backing card in order: wicking pad → NC membrane → conjugate pad → sample pad. Ensure proper overlaps and press lightly for adhesion.</li>
+            <li>After assembly, confirm order from top to bottom: wicking pad, NC membrane, conjugate pad, sample pad.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="sensor-testing" class="mb-5">
+  <h2 class="section-title">Complete Sensor Testing</h2>
+  <div class="divider"></div>
+
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs mt-4 custom-tabs" id="sensorTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="sensor-function-tab" data-bs-toggle="tab" data-bs-target="#sensor-function" type="button" role="tab" aria-controls="sensor-function" aria-selected="true">
+        Experiment 1: Sensor Function
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="sensor-validation-tab" data-bs-toggle="tab" data-bs-target="#sensor-validation" type="button" role="tab" aria-controls="sensor-validation" aria-selected="false">
+        Experiment 2: Sensor Validation
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tabs Content -->
+  <div class="tab-content" id="sensorTabsContent">
+    
+    <!-- Experiment 1: Sensor Function -->
+    <div class="tab-pane fade show active" id="sensor-function" role="tabpanel" aria-labelledby="sensor-function-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Discover the pH and temperature ranges at which the sensor is effective and ensure functionality in blood-like conditions.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+          <ul>
+            <li>Test aptamer-TMSD response to biomarker in Tris-HCl at pH 6.0, 7.0, and 8.0.</li>
+            <li>Test response at 15°C, 20°C, 25°C, 30°C, and 35°C.</li>
+            <li>Place buffer containing known biomarker concentration in the LFA under the specified condition (only one variable at a time).</li>
+            <li>Observe biosensor response and measure absorbance at 420 nm.</li>
+            <li>Determine concentration from standard curve and calculate percent error: <strong>Percent Error = (Obtained Concentration / Actual Concentration) × 100%</strong></li>
+            <li>Compare percent error across conditions to assess accuracy and effective operating range.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experiment 2: Sensor Validation -->
+    <div class="tab-pane fade" id="sensor-validation" role="tabpanel" aria-labelledby="sensor-validation-tab">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Objective</h5>
+          <p>Ensure the sensor works with all components in multiple conditions.</p>
+
+          <h5 class="card-title mt-3">Procedure</h5>
+
+          <div class="table-hazard-responsive mb-4">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Sample</th>
+                  <th>Positive Control</th>
+                  <th>Negative Control</th>
+                  <th>Test #1</th>
+                  <th>Test #2</th>
+                  <th>Test #3</th>
+                  <th>Test #4</th>
+                  <th>Test #5</th>
+                  <th>Test #6</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10mM ONPG</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                </tr>
+                <tr>
+                  <td>Biomarker</td>
+                  <td>10 µL</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                  <td>5 µL</td>
+                </tr>
+                <tr>
+                  <td>Similar structure molecule #1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                  <td>0</td>
+                  <td>5 µL</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                </tr>
+                <tr>
+                  <td>Similar structure molecule #2</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>10 µL</td>
+                  <td>0</td>
+                  <td>10 µL</td>
+                  <td>5 µL</td>
+                  <td>10 µL</td>
+                  <td>10 µL</td>
+                </tr>
+                <tr>
+                  <td>PBS</td>
+                  <td>80 µL</td>
+                  <td>90 µL</td>
+                  <td>70 µL</td>
+                  <td>80 µL</td>
+                  <td>80 µL</td>
+                  <td>70 µL</td>
+                  <td>60 µL</td>
+                  <td>65 µL</td>
+                </tr>
+                <tr class="table-secondary">
+                  <td>Total (µL)</td>
+                  <td>100</td>
+                  <td>100</td>
+                  <td>100</td>
+                  <td>100</td>
+                  <td>100</td>
+                  <td>100</td>
+                  <td>100</td>
+                  <td>100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul>
+            <li>Prepare 10 mM TAB stock in PBS (protect from light).</li>
+            <li>Dilute biomarker stock to desired concentrations.</li>
+            <li>Label 8 sample tubes for each test and combine sample contents according to table.</li>
+            <li>Add sample to the LFA device, record images/results at: 0, 1, 2, 5, 10, 15, 30 minutes, and 1 hour.</li>
+            <li>Repeat for each test condition.</li>
+          </ul>
+
+          <h5 class="card-title mt-3">Expected Results</h5>
+          <ul>
+            <li>Positive control: two distinct lines.</li>
+            <li>Negative control: control line only.</li>
+            <li>Test #1–3: control line only.</li>
+            <li>Test #4: two lines (lighter test line than positive control).</li>
+            <li>Test #5: two lines (lighter test line).</li>
+            <li>Test #6: two lines (lightest test line, still visible).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
+
+        </div>
+    </div>
   </div>
 
   <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
@@ -151,7 +753,7 @@
       <div class="col-lg-2 mb-4">
         <h5 class="text-uppercase">Home</h5>
         <ul class="list-unstyled">
-          <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="/" class="text-white">Home</a></li>
         </ul>
       </div>
 
@@ -159,11 +761,11 @@
       <div class="col-lg-2 mb-4">
         <h5 class="text-uppercase">Project</h5>
         <ul class="list-unstyled">
-          <li><a href="description.html" class="text-white text-decoration-none">Description</a></li>
-          <li><a href="modelling.html" class="text-white text-decoration-none">Modelling</a></li>
-          <li><a href="experiments.html" class="text-white text-decoration-none">Experiments</a></li>
-          <li><a href="results.html" class="text-white text-decoration-none">Results</a></li>
-          <li><a href="notebook.html" class="text-white text-decoration-none">Notebook</a></li>
+          <li><a href="description.html" class="text-white">Description</a></li>
+          <li><a href="modelling.html" class="text-white">Modelling</a></li>
+          <li><a href="experiments.html" class="text-white">Experiments</a></li>
+          <li><a href="results.html" class="text-white">Results</a></li>
+          <li><a href="notebook.html" class="text-white">Notebook</a></li>
         </ul>
       </div>
 
@@ -171,8 +773,7 @@
       <div class="col-lg-2 mb-4">
         <h5 class="text-uppercase">ELSI</h5>
         <ul class="list-unstyled">
-          <li><a href="ethics.html" class="text-white text-decoration-none">Ethics</a></li>
-          <li><a href="safety.html" class="text-white text-decoration-none">Safety</a></li>
+          <li><a href="elsi.html" class="text-white">ELSI</a></li>
         </ul>
       </div>
 
@@ -180,7 +781,7 @@
       <div class="col-lg-2 mb-4">
         <h5 class="text-uppercase">Team</h5>
         <ul class="list-unstyled">
-          <li><a href="members.html" class="text-white text-decoration-none">Members</a></li>
+          <li><a href="team.html" class="text-white">Team</a></li>
         </ul>
       </div>
 
@@ -203,5 +804,6 @@
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="static/bootstrap.bundle.min.js"></script>
+  <script src="static/sidenav.js"></script>
 </body>
 </html>

@@ -1,53 +1,61 @@
 {% extends "layout.html" %}
-  
+{% set toc_items = [
+  {"id": "overview", "title": "Overview"},
+  {"id": "colorimetric-assay", "title": "Colorimetric Assay"},
+  {"id": "gel-electrophoresis", "title": "Gel Electrophoresis"}
+] %}
+
 {% block title %}Results{% endblock %}
-{% block lead %}You can describe the results of your project and your future plans here.{% endblock %}
+{% block lead %}Outcomes of experiments and modelling{% endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col-lg-5">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Clearly and objectively describe the results of your work.</li>
-      <li>Future plans for the project.</li>
-      <li>Considerations for replicating the experiments.</li>
-    </ul>
-  </div>
-  <div class="col-lg-7">
-    <h2>Describe what your results mean</h2>
-    <hr>
-    <ul>
-      <li>Interpretation of the results obtained during your project. Don't just show a plot/figure/graph/other, tell us what you think the data means. This is an important part of your project that the judges will look for.</li>
-      <li>Show data, but remember <b>all measurement and characterization data must also be on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a>.</b> Otherwise these data will not be in consideration for any medals or part awards!</li>
-      <li>Consider including an analysis summary section to discuss what your results mean. Judges like to read what you think your data means, beyond all the data you have acquired during your project.</li>
-    </ul>
-  </div>
-</div>
+<section id="overview" class="mb-5">
+  <h2 class="section-title">Overview</h2>
+  <div class="divider"></div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Project Achievements</h2>
-    <hr>
-    <p>You can also include a list of bullet points (and links) of the successes and failures you have had over your summer. It is a quick reference page for the judges to see what you achieved during your summer.</p>
-    <ul>
-      <li>A list of linked bullet points of the successful results during your project</li>
-      <li>A list of linked bullet points of the unsuccessful results during your project. This is about being scientifically honest. If you worked on an area for a long time with no success, tell us so we know where you put your effort.</li>
-    </ul>
+  <p class="section-text mt-3">
+We did not complete all of the web lab experiments that we intended to finish, although we have completed some parts as listed below. Our main results came from modelling (see modelling section) regarding successful docking implementations involving our various target molecules and their respective DNA aptamers. We ended up choosing Aβ42 over both of our p-tau molecules due it being a better and more consistent modelling peptide, unlike p-tau, which is more variable and disordered (an exist pdb file does not exist for tau as only certain portions of the protein can be modelled at a given time).   </p>
+</section>
+
+<section id="colorimetric-assay" class="mb-5">
+  <h2 class="section-title">Colorimetric Assay</h2>
+  <div class="divider"></div>
+
+  <p class="section-text mt-3">
+Our colorimetric assay produced interesting results, leading us to believe there was an error in the experimental process. The corrected absorbance values were not consistent with literature or our predicted results. This could be due to the time between prep of TMB stock and use. This step should be completed as close as possible to the actual experiment to ensure the TMB stock does not sit out, but it was left over a weekend before use. This may have led to exposure to light, and the TMB may have been partially oxidized. We also note that we did not have access to a multichannel pipette, which caused the timing to be varied and the wells, not plates, to be filled simultaneously.  </p>
+
+  <!-- Absorbance Table -->
+  <div class="table-hazard-responsive mt-4">
+    <table>
+      <thead>
+        <tr>
+          <th>Tube</th>
+          <th>Corrected Absorbance at 690nm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tube A</td><td>-0.059</td></tr>
+        <tr><td>Tube B</td><td>-0.104</td></tr>
+        <tr><td>Tube C</td><td>-0.027</td></tr>
+        <tr><td>Tube D</td><td>0.013</td></tr>
+        <tr><td>Tube E</td><td>-0.226</td></tr>
+        <tr><td>Tube F</td><td>-0.205</td></tr>
+        <tr><td>Tube G</td><td>-0.283</td></tr>
+        <tr><td>Negative Control</td><td>0</td></tr>
+        <tr><td>No H2O2 Control</td><td>0.327</td></tr>
+      </tbody>
+    </table>
   </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Results">2019 Newcastle</a></li>
-      <li><a href="https://2019.igem.org/Team:Munich/Results">2019 Munich</a></li>
-      <li><a href="https://2019.igem.org/Team:Tec-Chihuahua/Results">2019 Tec Chihuahua</a></li>
-      <li><a href="https://2020.igem.org/Team:Aalto-Helsinki/Results">2020 Aalto Helsinki</a></li>
-      <li><a href="https://2020.igem.org/Team:GreatBay_SCIE/Results">2020 GreatBay SCIE</a></li>
-      <li><a href="https://2020.igem.org/Team:Queens_Canada/Results">2020 Queens Canada</a></li>
-    </ul>
-  </div>
-</div>
+</section>
+
+<section id="gel-electrophoresis" class="mb-5">
+  <h2 class="section-title">Gel Electrophoresis for TMSD Confirmation</h2>
+  <div class="divider"></div>
+
+  <p class="section-text mt-3">
+    The results for this experiment were obtained after the deadline.
+  </p>
+</section>
 
 {% endblock %}

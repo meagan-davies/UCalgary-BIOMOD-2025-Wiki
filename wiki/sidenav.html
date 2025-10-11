@@ -1,0 +1,7 @@
+<nav id="sidenav" class="sidenav">
+  <ul>
+    {% for item in toc_items %}
+      <li><a href="#{{ item.id }}" id="link-{{ item.id }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -33,7 +33,7 @@
       <header class="hero-section">
           <div class="video-container">
               <iframe class="hero-video"
-                      src="https://www.youtube.com/embed/ehu1Uct3S24?si=Au9mcSXl7QgEHaDx"
+                      src="https://www.youtube.com/embed/8-DDRdfRbHw?si=n9q5FDzNdcc_xBOp"
                       frameborder="0"
                       allow="autoplay; fullscreen"
                       allowfullscreen>
@@ -51,7 +51,7 @@
               <div class="divider"></div>
               <div class="video-container">
                 <iframe class="hero-video"
-                        src="https://www.youtube.com/embed/ehu1Uct3S24?si=Au9mcSXl7QgEHaDx"
+                        src="https://www.youtube.com/embed/8-DDRdfRbHw?si=n9q5FDzNdcc_xBOp"
                         frameborder="0"
                         allow="autoplay; fullscreen"
                         allowfullscreen>
@@ -81,7 +81,7 @@
                   <a href="{{ url_for('render_page', page='modelling') }}" class="learn-more-button">Modelling</a>
                   <a href="{{ url_for('render_page', page='experiments') }}" class="learn-more-button">Experiments</a>
                   <a href="{{ url_for('render_page', page='results') }}" class="learn-more-button">Results</a>
-                  <a href="{{ url_for('render_page', page='members') }}" class="learn-more-button">Members</a>
+                  <a href="{{ url_for('render_page', page='team') }}" class="learn-more-button">Team</a>
               </div>
           </div>
       </section>
@@ -89,6 +89,10 @@
   </div>
 
   {% include "footer.html" %}
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'sidenav.js') }}"></script>
 
 </body>
 

@@ -3,7 +3,7 @@ body {
 }
 .left-aligned { margin-left: auto; }
 .bg-dark { background-color: #030e1a !important; }
-.bg-hero { background-color: rgb(0, 208, 255); }
+.bg-hero { background-color: #141a29; }
 
 /* CALLOUT */
 .bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
@@ -104,7 +104,6 @@ section:not(:first-of-type)::before {
 }
 
 .content-container {
-    max-width: 950px;
     margin: 0 auto;
     padding: 2rem 1rem;
     position: relative;
@@ -139,6 +138,7 @@ section:not(:first-of-type)::before {
 .video-section .video-container {
     position: relative;
     width: 100%;
+    max-height: 80%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
     overflow: hidden;
     margin-top: 2rem; /* spacing from title */
@@ -185,6 +185,411 @@ section:not(:first-of-type)::before {
     color: white;
 }
 
+/* ==== REFERENCES ==== */
+/* References Card */
+.references-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--divider-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.references-toggle {
+    background: var(--accent-gradient);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: left;
+    padding: 0.6rem 1rem;
+    transition: background 0.3s ease;
+}
+
+.references-toggle:hover {
+    filter: brightness(1.1);
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when collapse is shown */
+.collapse.show + .references-toggle .arrow-icon,
+.references-toggle[aria-expanded="true"] .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* List inside card */
+.references-card ul li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--divider-color);
+}
+.references-card ul li:last-child {
+    border-bottom: none;
+}
+
+
+/* ==== TEAM CARDS ==== */
+.team-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    position: relative;
+    text-align: center;
+    padding: 25px 15px 40px;
+}
+
+.team-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ==== IMAGE CIRCLE WITH LINK ==== */
+.team-image-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #4fa3ff, #62ff8c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* changed from visible to hidden */
+}
+
+.team-image-wrapper a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.team-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* INFO */
+.team-info {
+    margin-top: 10px;
+}
+
+.team-name {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.15rem;
+}
+
+.team-role {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+/* BIO + FUN FACTS */
+.team-bio {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.4s ease, opacity 0.4s ease;
+    padding: 0 1rem;
+    text-align: left;
+}
+
+.team-card.expanded .team-bio {
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.fun-facts {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.fun-facts li {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Gradient text for fun fact labels */
+.team-bio .fun-facts li strong {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* EXPAND ARROW */
+.expand-arrow {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent-green);
+    transition: transform 0.4s ease;
+}
+
+.team-card.expanded .expand-arrow {
+    transform: translateX(-50%) rotate(180deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .team-card {
+        padding: 20px 10px 30px;
+    }
+    .team-image-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-image-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* ==== GROUP SLIDESHOW ==== */
+/* ==== GROUP SLIDESHOW ==== */
+.team-slideshow {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto 3rem;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  filter: brightness(85%);
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #444;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.active-dot,
+.dot:hover {
+  background: linear-gradient(135deg, #4fa3ff, #62ff8c);
+}
+
+/* Checklist Feature */
+
+.list-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-checklist li {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Checked items */
+.list-checklist li.checked::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #12fbff; /* green checkmark */
+  font-weight: bold;
+}
+
+/* Unchecked items */
+.list-checklist li.unchecked::before {
+  content: "○"; /* empty circle */
+  position: absolute;
+  left: 0;
+  color: #6c757d; /* gray */
+  font-weight: bold;
+}
+
+/* == Table Feature == */
+
+/* ==== ELSI HAZARD TABLE ==== */
+.table-hazard-responsive {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+}
+
+.table-hazard-responsive table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: var(--text-color);
+}
+
+.table-hazard-responsive th,
+.table-hazard-responsive td {
+    border: 1px solid var(--divider-color);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-hazard-responsive thead {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.table-hazard-responsive tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.table-hazard-responsive tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.table-hazard-responsive td:first-child,
+.table-hazard-responsive th:first-child {
+    font-weight: 600;
+}
+
+/* Optional: make table scroll nicely on mobile */
+@media (max-width: 768px) {
+    .table-hazard-responsive th,
+    .table-hazard-responsive td {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+/* ==== EXPERIMENTS ==== */
+/* ==== EXPERIMENTS SECTION ==== */
+.nav-tabs {
+    border-bottom: none;
+    justify-content: center;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 1rem 1rem 0 0;
+    margin: 0 0.25rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-tabs .nav-link.active {
+    background: var(--accent-gradient);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.tab-content .card {
+    background-color: var(--card-bg);
+    border-radius: 1.2rem;
+    border: 1px solid var(--divider-color);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab-content .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.tab-content .card h5.card-title {
+    color: var(--accent-green);
+    margin-bottom: 0.75rem;
+}
+
+.tab-content .card ul {
+    padding-left: 1rem;
+    margin-bottom: 0;
+}
+
+.tab-content .card ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.tab-content .card ul li ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.tab-content .card ul li ul li {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .nav-tabs .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-content .card {
+        padding: 1rem;
+    }
+}
+
+
 /* ==== FOOTER ==== */
 footer {
     position: relative;
@@ -213,6 +618,10 @@ footer a {
 
 footer a:hover {
     color: var(--accent-magenta);
+}
+
+footer .socials {
+    align-items: center;
 }
 
 /* ==== RESPONSIVE ==== */
