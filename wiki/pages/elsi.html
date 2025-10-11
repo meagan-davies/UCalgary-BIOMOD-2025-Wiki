@@ -1,51 +1,190 @@
 {% extends "layout.html" %}
+{% set toc_items = [
+  {"id": "ethical", "title": "Ethical"},
+  {"id": "social", "title": "Social"},
+  {"id": "legal", "title": "Legal"},
+  {"id": "biosafety", "title": "Biosafety"},
+  {"id": "references", "title": "References"}
+] %}
   
-{% block title %}Human Practices{% endblock %}
-{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
+{% block title %}ELSI{% endblock %}
+{% block lead %}Ethical, Legal, and Social Issues{% endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #2</h4>
-      <p>Explain how you have determined your work is responsible and good for the world.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2023 Medals Page</a> for more information.</p>
-    </div>
-  
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Integrated Human Practices</h4>
-      <p>To compete for the Best Integrated Human Practices prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <p>How does your project affect society and how does society influence the direction of your project? How might ethical considerations and stakeholder input guide your project purpose and design and the experiments you conduct in the lab? How does this feedback enter into the process of your work all through the iGEM competition? Document a thoughtful and creative approach to exploring these questions and how your project evolved in the process to compete for this award!</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>At iGEM we believe societal considerations should be upfront and integrated throughout the design and execution of synthetic biology projects. “Human Practices” refers to iGEM teams' efforts to actively consider how the world affects their work and their work affects the world. Through your Human Practices activities, your team should demonstrate how you have thought carefully and creatively about whether your project is responsible and good for the world. We invite you to explore issues relating (but not limited) to the ethics, safety, security, and sustainability of your project, and to show how this exploration feeds back into your project purpose, design, and execution.</p>
-    <p>Please note you can compete for the Silver Medal criterion #2 and the Best Integrated Human Practices prize with this page.</p>
-    <p>For more information, please see the <a href="https://responsibility.igem.org/human-practices/what-is-human-practices">Human Practices Hub</a>.
-    <p>On this page, your team should document all of your Human Practices work and activities. You should write about the Human Practices topics you considered in your project, document any activities you conducted to explore these topics (such as engaging with experts and stakeholders), describe why you took a particular approach (including referencing any work you built upon), and explain if and how you integrated takeaways from your Human Practices work back into your project purpose, design and/or execution.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
+
+  <!-- Ethical Section -->
+  <section id="ethical" class="mb-4">
+    <h2 class="section-title">Ethical</h2>
+    <div class="divider"></div>
+    <p>
+      <strong>Respect for Persons</strong> requires that the autonomy, dignity, and all rights of the participants are respected throughout the research process. Participants should be fully informed of procedures, risks, and benefits before starting. In this research, it means participants understand this is an early diagnostic device and should not replace consultation with a licensed clinician. Respect is maintained through clear communication with participants, families (if consent is given), and medical professionals.
+    </p>
     <ul>
-      <li><a href="https://2019.igem.org/Team:Thessaly/Human_Practices">2019 Thessaly</a></li>
-      <li><a href="https://2019.igem.org/Team:Linkoping_Sweden/Human_Practices">2019 Linkoping Sweden</a></li>
-      <li><a href="https://2019.igem.org/Team:FDR-HB_Peru/Human_Practices">2019 FDR HB Peru</a></li>
-      <li><a href="https://2020.igem.org/Team:William_and_Mary/Human_Practices">2020 William and Mary</a></li>
-      <li><a href="https://2020.igem.org/Team:Rochester/Human_Practices">2020 Rochester</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Human_Practices">2020 Leiden</a></li>
-      <li><a href="https://2020.igem.org/Team:Baltimore_BioCrew/Human_Practices">2020 Baltimore BioCrew</a></li>
+      <li>Ensure documented and ongoing consent of participants.</li>
     </ul>
-  </div>
-</div>
+  </section>
+
+  <!-- Social Section -->
+  <section id="social" class="mb-4">
+    <h2 class="section-title">Social</h2>
+    <div class="divider"></div>
+    <p>
+      <strong>Concern for Welfare</strong> ensures the physical, mental, and social well-being of participants is protected. Risks should be minimized and benefits maximized, and patient privacy maintained. Researchers must consider societal impacts and not use data to identify participants without explicit consent.
+    </p>
+    <ul>
+      <li>Ensure equal distribution of biosensors to prevent worsening existing health inequalities.</li>
+    </ul>
+  </section>
+
+  <!-- Legal Section -->
+  <section id="legal" class="mb-4">
+    <h2 class="section-title">Legal</h2>
+    <div class="divider"></div>
+    <p>
+      <strong>Justice</strong> ensures fair and equitable treatment of participants. Inclusion/exclusion criteria should be based on relevant factors, such as age or likelihood of developing Alzheimer's, rather than arbitrary factors. Recruitment should be diverse so no group is denied benefits of the research.
+    </p>
+  </section>
+
+  <!-- Biosafety Section -->
+  <section id="biosafety" class="mb-4">
+    <h2 class="section-title">Biosafety</h2>
+    <div class="divider"></div>
+    <p>
+      Biosafety involves training, protocols, equipment, and environments to protect researchers, the community, and the environment from accidental release of bioagents. Potential losses must be identified and evaluated, and emergency plans developed.
+    </p>
+
+    <h3>Potential Losses</h3>
+    <ul>
+      <li>L1: Misdiagnosis of Alzheimer’s condition</li>
+      <li>L2: Environmental contamination from improper disposal</li>
+      <li>L3: Loss of biosensor accuracy over time</li>
+      <li>L4: Loss of Life</li>
+    </ul>
+
+    <h3>Hazard Analysis</h3>
+    <div class="table-hazard-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Hazard</th>
+          <th>Description</th>
+          <th>Associated Loss</th>
+          <th>Refined Hazard ID</th>
+          <th>Refined Hazard Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>H1</td>
+          <td>Biosensor produces false positive results</td>
+          <td>L1, L4</td>
+          <td>H1.1</td>
+          <td>False positive occurs due to sample contamination before use</td>
+        </tr>
+        <tr>
+          <td>H1</td>
+          <td></td>
+          <td></td>
+          <td>H1.2</td>
+          <td>False positive occurs due to unrelated biomarker readings</td>
+        </tr>
+        <tr>
+          <td>H1</td>
+          <td></td>
+          <td></td>
+          <td>H1.3</td>
+          <td>Biosensor is used incorrectly</td>
+        </tr>
+        <tr>
+          <td>H2</td>
+          <td>Biosensor produces false negative results</td>
+          <td>L1, L4</td>
+          <td>H2.1</td>
+          <td>False negatives occur due to low biomarker sensitivity</td>
+        </tr>
+        <tr>
+          <td>H2</td>
+          <td></td>
+          <td></td>
+          <td>H2.2</td>
+          <td>Signal interference causes false readings</td>
+        </tr>
+        <tr>
+          <td>H2</td>
+          <td></td>
+          <td></td>
+          <td>H2.3</td>
+          <td>Biosensor is used incorrectly</td>
+        </tr>
+        <tr>
+          <td>H3</td>
+          <td>Biosensor component degradation</td>
+          <td>L3</td>
+          <td>H3.1</td>
+          <td>Manufacturing inconsistencies cause degradation before use</td>
+        </tr>
+        <tr>
+          <td>H3</td>
+          <td></td>
+          <td></td>
+          <td>H3.2</td>
+          <td>Storage conditions affect stability and performance</td>
+        </tr>
+        <tr>
+          <td>H4</td>
+          <td>Biosensor components contaminate environment upon disposal</td>
+          <td>L2</td>
+          <td>H4.1</td>
+          <td>Releases toxic chemicals upon degradation</td>
+        </tr>
+        <tr>
+          <td>H4</td>
+          <td></td>
+          <td></td>
+          <td>H4.2</td>
+          <td>Lack of proper disposal channels in underserved regions</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Risk Mitigation Strategies</h2>
+    <ul>
+      <li>Proper storage and disposal of the sensor and biomaterials.</li>
+      <li>Safe handling of biomaterials to prevent infections or disease spread.</li>
+      <li>Ongoing and documented consent of participants.</li>
+      <li>Medical device compliance with Health Canada or other regulatory bodies.</li>
+      <li>Documentation of all collected data and diagnostics, including errors.</li>
+      <li>Follow all safety protocols and datasheet recommendations for materials.</li>
+    </ul>
+  </section>
+
+  <!-- References Section -->
+  <section id="references" class="mb-4">
+    <h2 class="section-title">References</h2>
+    <div class="divider"></div>
+    <div class="references-card p-3 rounded mb-4">
+      <button class="btn references-toggle w-100 d-flex justify-content-between align-items-center"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#elsi-references-list"
+        aria-expanded="false"
+        aria-controls="elsi-references-list">
+        Show References
+        <i class="fas fa-chevron-down arrow-icon"></i>
+      </button>
+
+      <div class="collapse mt-3" id="elsi-references-list">
+        <ul class="list-unstyled small">
+          <li>[1] Barlow-Stewart, K., & Burnett, L. “Ethical Considerations in the Use of DNA for the Diagnosis of Diseases,” *Clinical Biochemist Reviews*, vol. 27, no. 1, p. 53, Feb. 2006. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1390792/" target="_blank">Link</a></li>
+          <li>[2] MDPI. “Proceedings,” 2020. <a href="https://www.mdpi.com/2504-3900/104/1/37" target="_blank">Link</a></li>
+          <li>[3] Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans – TCPS 2, 2022.</li>
+          <li>[4] MIT STPA Handbook (MIT-STAMP-001).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
 {% endblock %}

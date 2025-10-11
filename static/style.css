@@ -457,6 +457,57 @@ section:not(:first-of-type)::before {
   font-weight: bold;
 }
 
+/* == Table Feature == */
+
+/* ==== ELSI HAZARD TABLE ==== */
+.table-hazard-responsive {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+}
+
+.table-hazard-responsive table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: var(--text-color);
+}
+
+.table-hazard-responsive th,
+.table-hazard-responsive td {
+    border: 1px solid var(--divider-color);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-hazard-responsive thead {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.table-hazard-responsive tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.table-hazard-responsive tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.table-hazard-responsive td:first-child,
+.table-hazard-responsive th:first-child {
+    font-weight: 600;
+}
+
+/* Optional: make table scroll nicely on mobile */
+@media (max-width: 768px) {
+    .table-hazard-responsive th,
+    .table-hazard-responsive td {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
 
 /* ==== FOOTER ==== */
 footer {
